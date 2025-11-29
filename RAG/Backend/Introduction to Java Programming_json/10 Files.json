@@ -1,0 +1,92 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "10 Files",
+  "number_of_slides": 17,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Lecture 10 Files: Reading and Writing",
+      "text": "Lecture 10 Files: Reading and Writing"
+    },
+    {
+      "page_number": 2,
+      "title": "References & Reading",
+      "text": "References & Reading \n\n   The content is mainly selected (sometimes modified) from the original \n   slides provided by the authors of the textbook \n\n  · Readings \n      Chapter 15: Files, Streams and Object Serialization"
+    },
+    {
+      "page_number": 3,
+      "title": "15.1 Introduction",
+      "text": "15.1 Introduction \n\n  · Data stored in variables and arrays is temporary \n      It's lost when a local variable goes out of scope or when the program \n      terminates \n   For long-term retention of data, computers use files. \n   Computers store files on secondary storage devices \n      hard disks, flash drives, DVDs and more. \n   Data maintained in files is persistent data because it exists beyond \n   the duration of program execution."
+    },
+    {
+      "page_number": 4,
+      "title": "15.2 Files and Streams",
+      "text": "15.2 Files and Streams \n\n· Java views each file as a sequential stream of bytes (Fig. 15.1). \n\n Every operating system provides a mechanism to determine the end of a \n file, such as an end-of-file marker or a count of the total bytes in the file \n that is recorded in a system-maintained administrative data structure. \n \n A Java program simply receives an indication from the operating system \n when it reaches the end of the stream"
+    },
+    {
+      "page_number": 5,
+      "title": "15.2 Files and Streams (cont.)",
+      "text": "15.2 Files and Streams (cont.) \n\n   File streams can be used to input and output data as bytes \n   or characters. \n     \" Byte-based streams output and input data in its binary format-a \n      char is two bytes, an int is four bytes, a double is eight bytes, \n      etc. \n      Character-based streams output and input data as a sequence of \n      characters in which every character is two bytes-the number of \n      bytes for a given value depends on the number of characters in that \n      value. \n  · Files created using byte-based streams are referred to as \n   binary files. \n  . Files created using character-based streams are referred to \n   as text files. Text files can be read by text editors. \n  . Binary files are read by programs that understand the \n   specific content of the file and the ordering of that content."
+    },
+    {
+      "page_number": 6,
+      "title": "15.2 Files and Streams (cont.)",
+      "text": "15.2 Files and Streams (cont.) \n\n . A Java program opens a file by creating an object and \n   associating a stream of bytes or characters with it. \n      Can also associate streams with different devices. \n   Java creates three stream objects when a program begins \n   executing \n    \"System. in (standard input stream) object normally inputs bytes \n      from the keyboard \n    \"Object System. out (the standard output stream object) \n     normally outputs character data to the screen \n      Object System. err (the standard error stream object) normally \n      outputs character-based error messages to the screen."
+    },
+    {
+      "page_number": 7,
+      "title": "15.2 Files and Streams (cont.)",
+      "text": "15.2 Files and Streams (cont.) \n\n   Java programs perform file processing by using classes from package \n   java. io and the subpackages of java. nio. \n   Character-based input and output can be performed with classes \n   Scanner and Formatter. \n      Class Scanner is used extensively to input data from the keyboard. This \n      class can also read data from a file. \n      Class Formatter enables formatted data to be output to any text-based \n      stream in a manner similar to method System.out.printf."
+    },
+    {
+      "page_number": 8,
+      "title": "15.4 Sequential-Access Text Files",
+      "text": "15.4 Sequential-Access Text Files \n\n   Sequential-access files store records in order by the record-key field. \n   Text files are human-readable files."
+    },
+    {
+      "page_number": 9,
+      "title": "15.4.1 Creating a Sequential-Access Text File",
+      "text": "15.4.1 Creating a Sequential-Access Text File \n\n  · Java imposes no structure on a file \n       Notions such as records do not exist as part of the Java language. \n       You must structure files to meet the requirements of your applications."
+    },
+    {
+      "page_number": 10,
+      "title": "15.4.1 Creating a Sequential-Access Text File (cont.)",
+      "text": "15.4.1 Creating a Sequential-Access Text File (cont.) \n\n    Formatter outputs formatted Strings to the specified stream. \n  . The constructor with one String argument receives the name of the \n   file, including its path. \n     \" If a path is not specified, the JVM assumes that the file is in the directory \n      from which the program was executed. \n  . If the file does not exist, it will be created. \n  · If an existing file is opened, its contents are truncated."
+    },
+    {
+      "page_number": 11,
+      "title": "1. import java. util. Scanner;",
+      "text": "1. import java. util. Scanner; \n2. import java. util . Formatter; \n3. public class ex1{ \n4. public static void main(String [] args) throws Exception \n5. \n      { \n6.      Formatter output=new Formatter(\"clients. txt\"); \n7.      Scanner input=new Scanner(System. in); \n8.      System. out. println( \"Enter account number, First name, Last name and Balance. \"); \n9.      System. out. println( \"Enter EOF End-of-File Mark to stop. \"); \n10.    while(input. hasNext () ) \n11.    { \n12.     int account_num=input. nextInt(); \n13.     String Fname=input. next(); \n14.     String Lname=input. next(); \n15.     double balance=input.nextDouble(); \n16. \n        output . format (\"%d %s %s %f %n\", account_num, Fname, Lname, balance); \n17. \n        System. out. println( \"Enter account number, First name, Last name and Balance. \"); \n18.     System. out. println( \"Enter EOF End-of-File Mark to stop. \"); \n19.    } \n20.    if(output != null) \n21.    output. close(); \n22.   } \n23. }"
+    },
+    {
+      "page_number": 12,
+      "title": "Sample Run Showing Data Entered by the User",
+      "text": "Sample Run Showing Data Entered by the User \n\nEnter account number, First name, Last name and Balance. \nEnter EOF End-of-File Mark to stop. \n1122 Mohammed Ali 8000.98 \n?1133 Sarah Ahmed 9877.7 \n?1144 Nasser Salah 9886.435 \n? \n\n                         Output to the File \n                clients.txt  \n\n                clients.txt \n                1   1122 Mohammed Ali 8000.98 \n                2   1133 Sarah Ahmed 9877.70 \n                3   1144 Nasser Salah 9886.44"
+    },
+    {
+      "page_number": 13,
+      "title": "15.4.1 Creating a Sequential-Access Text File (cont.)",
+      "text": "15.4.1 Creating a Sequential-Access Text File (cont.) \n\n   An Exception occurs when there are an error while executing the \n  program: \n    if the user does not have permission to write data to the \n     file. \n    if the file does not exist and a new file cannot be created. \n     if the data being read by a Scanner method is in the \n     wrong format or if there is no more data to input. \n    if the Formatter is closed when you attempt to output"
+    },
+    {
+      "page_number": 14,
+      "title": "15.4.1 Creating a Sequential-Access Text File (cont.)",
+      "text": "15.4.1 Creating a Sequential-Access Text File (cont.) \n\n . Scanner method hasNext determines whether the end- \n  of-file key combination has been entered. \n   Formatter method format works like \n  System.out. printf \n   Formatter method close closes the file. \n     If method close is not called explicitly, the operating system \n     normally will close the file when program execution terminates."
+    },
+    {
+      "page_number": 15,
+      "title": "15.4.2 Reading Data from a Sequential-Access Text File",
+      "text": "15.4.2 Reading Data from a Sequential-Access Text File \n\n   The application (Fig. 15.6) reads records from the file \n   \"clients.txt\" created by the application of Section 15.4.1 and \n  displays the record contents."
+    },
+    {
+      "page_number": 16,
+      "title": "1. import java. nio. file. Paths;",
+      "text": "1. import java. nio. file. Paths; \n2. import java. util. Scanner; \n   public class ex1{ \n3. public static void main(String [ ] args) throws Exception \n4. \n     { \n5.     Scanner input=new Scanner (Paths.get(\"clients. txt\") ); \n6.     System. out. printf( \"%10s %10s %10s %10s %n\", \"Account\", \"First\", \n   \"Last\", \"Balance\"); \n7. \n8.     while( input . hasNext ( ) ) \n9.     { \n10.      int account_num=input. nextInt(); \n11.      String Fname=input.next(); \n12.      String Lname=input. next(); \n13.      double balance=input.nextDouble (); \n14. \n       System. out. printf(\"%10d %10s %10s %10.2f %n\", account_num, Fname, \n   Lname, balance) ; \n15.   } \n16. \n17. if(input != null) \n18.   input. close(); \n19. } \n20.}                                                                     16"
+    },
+    {
+      "page_number": 17,
+      "title": "Input from the File",
+      "text": "Input from the File \nclients.txt  \n\n clients.txt \n1   1122 Mohammed Ali 8000.98 \n2   1133 Sarah Ahmed 9877.70 \n3   1144 Nasser Salah 9886.44 \n\n        Sample Run Showing Data Reading from the File \n        \n         Account      First       Last    Balance \n            1122   Mohammed        Ali    8000.98 \n            1133      Sarah      Ahmed    9877.70 \n            1144     Nasser      Salah    9886.44"
+    }
+  ]
+}

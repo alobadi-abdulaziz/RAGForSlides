@@ -1,0 +1,590 @@
+
+
+Control Statements Repetition 
+           Loops - Part1 - 
+
+                                1 
+<<<
+
+Contents 
+
+· Readings 
+3.7 while Repetition Statement 
+3.8 Formulating Algorithms: Counter-Controlled Repetition 
+3.9 Formulating Algorithms: Sentinel-Controlled Repetition 
+3.10 Formulating Algorithms: Nested Control Statements 
+4.2 Essentials of Counter-Controlled Repetition 
+4.3 for Repetition Statement 
+4.4 Examples Using the for Statement 
+4.5 do ... while Repetition Statement 
+4.7 break and continue Statements 
+
+                                                            2 
+<<<
+
+   Repetition in Real Life 
+
+<<<
+
+Common Mathematic Problems Solved Using Repetition 
+
+· Print natural number set: 
+
+   1,2,3,4, ..... 
+
+· Compute Factorial of a number n: 
+
+   n! = n × (n - 1) x (n - 2) x ... 1 
+
+  Compute sequence (n+1)! - 1 : 
+
+   1 . 1! + 2 . 2! + ... + n n! = (n+1)! - 1, Vn ≥ 1 
+
+                                               4 
+<<<
+
+  How code would be look without a loop? 
+
+
+                                                                                                  5 
+<<<
+
+ Repetition Control Statements in High-Level Language 
+
+. There are mainly two types of loops: 
+     Entry Controlled loops: 
+         In this type of loop, the test condition is tested 
+        before entering the loop body. 
+       Ex: For loop and While loop. 
+     Exit Controlled Loops: 
+         In this type of loop the test condition is tested or 
+        evaluated at the end of the loop body. Therefore, 
+        the loop body will execute at least once, irrespective 
+        of whether the test condition is true or false. 
+       Ex: do-while loop. 
+
+                                                         6 
+<<<
+
+                                               Loops 
+
+
+                                                                                                   7 
+<<<
+
+  While Loop 
+
+                                                            
+ Repetition statement-repeats an action while a 
+condition remains true. 
+
+ The repetition statement's body may be a single           
+statement or a block. 
+                                                                   
+ Eventually, the condition will become false. At 
+this point, the repetition terminates, and the first 
+                                                           
+statement after the repetition statement executes. 
+
+                                                            
+
+                                                                    8 
+<<<
+
+ While Loop 
+
+
+
+  The expression in parentheses is called the continuation condition. The 
+
+  statements in braces are called the body. 
+  The flow of execution for a while statement is: 
+       Evaluate the condition, yielding true or false. 
+       If the condition is false, skip the body and go to the next statement. 
+       If the condition is true, execute the body and go back to step 1. 
+. This type of flow is called a loop, because the last step loops back 
+  around to the first.                                                 9 
+<<<
+
+Counter-Controlled While Loop 
+
+  Counter-controlled repetition requires 
+     a control variable (or loop counter) 
+     the initial value of the control variable 
+     the increment by which the control variable is modified 
+     each time through the loop (also known as each 
+     iteration of the loop) 
+     the loop-continuation condition that determines if 
+     looping should continue. 
+<<<
+
+       Fig. 4.1: WhileCounter . java 
+ 2   / Counter-controlled repetition with the while repetition statement. 
+  3 
+  4 public class WhileCounter 
+  5 { 
+  6    public static void main(String[] args) 
+  7    { 
+  8      int counter = 1; // declare and initialize control variable 
+  9 
+ 10      while (counter <= 10) // loop-continuation condition 
+ 11      { 
+ 12        System.out.printf("%d ", counter); 
+ 13        ++counter; // increment control variable 
+ 14      } 
+ 15 
+ 16      System.out.println(); 
+ 17    } 
+ 18 } // end class WhileCounter 
+
+ 1 2 3 4 5 6 7 8 9 10 
+
+Fig. 4.1 Counter-controlled repetition with the while repetition statement. 
+<<<
+
+Counter-Controlled While Loop
+
+   Common Programming Error 4. 
+   Because floating-point values may be approximate, con- 
+   trolling loops with floating-point variables may result in 
+   imprecise counter values and inaccurate termination 
+   tests. 
+
+     Error-Prevention Tip 4.1 
+     Use integers to control counting loops. 
+<<<
+
+Infinite While Loop 
+
+  int n=1;                               int n=1; 
+  while (n > 0) {                        while (true) { 
+  System.out.println(n);                 System.out.println(n); 
+      n++; }                                 n++; } 
+
+               Common Programming Error 3.2 
+               Not providing in the body of a while statement an ac- 
+               tion that eventually causes the condition in the while to 
+               become false normally results in a logic error called an 
+               infinite loop (the loop never terminates). 
+
+                                                                       13 
+<<<
+
+                 10 times
+int n=1;                     int n=0; 
+while (n <= 10) {                    while (n < 10) { 
+System.out.println(n);               System.out.println(n); 
+    n++; }                               n++; } 
+
+                   9 times                                   11 times 
+int n=1;                             int n=0; 
+while (n < 10) {                     while (n <= 10) { 
+System.out.println(n);               System.out.println(n); 
+    n++; }                               n++; } 
+
+         Common Programming Error 4.2 
+         Using an incorrect relational operator or an incorrect fi- 
+         nal value of a loop counter in the loop-continuation con- 
+         dition of a repetition statement can cause an off-by-one 
+         error. 
+<<<
+
+Counter-Controlled While Loop 
+
+  Example: find the first power of 3 larger than 100. 
+           int product = 3; 
+           while     (product <= 100) 
+               product = 3 * product ; 
+
+    Statement                     Performed Action 
+    int product = 3;              product declared and initialized to 3 
+    while (product <= 100)        while condition evaluated to true (3 <= 100) 
+         product = 3 * product;   product value changed to 9 
+    while (product <= 100)        condition evaluated to true (9 <= 100) 
+         product = 3 * product;   product value changed to 27 
+    while (product <= 100)        condition evaluated to true (27 <= 100) 
+         product = 3 * product;   product value changed to 81 
+    while (product <= 100)        condition evaluated to true (81 <= 100) 
+         product = 3 * product ; product value changed to 243 
+    while (product <= 100)        condition evaluated to false (243>100) 15 
+<<<
+
+Formulating Algorithms: Counter-Controlled Repetition 
+
+ A class of ten students took a quiz. The grades 
+  (integers in the range 0 to 100) for this quiz are 
+  available to you. Determine the class average on the 
+  quiz. 
+  The class average is equal to the sum of the grades divided by the 
+ number of students. 
+  The algorithm for solving this problem on a computer must input 
+ each grade, keep track of the total of all grades input, perform the 
+ averaging calculation and print the result. 
+  Use counter-controlled repetition to input the grades one at a time. 
+  A variable called a counter (or control variable) controls the number 
+  of times a set of statements will execute. 
+  Counter-controlled repetition is often called definite repetition, 
+ because the number of repetitions is known before the loop begins 
+  executing. 
+<<<
+
+Formulating Algorithms: Counter-Controlled Repetition (Cont.) 
+
+   1   Set total to zero 
+   2   Set grade counter to one 
+   3 
+   4   While grade counter is less than or equal to ten 
+   5      Prompt the user to enter the next grade 
+   6      Input the next grade 
+   7      Add the grade into the total 
+   8      Add one to the grade counter 
+   9 
+   10 Set the class average to the total divided by ten 
+   11 Print the class average 
+
+ Fig. 3.5   Pseudocode algorithm that uses counter-controlled repetition to solve the 
+ class-average problem. 
+
+  A total is a variable used to accumulate the sum of several values. 
+
+· A counter is a variable used to count. 
+
+  Variables used to store totals are normally initialized to zero before 
+  being used in a program. 
+<<<
+
+      / Fig. 3.6: ClassAverage. java 
+  2 // Solving the class-average problem using counter-controlled repetition. 
+  3 import java. util. Scanner; // program uses class Scanner 
+  4 
+  5 public class ClassAverage 
+  6 { 
+  7    public static void main(String[] args) 
+  8     { 
+  9       // create Scanner to obtain input from command window 
+  10      Scanner input = new Scanner(System. in); 
+  11 
+  12      // initialization phase 
+  13      int total = 0; // initialize sum of grades entered by the user 
+  14      int gradeCounter = 1; // initialize # of grade to be entered next 
+  15 
+  16      // processing phase uses counter-controlled repetition 
+  17      while (gradeCounter <= 10) // loop 10 times 
+  18      { 
+  19        System.out.print("Enter grade: "); // prompt 
+  20          int grade = input. nextInt(); // input next grade 
+  21          total = total + grade; // add grade to total 
+  22          gradeCounter = gradeCounter + 1; // increment counter by 1 
+  23        } 
+  24 
+  25        // termination phase 
+  26        int average = total / 10; // integer division yields integer result 
+  27 
+  28        // display total and average of grades 
+  29        System.out.printf("%nTotal of all 10 grades is %d%n", total); 
+  30        System. out. printf("Class average is %d%n", average) ; 
+  31      } 
+  32   } // end class ClassAverage 
+<<<
+
+  Enter grade: 67 
+  Enter grade: 78 
+  Enter grade: 89 
+  Enter grade: 67 
+  Enter grade: 87 
+  Enter grade: 98 
+  Enter grade: 93 
+  Enter grade: 85 
+  Enter grade: 82 
+  Enter grade: 100 
+
+  Total of all 10 grades is 846 
+  Class average is 84 
+
+Fig. 3.6   Solving the class-average problem using counter-controlled repetition. 
+<<<
+
+Formulating Algorithms: Counter-Controlled Repetition (Cont.) 
+
+  A local variable's declaration must appear before the 
+  variable is used in the program. 
+      Common Programming Error 3.3 
+      Using the value of a local variable before it's initialized 
+      results in a compilation error. All local variables must be 
+      initialized before their values are used in expressions. 
+
+      Error-Prevention Tip 3.3 
+      Initialize each total and counter, either in its declara- 
+      tion or in an assignment statement. Totals are normally 
+      initialized to 0. Counters are normally initialized to 0 
+      or 1, depending on how they're used (we'll show exam- 
+      ples of when to use O and when to use 1). 
+<<<
+
+ Formulating Algorithms: Sentinel-Controlled Repetition 
+
+  Develop a class-averaging program that 
+  processes grades for an arbitrary number of 
+  students each time it's run. 
+· Sentinel-controlled repetition is often called indefinite 
+  repetition because the number of repetitions is not known 
+  before the loop begins executing. 
+· A special value called a sentinel value (also called a signal 
+  value, a dummy value or a flag value) can be used to 
+  indicate "end of data entry." 
+  A sentinel value must be chosen that cannot be confused 
+  with an acceptable input value. 
+
+<<<
+
+  1 Initialize total to zero 
+  2 Initialize counter to zero 
+  3 
+  4 Prompt the user to enter the first grade 
+  5 Input the first grade (possibly the sentinel) 
+  6 
+  7 While the user has not yet entered the sentinel 
+  8     Add this grade into the running total 
+  9     Add one to the grade counter 
+ 10     Prompt the user to enter the next grade 
+ 11     Input the next grade (possibly the sentinel) 
+ 12 
+ 13 If the counter is not equal to zero 
+ 14     Set the average to the total divided by the counter 
+ 15     Print the average 
+ 16 else 
+ 17     Print "No grades were entered" 
+
+Fig. 3.7 Class-average pseudocode algorithm with sentinel-controlled repetition. 
+<<<
+
+1 11 Fig. 3.8: ClassAverage. java 
+2 // Solving the class-average problem using sentinel-controlled repetition. 
+3 import java. util . Scanner; // program uses class Scanner 
+4 
+5 public class ClassAverage 
+6 { 
+7   public static void main(String[] args) 
+8    { 
+9     // create Scanner to obtain input from command window 
+10    Scanner input = new Scanner(System. in); 
+11 
+12    // initialization phase 
+13    int total = 0; // initialize sum of grades 
+14    int gradeCounter = 0; // initialize # of grades entered so far 
+15 
+16    // processing phase 
+17    // prompt for input and read grade from user 
+18    System.out.print("Enter grade or -1 to quit: "); 
+19    int grade = input.nextInt(); 
+20 
+21     // loop until sentinel value read from user 
+22     while (grade != - 1) 
+23     { 
+24       total = total + grade; // add grade to total 
+25       gradeCounter = gradeCounter + 1; // increment counter 
+26 
+27       // prompt for input and read next grade from user 
+28       System. out. print("Enter grade or -1 to quit: "); 
+29       grade = input. nextInt(); 
+30     } 
+31 
+32       termination phase 
+33       if user entered at least one grade ... 
+34     if (gradeCounter != 0) 
+35     { 
+36       // use number with decimal point to calculate average of grades 
+37       double average = (double) total / gradeCounter; 
+38 
+39       // display total and average (with two digits of precision) 
+40       System. out.printf("%nTotal of the %d grades entered is %d%n", 
+41         gradeCounter, total) ; 
+42       System. out.printf("Class average is %.2f%n", average) ; 
+43     } 
+44    else // no grades were entered, so output appropriate message 
+45      System.out. println("No grades were entered"); 
+46 } 
+47 } // end class ClassAverage 
+<<<
+
+   Enter grade or -1 to quit: 97 
+   Enter grade or -1 to quit: 88 
+   Enter grade or -1 to quit: 72 
+   Enter grade or -1 to quit: - 1 
+
+   Total of the 3 grades entered is 257 
+   Class average is 85.67 
+
+Fig. 3.8    Solving the class-average problem using sentinel-controlled repetition. 
+<<<
+
+Good Programming Practice 3.3 
+In a sentinel-controlled loop, prompts should remind the 
+user of the sentinel. 
+
+Common Programming Error 3.5 
+Omitting the braces that delimit a block can lead to logic 
+errors, such as infinite loops. To prevent this problem, 
+some programmers enclose the body of every control state- 
+ment in braces, even if the body contains only a single 
+statement. 
+<<<
+
+ Formulating Algorithms: Nested Control Statements 
+
+. This case study examines nesting one control 
+  statement within another. 
+  A college offers a course that prepares students for 
+  exam for real-estate brokers. 
+. Ten of the students who completed this course took 
+  the exam. The college wants to know how well its 
+  students did on the exam. You've been asked to write 
+  a program to summarize the results. You've been 
+  given a list of these 10 students. Next to each name is 
+  written a 1 if the student passed the exam or a 2 if the 
+  student failed. 
+
+<<<
+
+3.10 Formulating Algorithms: Nested Control Statements (Cont.) 
+
+. This case study examines nesting one control statement 
+  within another. 
+
+  Your program should analyze the results of the exam as 
+  follows: 
+      Input each test result (i.e., a 1 or a 2). Display the message 
+      "Enter result" on the screen each time the program requests 
+      another test result. 
+      Count the number of test results of each type. 
+      Display a summary of the test results, indicating the number 
+      of students who passed and the number who failed. 
+    · If more than eight students passed the exam, print "Bonus to 
+      instructor!" 
+<<<
+
+  1 // Fig. 3.10: Analysis. java 
+  2 // Analysis of examination results using nested control statements. 
+  3 import java. util . Scanner; // class uses class Scanner 
+  4 
+  5 public class Analysis 
+  6 { 
+  7   public static void main(String[] args) 
+  8   { 
+  9     // create Scanner to obtain input from command window 
+10      Scanner input = new Scanner(System. in); 
+11 
+12      // initializing variables in declarations 
+13      int passes = 0; 
+14      int failures = 0; 
+15      int studentCounter = 1; 
+16 
+17      // process 10 students using counter-controlled loop 
+18      while (studentCounter <= 10) 
+19      { 
+20        // prompt user for input and obtain value from user 
+21        System. out. print("Enter result (1 = pass, 2 = fail): "); 
+22        int result = input.nextInt(); 
+23 
+24         // if ... else is nested in the while statement 
+25         if (result == 1) 
+26           passes = passes + 1; 
+27         else 
+28           failures = failures + 1; 
+29 
+30         // increment studentCounter so loop eventually terminates 
+31         studentCounter = studentCounter + 1; 
+32       } 
+33 
+34       // termination phase; prepare and display results 
+35       System. out. printf("Passed : %d%nFailed : %d%n", passes, failures) ; 
+36 
+37       // determine whether more than 8 students passed 
+38       if (passes > 8) 
+39         System.out.println("Bonus to instructor!"); 
+40    } 
+41 } // end class Analysis 
+
+Fig. 3.10 Analysis of examination results using nested control statements. (Part 2 
+<<<
+
+ Enter result (1 = pass, 2 = fail): 1 
+ Enter result (1 = pass, 2 = fail): 2 
+ Enter result (1 = pass, 2 = fail): 1 
+ Enter result (1 = pass, 2 = fail): 1 
+ Enter result (1 = pass, 2 = fail): 1 
+ Enter result (1 = pass, 2 = fail): 1 
+ Enter result (1 = pass, 2 = fail) : 1 
+ Enter result (1 = pass, 2 = fail): 1 
+ Enter result (1 = pass, 2 = fail): 1 
+ Enter result (1 = pass, 2 = fail): 1 
+ Passed: 9 
+ Failed: 1 
+ Bonus to instructor! 
+
+Fig. 3.10   Analysis of examination results using nested control statements. (Part 3 
+of 4.) 
+                    Enter result (1 = pass, 2 = fail): 1 
+                    Enter result (1 = pass, 2 = fail): 2 
+                    Enter result (1 = pass, 2 = fail): 1 
+                    Enter result (1 = pass, 2 = fail) : 2 
+                    Enter result (1 = pass, 2 = fail): 1 
+                    Enter result (1 = pass, 2 = fail): 2 
+                    Enter result (1 = pass, 2 = fail) : 2 
+                    Enter result (1 = pass, 2 = fail): 1 
+                    Enter result (1 = pass, 2 = fail): 1 
+                    Enter result (1 = pass, 2 = fail): 1 
+                    Passed: 6 
+                    Failed: 4 
+
+                  Fig. 3.10   Analysis of examination results using nested control statements. (Part 4 
+                  of 4.) 
+<<<
+
+   Loop with Array 
+
+
+ 1   public class ex1{ 
+     Run | Debug 
+ 2   public static void main(String [ ] args) 
+ 3   { 
+ 4   int [] arr=new int [10]; 
+ 5   arr[0]=0; 
+ 6   arr[1]=1;                              
+ 7   arr[2]=2; 
+ 8   arr[3]=3;                              
+ 9   arr [4]=4; 
+10   arr[5]=5;                              
+11   arr[6]=6; 
+12   arr[7]=7;                                    
+13   arr[8]=8; 
+14   arr [9]=9;                                  
+15 
+16   }                                      
+
+                 
+
+                       
+
+                                                                                          30 
+<<<
+
+  Loop with String 
+
+                                      
+String name="JAVA"; 
+                                           
+int n=0; 
+
+while (n < 4) { 
+
+    System.out.println(name.charAt(n)); 
+                                              
+   n++; 
+                                       
+ }                                    
+
+                                      
+
+                                                      31 
+<<<

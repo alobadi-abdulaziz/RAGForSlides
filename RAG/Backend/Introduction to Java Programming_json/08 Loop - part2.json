@@ -1,0 +1,137 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "08 Loop - part2",
+  "number_of_slides": 26,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Control Statements Repetition",
+      "text": "Control Statements Repetition \n\n       Part2- For & Do while Loops"
+    },
+    {
+      "page_number": 2,
+      "title": "Loops",
+      "text": "Loops"
+    },
+    {
+      "page_number": 3,
+      "title": "for Repetition Statement",
+      "text": "for Repetition Statement \n\n· The loops we have written so far have several \n  elements in common. \n     They start by initializing a variable, \n     they have a condition that depends on that variable, and \n     inside the loop they do something to update that variable. \n\n. This type of loop is so common that there is another \n  statement, the for loop, that expresses it more \n  concisely."
+    },
+    {
+      "page_number": 4,
+      "title": "for Repetition Statement (Cont.)",
+      "text": "for Repetition Statement (Cont.) \n\n  The general format of the for statement is \n\n     for (initialization; loopContinuationCondition; \n                              update) \n      the initialization expression names the loop's control variable and \n      optionally provides its initial value \n      loopContinuationCondition determines whether the loop should \n      continue executing \n\n      update modifies the control variable's value, so that the loop- \n      continuation condition eventually becomes false."
+    },
+    {
+      "page_number": 5,
+      "title": "for Repetition Statement (Cont.)",
+      "text": "for Repetition Statement (Cont.) \n\n. The two semicolons in the for header are required. \n\n. If the loop-continuation condition is initially false, the \n\n program does not execute the for statement's body. Instead, \n\n execution proceeds with the statement following the for."
+    },
+    {
+      "page_number": 6,
+      "title": "While statement:",
+      "text": "While statement: \n                 int counter=1; \n                 while (counter <= 10) \n                  { \n                    statement \n                    counter++; \n                  } \n\nFor statement: \n\n\n                  for (int counter = 1; counter <= 10; counter++) \n\n \n\nTypically, for statements are used for counter-controlled repetition and while \nstatements for sentinel-controlled repetition."
+    },
+    {
+      "page_number": 7,
+      "title": "I   // Fig. 4.2: ForCounter. java",
+      "text": "I   // Fig. 4.2: ForCounter. java \n  2   // [X] Counter-controlled repetition with the for repetition statement. \n  4   public class ForCounter \n  5   { \n  6      public static void main(String[] args) \n  7      { \n  8         // for statement header includes initialization, \n  9         // loop-continuation condition and increment \n 10         for (int counter = 1; counter <= 10; counter++) \n 11            System.out.printf(\"%d \", counter) ; \n  13        System.out.println(); \n  14     } \n 15   } // end class ForCounter \n\n  1 2 3 4 5 6 7 8 9 10 \n\nFig. 4.2   Counter-controlled repetition with the for repetition statement."
+    },
+    {
+      "page_number": 8,
+      "title": "for (int counter = 1; counter <= 3; counter++)",
+      "text": "for (int counter = 1; counter <= 3; counter++) \n            \n    Statement           Performed Action \n\n    int counter = 1;    counter declared and initialized to 1 \n \n    counter <= 3;      for condition evaluated to true (1 <= 3) \n    counter++          counter value changed to 2 \n\n    counter <= 3;      condition evaluated to true (2 <= 3) \n    counter++          product value changed to 3 \n \n    counter <= 3;       condition evaluated to true (3 <= 3) \n    counter++           product value changed to 4 \n    counter <= 3;       condition evaluated to false (4 > 3)"
+    },
+    {
+      "page_number": 9,
+      "title": "for Repetition Statement (Cont.)",
+      "text": "for Repetition Statement (Cont.) \n\n The for loop is often easier to read because it puts \n all the loop-related statements at the top of the loop. \n. There is one difference between for loops and while \n loops: if you declare a variable in the initializer, it \n only exists inside the for loop. \n\n     for (int i = 1; i <= 10; i = i + 1) \n     { \n        System.out.println(i); \n     } \n      System.out.println(i); // compiler error \n      \n                                     Can you think how to solve this problem?"
+    },
+    {
+      "page_number": 10,
+      "title": "Common Programming Error 4.3",
+      "text": "Common Programming Error 4.3 \n When a for statement's control variable is declared in \n the initialization section of the for's header, using the \ncontrol variable after the for's body is a compilation \nerror. \n\n    int i = 1; \n    for (int i = 1; i <= 10; i = i + 1) \n    { \n        System.out.println(i); \n    } \n     System. out.println(i); // it will work!"
+    },
+    {
+      "page_number": 11,
+      "title": "Common Programming Error 4.4",
+      "text": "Common Programming Error 4.4 \n Placing a semicolon immediately to the right of the right \n parenthesis of a for header makes that for's body an \n empty statement. This is normally a logic error. \n\nfor (int i = 1; i <= 10; i++); \n{ \n    System.out.println(i); // it will not print i \n\n}"
+    },
+    {
+      "page_number": 12,
+      "title": "for Repetition Statement (Cont.)",
+      "text": "for Repetition Statement (Cont.) \n\n. All three expressions in a for header are optional. \n\n    . If the loopContinuationCondition is omitted, the condition is always \n\n      true, thus creating an infinite loop. \n\n      You might omit the initialization expression if the program \n      initializes the control variable before the loop. \n\n      You might omit the increment if the program calculates it with \n      statements in the loop's body or if no increment is needed."
+    },
+    {
+      "page_number": 13,
+      "title": "for Repetition Statement (Cont.)",
+      "text": "for Repetition Statement (Cont.) \n\n. The increment expression in a for acts as if it were a \n\n  standalone statement at the end of the for's body, so \n\n        counter = counter + 1 \n        counter += 1 \n        ++counter \n        counter++ \n\n  are equivalent increment expressions in a for statement."
+    },
+    {
+      "page_number": 14,
+      "title": "for Repetition Statement (Cont.)",
+      "text": "for Repetition Statement (Cont.) \n\n  The initialization, loop-continuation condition and \n  increment can contain arithmetic expressions. \n        for (int j = x; j <= 4 * x * y; j += y / X) \n\n. The increment of a for statement may be negative, \n  in which case it's a decrement, and the loop counts \n  downward. \n       for (int k = 10; k >= 1; k-- )"
+    },
+    {
+      "page_number": 15,
+      "title": "Examples Using the for Statement",
+      "text": "Examples Using the for Statement \n\n Vary the control variable from 1 to 100 in increments of 1. \n\n            for (int i = 1; i <= 100; i++) \n\n Vary the control variable from 100 to 1 in decrements of 1. \n\n            for (int i = 100; i >= 1; i -- ) \n\n  Vary the control variable from 7 to 77 in increments of 7. \n\n            for (int i = 7; i <= 77; i += 7)"
+    },
+    {
+      "page_number": 16,
+      "title": "Examples Using the for Statement (Cont.)",
+      "text": "Examples Using the for Statement (Cont.) \n\n  Vary the control variable from 20 to 2 in decrements of 2. \n            for (int i = 20; i >= 2; i -= 2) \n\n  Vary the control variable over the values 2, 5, 8, 11, 14, \n  17, 20. \n            for (int i = 2; i <= 20; i += 3) \n\n  Vary the control variable over the values 99, 88, 77, 66, \n  55, 44, 33, 22, 11, 0. \n            for (int i = 99; i >= 0; i -= 11)"
+    },
+    {
+      "page_number": 17,
+      "title": "Fig. 4.5: Sum. java",
+      "text": "Fig. 4.5: Sum. java \n  2    / Summing integers with the for statement. \n   4 public class Sum \n   5 { \n   6     public static void main(String[] args) \n   7     { \n   8        int total = 0; \n  10        // total even integers from 2 through 20 \n  11        for (int number = 2; number <= 20; number += 2) \n  12           total += number; \n  14        System.out.printf(\"Sum is %d%n\", total); \n  15     } \n  16 } // end class Sum \n\n  Sum is 110 \n\nFig. 4.5   Summing integers with the for statement."
+    },
+    {
+      "page_number": 18,
+      "title": "4.4 Examples Using the for Statement (Cont.)",
+      "text": "4.4 Examples Using the for Statement (Cont.) \n\n  The initialization and increment expressions can be \n  comma-separated lists that enable you to use \n  multiple initialization expressions or multiple \n  increment expressions. \n\nfor (int i= 2, j=0; i <= 20; i += 2) \n j += i ;"
+    },
+    {
+      "page_number": 19,
+      "title": "4.4 Examples Using the for Statement (Cont.)",
+      "text": "4.4 Examples Using the for Statement (Cont.) \n\n· Body of the for statement could be merged into the \n  increment portion of the for header by using a \n  comma as follows: \n      for (int i= 2, j=0; i <= 20; j += i, i += 2) \n           ; / / empty statement \n\n      Can be written as following: \n\n      for (int i= 2, j=0; \n       i <= 20; \n       j += i, i += 2) \n           ; / / empty statement"
+    },
+    {
+      "page_number": 20,
+      "title": "Do while loop",
+      "text": "Do while loop"
+    },
+    {
+      "page_number": 21,
+      "title": "4.5 do ... while Repetition Statement",
+      "text": "4.5 do ... while Repetition Statement \n\n The do ... while repetition statement is similar to the \n while statement. \n. In the while, the program tests the loop-continuation \n condition at the beginning of the loop, before executing \n the loop's body; if the condition is false, the body never \n executes. \n The do ... while statement tests the loop-continuation \n condition after executing the loop's body; therefore, the \n body always executes at least once. \n When a do ... while statement terminates, execution \n continues with the next statement in sequence."
+    },
+    {
+      "page_number": 22,
+      "title": "I     Fig. 4.7: DoWhileTest. java",
+      "text": "I     Fig. 4.7: DoWhileTest. java \n  2   // do ... while repetition statement. \n  4 public class DoWhileTest \n  5 { \n  6     public static void main(String[] args) \n  7     { \n  8        int counter = 1; \n 10        do \n 11         { \n 12           System.out.printf(\"%d   \", counter); \n 13           ++counter; \n 14        } while (counter <= 10); // [X] end do ... while \n 16        System.out.println(); \n 17     } \n 18 } // end class DoWhileTest \n\n 1 2 3 4 5 6 7 8 9 10 \n\nFig. 4.7 do ... while repetition statement."
+    },
+    {
+      "page_number": 23,
+      "title": "4.7 break and continue Statements",
+      "text": "4.7 break and continue Statements \n\n. The break statement, when executed in a while, \n  for, do ... while or switch, causes immediate \n exit from that statement. \n· Execution continues with the first statement after \n the control statement. \n. Common uses of the break statement are to escape \n early from a loop or to skip the remainder of a \n  switch."
+    },
+    {
+      "page_number": 24,
+      "title": "1 // Fig. 4.11: BreakTest. java",
+      "text": "1 // Fig. 4.11: BreakTest. java \n   2   // break statement exiting a for statement. \n   3 public class BreakTest \n   4   { \n   5     public static void main(String[] args) \n   6     { \n   7        int count; // control variable also used after loop terminates \n   9        for (count = 1; count <= 10; count++) // loop 10 times \n  10        { \n  11           if (count == 5) \n  12              break; // terminates loop if count is 5 \n  14           System.out.printf(\"%d \", count); \n  15        } \n  17        System. out. printf(\"%nBroke out of loop at count = %d%n\", count) ; \n  18     } \n  19 } // end class BreakTest \n\n  1 2 3 4 \n  Broke out of loop at count = 5 \n\nFig. 4.11 break statement exiting a for statement."
+    },
+    {
+      "page_number": 25,
+      "title": "4.7 break and continue Statements (Cont.)",
+      "text": "4.7 break and continue Statements (Cont.) \n\n. The continue statement, when executed in a \n while, for or do ... while, skips the remaining \n statements in the loop body and proceeds with the \n next iteration of the loop. \n. In while and do ... while statements, the \n program evaluates the loop-continuation test \n immediately after the continue statement \n executes. \n. In a for statement, the increment expression \n executes, then the program evaluates the loop- \n continuation test."
+    },
+    {
+      "page_number": 26,
+      "title": "1     Fig. 4.12: ContinueTest. java",
+      "text": "1     Fig. 4.12: ContinueTest. java \n  2     continue statement terminating an iteration of a for statement. \n  3 public class ContinueTest \n  4 { \n  5     public static void main(String[] args) \n  6     { \n  7        for (int count = 1; count <= 10; count++) // loop 10 times \n  8        { \n  9           if (count == 5) \n 10              continue; // skip remaining code in loop body if count is 5 \n 12           System.out.printf(\"%d \", count); \n 13        } \n 15        System.out.printf(\"%nUsed continue to skip printing 5%n\"); \n 16     } \n 17 } // end class ContinueTest \n\n 1 2 3 4 6 7 8 9 10 \n Used continue to skip printing 5 \n\nFig. 4.12 continue statement terminating an iteration of a for statement."
+    }
+  ]
+}

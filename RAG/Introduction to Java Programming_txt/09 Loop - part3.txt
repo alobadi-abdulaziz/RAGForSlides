@@ -1,0 +1,330 @@
+
+
+Control Statements Repetition 
+
+     Part3- Arrays Handling using Loop 
+
+                                  1 
+<<<
+
+6.5 Examples Using Arrays 
+
+ . This section presents several examples that 
+   demonstrate declaring arrays, creating arrays, 
+   initializing arrays and manipulating array elements 
+   using loops. 
+
+                                                   2 
+<<<
+
+  6.5.2 Using an Array Initializer 
+
+ 1 // Fig. 6.3: InitArray. java 
+ 2      Initializing the elements of an array with an array initializer. 
+ 3 
+ 4   public class InitArray 
+ 5   { 
+ 6     public static void main(String[] args) 
+ 7      { 
+ 8         // initializer list specifies the initial value for each element 
+ 9         int [] array = { 32, 27, 64, 18, 95, 14, 90, 70, 60, 37 }; 
+ 10 
+ 11        System.out.printf("%s%8s%n", "Index", "Value"); // column headings 
+ 12 
+ 13        // output each array element's value 
+ 14        for (int counter = 0; counter < array. length; counter++) 
+ 15           System.out.printf("%5d%8d%n", counter, array[counter]); 
+ 16 
+ 17 } // end class InitArray 
+
+ Index   Value 
+     0      32 
+     1      27 
+     2      64 
+     3      18 
+     4      95 
+     5      14 
+     6      90 
+     7      70 
+     8      60 
+     9      37 
+
+Fig. 6.3 Initializing the elements of an array with an array initializer. 
+                                                                                         3 
+<<<
+
+6.5.3 Calculating the Values to Store in an Array 
+
+  Modifier final indicates that a variable is a constant. 
+  Constant variables must be initialized before they're 
+  used and cannot be modified thereafter. 
+. If you attempt to modify a final variable after it's 
+  initialized in its declaration, the compiler issues an 
+  error message like 
+        cannot assign a value to final variable 
+        variableName 
+  Constant variables often make programs more 
+  readable (instead of using literal values, e.g. 10) 
+
+                                                      4 
+<<<
+
+ 1  // Fig. 6.4: InitArray. java 
+ 2 // Calculating the values to be placed into the elements of an array. 
+ 3 
+ 4 public class InitArray 
+ 5   { 
+ 6     public static void main(String[] args) 
+ 7 
+ 8        final int ARRAY_LENGTH = 10; // declare constant 
+ 9        int[] array = new int [ARRAY_LENGTH]; // create array 
+10 
+11        // calculate value for each array element 
+12        for (int counter = 0; counter < array. length; counter++) 
+13           array [counter] = 2 + 2 * counter; 
+14 
+15        System. out. printf("%s%8s%n", "Index",        // column headings 
+16 
+17        // output each array element's value 
+18        for (int counter = 0; counter < array. length; counter++) 
+19           System. out.printf("%5d%8d%n", counter, array [counter]); 
+20      } 
+21   } // end class InitArray 
+
+ Index   Value 
+     0       2 
+     1       4 
+     2       6 
+     3       8 
+     4      10 
+     5      12 
+     6      14 
+     7      16 
+     8      18 
+     9      20 
+
+Fig. 6.4 Calculating the values to be placed into the elements of an array. 
+                                                                                         5 
+<<<
+
+   6.5.4 Summing the Elements of an Array 
+
+   . Often, the elements of an array represent a series of 
+
+     values to be used in a calculation. 
+
+  1 // Fig. 6.5: SumArray. java 
+  2 / / Computing the sum of the elements of an array. 
+  3 
+  4 public class SumArray 
+  5 { 
+  6     public static void main(String[] args) 
+  7     { 
+  8        int[] array = { 87, 68, 94, 100, 83, 78, 85, 91, 76, 87 }; 
+  9        int total = 0; 
+ 10 
+ 11        // add each element's value to total 
+ 12        for (int counter = 0; counter < array. length; counter++) 
+  13          total += array [counter] ; 
+ 14 
+  15       System.out.printf("Total of array elements: %d%n", total); 
+ 16     } 
+ 17 } // end class SumArray 
+
+  Total of array elements: 849 
+
+Fig. 6.5 Computing the sum of the elements of an array. 
+
+                                                                                    6 
+<<<
+
+6.7 Enhanced for Statement 
+
+  . Iterates through the elements of an array without 
+   using a counter, thus avoiding the possibility of 
+   "stepping outside" the array. 
+  · Syntax: 
+          for (parameter : arrayName) 
+             statement 
+      where parameter has a type and an identifier, and 
+      arrayName is the array through which to iterate. 
+       Parameter type must be consistent with the type of the 
+      elements in the array. 
+
+                                                        7 
+<<<
+
+  1   // Fig. 6.9: EnhancedForTest . java 
+  2 // Using the enhanced for statement to total integers in an array. 
+  3 
+  4 public class EnhancedForTest 
+  5 { 
+  6     public static void main(String[] args) 
+  7     { 
+  8        int[] array = { 87, 68, 94, 100, 83, 78, 85, 91, 76, 87 } ; 
+  9        int total = 0; 
+ 10 
+ 11        // add each element's value to total 
+ 12        for (int number : array) 
+ 13           total += number; 
+ 14 
+ 15        System. out. printf("Total of array elements: %d%n", total); 
+ 16     } 
+ 17 } // end class EnhancedForTest 
+
+ Total of array elements: 849 
+
+Fig. 6.9 Using the enhanced for statement to total integers in an array. 
+
+                                                                                             8 
+<<<
+
+6.7 Enhanced for Statement (Cont.) 
+
+    Can be used only to obtain array elements-it 
+   cannot be used to modify elements. 
+  . Can be used in place of the counter-controlled for 
+   statement whenever code looping through an array 
+   does not require access to the counter indicating the 
+   index of the current array element. 
+
+      Error-Prevention Tip 6.2 
+      The enhanced for statement simplifies the code for iter- 
+      ating through an array making the code more readable 
+      and eliminating several error possibilities, such as im- 
+     properly specifying the control variable's initial value, 
+      the loop-continuation test and the increment expression. 
+
+                                                          9 
+<<<
+
+ 1 // Fig. 6.12: InitArray. java 
+ 2 // Initializing two-dimensional arrays. 
+ 3 
+ 4 public class InitArray 
+ 5 { 
+ 6     // create and output two-dimensional arrays 
+ 7     public static void main(String[] args) 
+ 8     { 
+ 9        int[][] array1 = {{1, 2, 3}, {4, 5, 6}}; 
+10 
+11 
+12        System. out. println("Values in array1 by row are"); 
+22        // loop through array's rows 
+23        for (int row = 0; row < array1. length; row++) 
+24        { 
+25           // loop through columns of current row 
+26           for (int column = 0; column <        . length; column++) 
+27             System.out.printf("%d ", array1[row] [column] ); 
+28 
+29           System.out.println(); 
+30        } 
+31     } 
+32 } // end class InitArray 
+
+Values in array1 by row are 
+ 1 2 3 
+ 4 5 6 
+
+                                                                                                10 
+<<<
+
+ 1    // Fig. 6.12: InitArray. java 
+ 2 // Initializing two-dimensional arrays. 
+ 3 
+ 4 public class InitArray 
+ 5 { 
+ 6     // create and output two-dimensional arrays 
+ 7     public static void main(String[] args) 
+ 8     { 
+ 9         int[][] array2 = {{1, 2}, {3}, {4, 5, 6}}; 
+10 
+11 
+12        System. out.println("Values in array1 by row are"); 
+22        // loop through array's rows 
+23        for (int row = 0; row <array2. length; row++) 
+24        { 
+25           // loop through columns of current row 
+26           for (int column = 0; column <array2[row]. length; column++) 
+27             System.out.printf("%d ", array2[row] [column] ); 
+28 
+29           System.out.println(); 
+30 
+31     } 
+32 } // end class InitArray 
+
+  Values in array2 by row are 
+  1 2 
+  3 
+  4 5 6 
+
+Fig. 6.12    Initializing two-dimensional arrays. (Part 2 of 2.) 
+
+                                                                                               11 
+<<<
+
+Array Searching 
+
+  Searching data involves determining whether a 
+  value (referred to as the search key) is present in the 
+  data and, if so, finding its location. 
+     Two popular search algorithms are the simple linear 
+     search and the faster but more complex binary search. 
+  We'll only study the linear search 
+
+                                                     12 
+<<<
+
+Array Searching 
+
+  The linear search algorithm searches each element 
+  in an array sequentially. 
+    . If the search key does not match an element in the array, 
+     the algorithm tests each element, and when the end of the 
+     array is reached, informs the user that the search key is 
+     not present. 
+    . If the search key is in the array, the algorithm tests each 
+     element until it finds one that matches the search key and 
+     returns the index of that element. 
+
+                                                          13 
+<<<
+
+1. import java. util .*; 
+2. public class exl{                                              
+3. public static void main(String [] args) //0.5      
+4. { 
+                                                       
+5.   Scanner input=new Scanner(System.in) ; 
+     int arr[]={1,99,30,73,97,56,53,0,-30,20};         
+                                                                  
+     System. out.print("Enter element for search: ") ;  
+8.   int key=input. nextInt(); 
+                                                       
+9.   int i=0; 
+10. boolean flag=false;                                
+11. while(i<arr. length) 
+12. { 
+13.    if (arr[i] == key) 
+14.    { 
+15.      System. out.print("Element found in index: "+ i) ; 
+16.      flag=true; 
+17.       break; 
+18.     } 
+
+19.    i++; 
+20. } 
+
+21. if ( ! flag) 
+22. System. out.println("Element not found" ) ; 
+23.} 
+24.} 
+
+Run 1 Enter element for search: 30 
+Element found in index: 2
+
+Run 2 Enter element for search: 999
+Element not found
+
+                                                                            14 
+<<<

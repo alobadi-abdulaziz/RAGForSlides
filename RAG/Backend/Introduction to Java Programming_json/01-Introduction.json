@@ -1,0 +1,132 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "01-Introduction",
+  "number_of_slides": 25,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Introduction to Computer Programing and Java",
+      "text": "Introduction to Computer Programing and Java \n    Textbook: Java How to Program, 10/e \nLate Objects Version"
+    },
+    {
+      "page_number": 2,
+      "title": "References & Reading",
+      "text": "References & Reading \n\n   The content is mainly selected (sometimes modified) \n  from the original slides provided by the authors of the \n  textbook \n\n  Readings \n     Chapter 1- Introduction to Computers, Internet, and Java \n    A short history about programming Languages ( \n     ges \n    ) \n\n                           @1992-2015 by Pearson Education, Inc. \n All Rights Reserved."
+    },
+    {
+      "page_number": 3,
+      "title": "Outline",
+      "text": "Outline \n\n1.1   Introduction \n1.2   Hardware and Software \n1.4   Machine Languages, Assembly Languages \n      and High-Level Languages \n -.- Programming Paradigms \n1.6   Operating Systems \n1.7   Programming Languages \n1.8   Java \n1.9 Typical C++ Development Environment \n\n                           1992-2015 by Pearson Education, Inc. \n All Rights Reserved."
+    },
+    {
+      "page_number": 4,
+      "title": "1.1 Introduction",
+      "text": "1.1 Introduction \n\n  Computers (often referred to as hardware) are \n  controlled by software (i.e., the instructions you write \n  to command the computer to perform actions and make \n  decisions). \n\n  You'll learn to write instructions commanding \n  computers to perform tasks. \n\n  Java is one of the world's most widely used computer \n  programming languages. \n\n                          @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 5,
+      "title": "1.1 Introduction (Cont.)",
+      "text": "1.1 Introduction (Cont.) \n\n   For many organizations, the preferred language for \n\n   meeting their enterprise programming needs is Java. \n\n   Java is also widely used for implementing Internet- \n\n   based applications and software for devices that \n\n   communicate over a network. \n\n                           1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 6,
+      "title": "Devices",
+      "text": "Devices \n\n  Airplane systems   ATMs                 Automobile infotainment systems \n  Blu-ray Disc™M players Cable boxes      Copiers \n  Credit cards       CT scanners          Desktop computers \n  e-Readers          Game consoles        GPS navigation systems \n  Home appliances    Home security systems Light switches \n  Lottery terminals Medical devices       Mobile phones \n  MRIs               Parking payment stations Printers \n  Transportation passes Robots            Routers \n  Smart cards        Smart meters         Smartpens \n  Smartphones        Tablets              Televisions \n  TV set-top boxes   Thermostats          Vehicle diagnostic systems \n\nFig. 1.1 Some devices that use Java. \n\n                                      @1992-2015 by Pearson Education, Inc. \n All Rights Reserved."
+    },
+    {
+      "page_number": 7,
+      "title": "1.2 Hardware and Software",
+      "text": "1.2 Hardware and Software \n\n    Computers can perform calculations and make logical decisions \n    phenomenally faster than human beings can. \n\n    Today's personal computers can perform billions of calculations in one \n    second-more than a human can perform in a lifetime. \n\n    Supercomputers are already performing thousands of trillions \n    (quadrillions) of instructions per second! \n\n    Computers process data under the control of sequences of instructions \n    called computer programs. \n\n    A computer consists of various devices referred to as hardware. \n\n    The programs that run on a computer are referred to as software. \n\n                                1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 8,
+      "title": "1.2.2 Computer Organization",
+      "text": "1.2.2 Computer Organization \n\n   Computers can be envisioned as divided into six logical units \n   or sections: \n     Input unit. This \"receiving\" section obtains from input devices and \n     places it at the disposal of the other units so that it can be processed. \n\n     Output unit. This \"shipping\" section takes information that the computer \n     has processed and places it on various output devices to make it \n     available for use outside the computer. \n\n     Memory unit. This rapid-access, relatively low-capacity \"warehouse\" \n     section retains information that has been entered through the input unit, \n     making it immediately available for processing when needed. It also \n     retains processed information until it can be placed on output devices by \n     the output unit. Information in the memory unit is volatile. The memory \n     unit is often called either memory or primary memory. \n\n                                @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 9,
+      "title": "1.2.2 Computer Organization (cont.)",
+      "text": "1.2.2 Computer Organization (cont.) \n\n     Arithmetic and logic unit (ALU). This \" manufacturing\" section \n     performs calculations. It also contains the computer's decision \n     mechanisms. In today's systems, the ALU is usually implemented as \n     part of the next logical unit, the CPU. \n\n      Central processing unit (CPU). This \" administrative\" section \n      coordinates and supervises the operation of the other sections. \n        Tells the input unit when information should be read into the memory unit \n        Tells the ALU when information from the memory unit should be used in \n        calculations \n        Tells the output unit when to send information from the memory unit to \n        certain output devices. \n        Many of today's computers have multiple CPUs and, hence, can perform \n        many operations simultaneously-such computers are called multiprocessors. \n        A multi-core processor implements multiprocessing on a single integrated \n        circuit chip. \n\n                                  1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 10,
+      "title": "1.2.2 Computer Organization (cont.)",
+      "text": "1.2.2 Computer Organization (cont.) \n\n     Secondary storage unit. This is the long-term, high-capacity \n     \"warehousing\" section. Programs or data not actively being \n     used by the other units normally are placed on secondary \n     storage devices (e.g., your hard drive) until they're again \n     needed, possibly hours, days, months or even years later. \n     Therefore, information on secondary storage devices is said to \n     be persistent. \n\n                             @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 11,
+      "title": "1.4 Machine Languages, Assembly Languages and High-Level Languages",
+      "text": "1.4 Machine Languages, Assembly Languages and High-Level Languages \n\n   Programmers write instructions in various programming \n   languages, some directly understandable by computers and \n   others requiring intermediate translation steps. \n\n   Programming languages may be divided into three general \n   types: \n     Machine languages \n     Assembly languages \n     High-level languages \n\n                           @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 12,
+      "title": "1.4 Machine Languages, Assembly Languages and High-Level Languages (Cont.)",
+      "text": "1.4 Machine Languages, Assembly Languages and High-Level Languages (Cont.) \n\n  Machine Languages \n    Any computer can directly understand only its own machine language \n    (machine-dependent). \n    Consist of strings of numbers (ultimately reduced to 1s and Os) that instruct \n    computers to perform their most elementary operations one at a time. \n    Writing programs in machine language is very hard and error prone \n\n Assembly Languages and Assemblers \n    Low level languages where strings of 1s and Os are replaced by \n    mnemonics: ADD, SUB, etc. \n    Translator programs called Assemblers convert early assembly-language \n    programs to machine language. \n\n                                  @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 13,
+      "title": "1.4 Machine Languages, Assembly Languages and High-Level Languages (Cont.)",
+      "text": "1.4 Machine Languages, Assembly Languages and High-Level Languages (Cont.) \n\n High-Level Languages and Compilers \n  High-level languages allow to write instructions that look \n   almost like everyday English and contain commonly used \n  mathematical notations: Single statements accomplish \n   substantial tasks. \n\n   Translator programs called Compilers convert high-level \n  language programs into machine language. \n\n  Writing programs in high-level language is faster and easier to \n  maintain than in assembly language \n\n                           1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 14,
+      "title": "1.6 Operating Systems",
+      "text": "1.6 Operating Systems \n\n   Software systems that make using computers more convenient. \n\n   Provide services that allow each application to execute safely, efficiently \n   and concurrently (i.e., in parallel) with other applications. \n\n   The software that contains the core components of the operating system is \n   called the kernel. \n\n   Popular desktop operating systems include Linux, Windows 7 and Mac OS \n   X. \n\n   Popular mobile operating systems used in smartphones and tablets include \n   Google's Android, Apple's iOS (for its iPhone, iPad and iPod Touch \n   devices), Windows Phone and Blackberry OS. \n\n                                1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 15,
+      "title": "1.7 Programming Languages",
+      "text": "1.7 Programming Languages \n\n  Programming \n  language       Description \n\n  Fortran        Fortran (FORmula TRANslator) was developed by IBM Corporation in the mid- \n                  1950s for scientific and engineering applications that require complex mathemati- \n                 cal computations. It's still widely used, and its latest versions support object-ori- \n                 ented programming. \n  COBOL          COBOL (COmmon Business Oriented Language) was developed in the late \n                  1950s by computer manufacturers, the U.S. government and industrial computer \n                 users based on a language developed by Grace Hopper, a U.S. Navy Rear Admiral \n                 and computer scientist who also advocated for the international standardization of \n                 programming languages. COBOL is still widely used for commercial applications \n                 that require precise and efficient manipulation of large amounts of data. Its latest \n                 version supports object-oriented programming. \n  Pascal         Research in the 1960s resulted in structured programming a disciplined approach \n                 to writing programs that are clearer, easier to test and debug and easier to modify \n                 than large programs produced with previous techniques. One result of this research \n                 was the development in 1971 of the Pascal programming language, which was \n                 designed for teaching structured programming and was popular in college courses \n                 for several decades. \n\nFig. 1.5 Some other programming languages. (Part of 4.) \n\n                                            1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 16,
+      "title": "1.7 Programming Languages(cont.)",
+      "text": "1.7 Programming Languages(cont.)\n\n  Programming \n  language       Description \n\n  Ada            Ada, based on Pascal, was developed under the sponsorship of the U.S. Depart- \n                 ment of Defense (DOD) during the 1970s and early 1980s. The DOD wanted a \n                 single language that would fill most of its needs. The Ada language was named \n                 after Lady Ada Lovelace, daughter of the poet Lord Byron. She's credited with writ- \n                 ing the world's first computer program in the early 1800s (for the Analytical \n                 Engine mechanical computing device designed by Charles Babbage). Ada also sup- \n                 ports object-oriented programming. \n  Basic          Basic was developed in the 1960s at Dartmouth College to familiarize novices with \n                 programming techniques. Many of its latest versions are object oriented. \n  C              C was developed in the early 1970s by Dennis Ritchie at Bell Laboratories. It ini- \n                 tially became widely known as the UNIX operating system's development lan- \n                 guage. Today, most of the code for general-purpose operating systems is written in \n                 C or C++. \n  C++            C++, which is based on C, was developed by Bjarne Stroustrup in the early 1980s \n                 at Bell Laboratories. C++ provides several features that \"spruce up\" the C language, \n                 but more important, it provides capabilities for object-oriented programming. \n\nFig. 1.5 Some other programming languages. (Part 2 of 4.) \n\n                                              @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 17,
+      "title": "1.7 Programming Languages(cont.)",
+      "text": "1.7 Programming Languages(cont.)\n\n  Programming \n  language       Description \n\n  Objective-C    Objective-C is another object-oriented language based on C. It was developed in \n                 the early 1980s and later acquired by NeXT, which in turn was acquired by Apple. \n                 It has become the key programming language for the OS X operating system and \n                 all iOS-powered devices (such as iPods, iPhones and iPads). \n  Visual Basic   Microsoft's Visual Basic language was introduced in the early 1990s to simplify the \n                 development of Microsoft Windows applications. Its latest versions support object- \n                 oriented programming. \n  Visual C#      Microsoft's three object-oriented primary programming languages are Visual Basic \n                 (based on the original Basic), Visual C++ (based on C++) and Visual C# (based on \n                 C++ and Java, and developed for integrating the Internet and the web into com- \n                 puter applications). \n  PHP            PHP, an object-oriented, open-source scripting language supported by a commu- \n                 nity of users and developers, is used by millions of websites. PHP is platform inde- \n                 pendent-implementations exist for all major UNIX, Linux, Mac and Windows \n                 operating systems. PHP also supports many databases, including the popular \n                 open-source MySQL. \nFig. 1.5 Some other programming languages. (Part 3 of 4.) \n\n                                              @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 18,
+      "title": "1.7 Programming Languages(cont.)",
+      "text": "1.7 Programming Languages(cont.)\n\n  Programming \n  language      Description \n  Perl          Perl (Practical Extraction and Report Language), one of the most widely used \n                object-oriented scripting languages for web programming, was developed in 1987 \n                by Larry Wall. It features rich text-processing capabilities. \n  Python        Python, another object-oriented scripting language, was released publicly in 1991. \n                Developed by Guido van Rossum of the National Research Institute for Mathe- \n                matics and Computer Science in Amsterdam (CWI), Python draws heavily from \n                Modula-3-a systems programming language. Python is \"extensible\"-it can be \n                extended through classes and programming interfaces. \n  JavaScript    JavaScript is the most widely used scripting language. It's primarily used to add \n                dynamic behavior to web pages-for example, animations and improved interac- \n                tivity with the user. It's provided with all major web browsers. \n  Ruby on Rails Ruby, created in the mid-1990s, is an open-source, object-oriented programming \n                language with a simple syntax that's similar to Python. Ruby on Rails combines the \n                scripting language Ruby with the Rails web application framework developed by \n                37Signals. Their book, Getting Real (gettingreal.37signals.com/toc.php), is a \n                must read for web developers. Many Ruby on Rails developers have reported pro- \n                ductivity gains over other languages when developing database-intensive web \n                applications. \n\nFig. 1.5 Some other programming languages. (Part 4 of 4.) \n\n                                             @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 19,
+      "title": "1.9 A Typical Java Development",
+      "text": "1.9 A Typical Java Development \n Environment \n\n   Normally there are three phases \n     edit \n     compile \n     execute. \n\n                           1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 20,
+      "title": "1.9 A Typical Java Development Environment (Cont.)",
+      "text": "1.9 A Typical Java Development Environment (Cont.) \n\n   Phase 1 consists of editing a file with an editor program \n\n      Using the editor, you type a Java program (source code). \n\n      Make any necessary corrections. \n\n       Save the program. \n\n      Java source code files are given a name ending with the .java extension \n\n      indicating that the file contains Java source code. \n      Program is created in an \n      editor and stored on disk in \n      a file whose name ends \n      with .java \n\n   Fig. 1.6 Typical Java development environment-editing phase. \n\n                                    1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 21,
+      "title": "1.9 A Typical Java Development Environment (Cont.)",
+      "text": "1.9 A Typical Java Development Environment (Cont.) \n\n   Linux editors: vi and emacs. \n   Windows provides Notepad. \n   OSX provides TextEdit. \n   Many freeware and shareware editors available online: \n      Notepad++ (notepad-plus-plus. org) \n      EditPlus (www.editplus.com) \n      TextPad (www.textpad.com) \n      jEdit (www.jedit.org). \n   Integrated development environments (IDEs) \n      Provide tools that support the software development process, such as \n      editors, debuggers for locating logic errors (errors that cause programs \n      to execute incorrectly) and more. \n\n                                @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 22,
+      "title": "1.9 Java and a Typical Java Development Environment (Cont.)",
+      "text": "1.9 Java and a Typical Java Development Environment (Cont.) \n\n   Popular Java IDEs \n     Eclipse (www. eclipse.org) \n     NetBeans (www. netbeans. org) \n     IntelliJ IDEA (www. jetbrains.com) \n\n   On the book's website at \n   www.deitel.com/books/jhtp10 \n     Dive-Into® videos that show you how to execute this book's \n     Java applications and how to develop new Java applications \n     with Eclipse, NetBeans and IntelliJ IDEA. \n\n                           1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 23,
+      "title": "1.9 A Typical Java Development Environment (Cont.)",
+      "text": "1.9 A Typical Java Development Environment (Cont.) \n\n   Phase 2: Compiling a Java Program into Bytecodes \n\n      If the program compiles, the compiler produces a .class file \n\n      called Welcome. class that contains the compiled version. \n\n    Compiler creates bytecodes \n    and stores them on disk in a \n    Disk file whose name ends \n    with .class \n\n   Fig. 1.7 Typical Java development environment-compilation phase. \n\n                                  1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 24,
+      "title": "1.9 A Typical Java Development Environment (Cont.)",
+      "text": "1.9 A Typical Java Development Environment (Cont.) \n\n     Phase 3: Execution \n\n        The Java Virtual Machine (JVM)-a part of the JDK and the \n\n        foundation of the Java platform-executes bytecodes. \n\n        To execute the program, the \n        JVM reads bytecodes and \n        just-in-time (JIT) compiles \n        (i.e., translates) them into a \n        language that the computer \n        can understand. As the \n        program executes, it may store \n        data values in primary \n        memory. \n\n                Fig. 1.10   Typical Java development environment-execution phase. \n\n                                           @1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    },
+    {
+      "page_number": 25,
+      "title": "1.9 A Typical Java Development Environment (Cont.)",
+      "text": "1.9 A Typical Java Development Environment (Cont.) \n\n    Java programs go through two compilation phases \n\n    One in which source code is translated into bytecodes (for \n\n    portability across JVMs on different computer platforms) \n    and \n\n    A second in which, during execution, the bytecodes are \n    translated into machine language for the actual computer on \n\n    which the program executes. \n\n                           1992-2015 by Pearson Education, Inc. \nAll Rights Reserved."
+    }
+  ]
+}

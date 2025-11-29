@@ -1,0 +1,439 @@
+
+
+Control Statements Repetition 
+
+       Part2- For & Do while Loops 
+
+                               1 
+<<<
+
+                                               Loops 
+
+
+                                                                                                   2 
+<<<
+
+for Repetition Statement 
+
+· The loops we have written so far have several 
+  elements in common. 
+     They start by initializing a variable, 
+     they have a condition that depends on that variable, and 
+     inside the loop they do something to update that variable. 
+
+. This type of loop is so common that there is another 
+  statement, the for loop, that expresses it more 
+  concisely. 
+
+                                                         3 
+<<<
+
+for Repetition Statement (Cont.) 
+
+  The general format of the for statement is 
+
+     for (initialization; loopContinuationCondition; 
+                              update) 
+      the initialization expression names the loop's control variable and 
+      optionally provides its initial value 
+      loopContinuationCondition determines whether the loop should 
+      continue executing 
+
+      update modifies the control variable's value, so that the loop- 
+      continuation condition eventually becomes false. 
+
+                                                                  4 
+<<<
+
+for Repetition Statement (Cont.) 
+
+. The two semicolons in the for header are required. 
+
+. If the loop-continuation condition is initially false, the 
+
+ program does not execute the for statement's body. Instead, 
+
+ execution proceeds with the statement following the for. 
+
+                                                        5 
+<<<
+
+ While statement: 
+                 int counter=1; 
+                 while (counter <= 10) 
+                  { 
+                    statement 
+                    counter++; 
+                  } 
+
+For statement: 
+
+
+                  for (int counter = 1; counter <= 10; counter++) 
+
+ 
+
+Typically, for statements are used for counter-controlled repetition and while 
+statements for sentinel-controlled repetition. 
+
+                                                                                               6 
+<<<
+
+  I   // Fig. 4.2: ForCounter. java 
+  2   // [X] Counter-controlled repetition with the for repetition statement. 
+  3 
+  4   public class ForCounter 
+  5   { 
+  6      public static void main(String[] args) 
+  7      { 
+  8         // for statement header includes initialization, 
+  9         // loop-continuation condition and increment 
+ 10         for (int counter = 1; counter <= 10; counter++) 
+ 11            System.out.printf("%d ", counter) ; 
+  12 
+  13        System.out.println(); 
+  14     } 
+ 15   } // end class ForCounter 
+
+  1 2 3 4 5 6 7 8 9 10 
+
+Fig. 4.2   Counter-controlled repetition with the for repetition statement. 
+
+                                                                               7 
+<<<
+
+     for (int counter = 1; counter <= 3; counter++) 
+            
+    Statement           Performed Action 
+
+    int counter = 1;    counter declared and initialized to 1 
+ 
+    counter <= 3;      for condition evaluated to true (1 <= 3) 
+    counter++          counter value changed to 2 
+
+    counter <= 3;      condition evaluated to true (2 <= 3) 
+    counter++          product value changed to 3 
+ 
+    counter <= 3;       condition evaluated to true (3 <= 3) 
+    counter++           product value changed to 4 
+    counter <= 3;       condition evaluated to false (4 > 3) 
+
+                                                              8 
+<<<
+
+for Repetition Statement (Cont.) 
+
+ The for loop is often easier to read because it puts 
+ all the loop-related statements at the top of the loop. 
+. There is one difference between for loops and while 
+ loops: if you declare a variable in the initializer, it 
+ only exists inside the for loop. 
+
+     for (int i = 1; i <= 10; i = i + 1) 
+     { 
+        System.out.println(i); 
+     } 
+      System.out.println(i); // compiler error 
+      
+                                     Can you think how to solve this problem?  
+                                     
+                                        9 
+<<<
+
+Common Programming Error 4.3 
+ When a for statement's control variable is declared in 
+ the initialization section of the for's header, using the 
+control variable after the for's body is a compilation 
+error. 
+
+    int i = 1; 
+    for (int i = 1; i <= 10; i = i + 1) 
+    { 
+        System.out.println(i); 
+    } 
+     System. out.println(i); // it will work! 
+
+                                                           10 
+<<<
+
+ Common Programming Error 4.4 
+ Placing a semicolon immediately to the right of the right 
+ parenthesis of a for header makes that for's body an 
+ empty statement. This is normally a logic error. 
+
+for (int i = 1; i <= 10; i++); 
+{ 
+    System.out.println(i); // it will not print i 
+
+} 
+
+                                                           11 
+<<<
+
+  for Repetition Statement (Cont.) 
+
+. All three expressions in a for header are optional. 
+
+    . If the loopContinuationCondition is omitted, the condition is always 
+
+      true, thus creating an infinite loop. 
+
+      You might omit the initialization expression if the program 
+      initializes the control variable before the loop. 
+
+      You might omit the increment if the program calculates it with 
+      statements in the loop's body or if no increment is needed. 
+
+                                                                   12 
+<<<
+
+ for Repetition Statement (Cont.) 
+
+. The increment expression in a for acts as if it were a 
+
+  standalone statement at the end of the for's body, so 
+
+        counter = counter + 1 
+        counter += 1 
+        ++counter 
+        counter++ 
+
+  are equivalent increment expressions in a for statement. 
+
+                                                      13 
+<<<
+
+for Repetition Statement (Cont.) 
+
+  The initialization, loop-continuation condition and 
+  increment can contain arithmetic expressions. 
+        for (int j = x; j <= 4 * x * y; j += y / X) 
+
+. The increment of a for statement may be negative, 
+  in which case it's a decrement, and the loop counts 
+  downward. 
+       for (int k = 10; k >= 1; k-- ) 
+
+                                                  14 
+<<<
+
+Examples Using the for Statement 
+
+ Vary the control variable from 1 to 100 in increments of 1. 
+
+            for (int i = 1; i <= 100; i++) 
+
+ Vary the control variable from 100 to 1 in decrements of 1. 
+
+            for (int i = 100; i >= 1; i -- ) 
+
+  Vary the control variable from 7 to 77 in increments of 7. 
+
+            for (int i = 7; i <= 77; i += 7) 
+
+                                                               15 
+<<<
+
+Examples Using the for Statement (Cont.) 
+
+  Vary the control variable from 20 to 2 in decrements of 2. 
+            for (int i = 20; i >= 2; i -= 2) 
+
+  Vary the control variable over the values 2, 5, 8, 11, 14, 
+  17, 20. 
+            for (int i = 2; i <= 20; i += 3) 
+
+  Vary the control variable over the values 99, 88, 77, 66, 
+  55, 44, 33, 22, 11, 0. 
+            for (int i = 99; i >= 0; i -= 11) 
+
+                                                           16 
+<<<
+
+         Fig. 4.5: Sum. java 
+  2    / Summing integers with the for statement. 
+   3 
+   4 public class Sum 
+   5 { 
+   6     public static void main(String[] args) 
+   7     { 
+   8        int total = 0; 
+   9 
+  10        // total even integers from 2 through 20 
+  11        for (int number = 2; number <= 20; number += 2) 
+  12           total += number; 
+  13 
+  14        System.out.printf("Sum is %d%n", total); 
+  15     } 
+  16 } // end class Sum 
+
+  Sum is 110 
+
+Fig. 4.5   Summing integers with the for statement. 
+
+                                                                                         17 
+<<<
+
+4.4 Examples Using the for Statement (Cont.) 
+
+  The initialization and increment expressions can be 
+  comma-separated lists that enable you to use 
+  multiple initialization expressions or multiple 
+  increment expressions. 
+
+for (int i= 2, j=0; i <= 20; i += 2) 
+ j += i ; 
+
+                                                 18 
+<<<
+
+4.4 Examples Using the for Statement (Cont.) 
+
+· Body of the for statement could be merged into the 
+  increment portion of the for header by using a 
+  comma as follows: 
+      for (int i= 2, j=0; i <= 20; j += i, i += 2) 
+           ; / / empty statement 
+
+      Can be written as following: 
+
+      for (int i= 2, j=0; 
+       i <= 20; 
+       j += i, i += 2) 
+           ; / / empty statement 
+
+                                                 19 
+<<<
+
+Do while loop 
+
+                      20 
+<<<
+
+4.5 do ... while Repetition Statement 
+
+ The do ... while repetition statement is similar to the 
+ while statement. 
+. In the while, the program tests the loop-continuation 
+ condition at the beginning of the loop, before executing 
+ the loop's body; if the condition is false, the body never 
+ executes. 
+ The do ... while statement tests the loop-continuation 
+ condition after executing the loop's body; therefore, the 
+ body always executes at least once. 
+ When a do ... while statement terminates, execution 
+ continues with the next statement in sequence. 
+
+                                                      21 
+<<<
+
+  I     Fig. 4.7: DoWhileTest. java 
+  2   // do ... while repetition statement. 
+  3 
+  4 public class DoWhileTest 
+  5 { 
+  6     public static void main(String[] args) 
+  7     { 
+  8        int counter = 1; 
+  9 
+ 10        do 
+ 11         { 
+ 12           System.out.printf("%d   ", counter); 
+ 13           ++counter; 
+ 14        } while (counter <= 10); // [X] end do ... while 
+ 15 
+ 16        System.out.println(); 
+ 17     } 
+ 18 } // end class DoWhileTest 
+
+ 1 2 3 4 5 6 7 8 9 10 
+
+Fig. 4.7 do ... while repetition statement. 
+
+                                                                                            22 
+<<<
+
+4.7 break and continue Statements 
+
+. The break statement, when executed in a while, 
+  for, do ... while or switch, causes immediate 
+ exit from that statement. 
+· Execution continues with the first statement after 
+ the control statement. 
+. Common uses of the break statement are to escape 
+ early from a loop or to skip the remainder of a 
+  switch. 
+
+                                                23 
+<<<
+
+   1 // Fig. 4.11: BreakTest. java 
+   2   // break statement exiting a for statement. 
+   3 public class BreakTest 
+   4   { 
+   5     public static void main(String[] args) 
+   6     { 
+   7        int count; // control variable also used after loop terminates 
+   8 
+   9        for (count = 1; count <= 10; count++) // loop 10 times 
+  10        { 
+  11           if (count == 5) 
+  12              break; // terminates loop if count is 5 
+  13 
+  14           System.out.printf("%d ", count); 
+  15        } 
+  16 
+  17        System. out. printf("%nBroke out of loop at count = %d%n", count) ; 
+  18     } 
+  19 } // end class BreakTest 
+
+  1 2 3 4 
+  Broke out of loop at count = 5 
+
+Fig. 4.11 break statement exiting a for statement. 
+
+                                                                                         24 
+<<<
+
+4.7 break and continue Statements (Cont.) 
+
+. The continue statement, when executed in a 
+ while, for or do ... while, skips the remaining 
+ statements in the loop body and proceeds with the 
+ next iteration of the loop. 
+. In while and do ... while statements, the 
+ program evaluates the loop-continuation test 
+ immediately after the continue statement 
+ executes. 
+. In a for statement, the increment expression 
+ executes, then the program evaluates the loop- 
+ continuation test. 
+
+                                              25 
+<<<
+
+  1     Fig. 4.12: ContinueTest. java 
+  2     continue statement terminating an iteration of a for statement. 
+  3 public class ContinueTest 
+  4 { 
+  5     public static void main(String[] args) 
+  6     { 
+  7        for (int count = 1; count <= 10; count++) // loop 10 times 
+  8        { 
+  9           if (count == 5) 
+ 10              continue; // skip remaining code in loop body if count is 5 
+ 11 
+ 12           System.out.printf("%d ", count); 
+ 13        } 
+ 14 
+ 15        System.out.printf("%nUsed continue to skip printing 5%n"); 
+ 16     } 
+ 17 } // end class ContinueTest 
+
+ 1 2 3 4 6 7 8 9 10 
+ Used continue to skip printing 5 
+
+Fig. 4.12 continue statement terminating an iteration of a for statement. 
+
+                                                                                            26 
+<<<

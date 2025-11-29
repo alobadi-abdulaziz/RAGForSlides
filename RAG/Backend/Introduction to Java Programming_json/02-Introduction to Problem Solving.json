@@ -1,0 +1,202 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "02-Introduction to Problem Solving",
+  "number_of_slides": 39,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Introduction to Problem Solving",
+      "text": "Introduction to Problem Solving \n\n                          Reference: \n      Problem Solving and Programming Concepts 9th Edition \n             by Maureen Sprankle and Jim Hubbard \n\nAugust 24, 2025      IMAMU, Computer Science dept, CS140/150 1"
+    },
+    {
+      "page_number": 2,
+      "title": "Outlines",
+      "text": "Outlines \n\n General Problem Solving \n\n Six Steps of Problem Solving \n\n Structure of Programs \n\n Beginning Computer Concepts for Problem Solving \n\n Problem Solving Organization Tools"
+    },
+    {
+      "page_number": 3,
+      "title": "General Problem Solving",
+      "text": "General Problem Solving \n\n. People make decisions every day to solve problems that affect their lives \n\n    Important problems \n    Unimportant problem \n\n· Bad/Good decision"
+    },
+    {
+      "page_number": 4,
+      "title": "Six Steps of Problem Solving",
+      "text": "Six Steps of Problem Solving \n\n. There are six steps to follow to ensure the best decision. \n  Most people use them without even knowing it: \n   1. Identify the problem. \n   2. Understand the problem. \n   3. Identify alternative ways to solve the problem. \n   4. Select the best way to solve the problem from the list of \n      alternative solutions. \n   5. List instructions that enable you to solve the problem using \n      the selected solution. \n   6. Evaluate the solution."
+    },
+    {
+      "page_number": 5,
+      "title": "Six Steps of Problem Solving",
+      "text": "Six Steps of Problem Solving \n\n1. Identify the problem \n\n     The first step toward solving a problem is to identify the problem \n\n     What is the specific problem?                              \n      . This means you should determine what is that you want to change. \n\n     Clearly define the goal that you want to achieve. \n        What are you trying to achieve? \n\n     Determine what are the inputs and outputs \n\n     If you don't know what the problem is, you cannot solve it."
+    },
+    {
+      "page_number": 6,
+      "title": "Six Steps of Problem Solving",
+      "text": "Six Steps of Problem Solving \n\n2.   Understand the problem \n    . You must understand what is involved in the problem before you can continue \n      toward the solution (you should issue a clear (unambiguous) problem \n      statement). \n    . This includes understanding the rules or the logic for the business \n      (business rules or logic) you are attempt to solve a problem concerned with \n      it. \n    . Also, you must know the suitable set of steps to solve a given problem. You \n      cannot solve a problem if you miss the exact processing steps (arithmetic, \n      relational and logical) to handle it . For example, to solve a problem involving \n      accounting, you must study the accounting life cycle."
+    },
+    {
+      "page_number": 7,
+      "title": "Six Steps of Problem Solving",
+      "text": "Six Steps of Problem Solving \n\n3. Identify alternative ways to solve the problem \n   Generate as many potential solutions as possible. \n   List the features for each possible solution"
+    },
+    {
+      "page_number": 8,
+      "title": "Six Steps of Problem Solving",
+      "text": "Six Steps of Problem Solving \n\n4. Select the best way to solve the problem from \n   the list of alternative solutions \n\n   . In this step, you need to identify and evaluate the pros and \n    cons of each possible solution before selecting the best one \n\n   . In order to do this, you need to select criteria for the evaluation"
+    },
+    {
+      "page_number": 9,
+      "title": "Six Steps of Problem Solving",
+      "text": "Six Steps of Problem Solving \n\n5. List instructions that enable you to solve the \n   problem using the selected solution \n        Create a numbered, step-by-step instructions that must fall within the \n       knowledge base set up in step 2"
+    },
+    {
+      "page_number": 10,
+      "title": "Six Steps of Problem Solving",
+      "text": "Six Steps of Problem Solving \n\n6. Evaluate the solution \n\n     To evaluate or test a solution means to check its result to see if it is \n\n     correct, and to see if it satisfies the needs of the person(s) with the \n\n     problem. \n\n     Test the solution \n\n         Are the results accurate? \n\n         Does the solution solve the original problem? \n\n         Does it satisfy the needs of the user? \n\n         Is it acceptable to the user?"
+    },
+    {
+      "page_number": 11,
+      "title": "Problem Solving Example",
+      "text": "Problem Solving Example"
+    },
+    {
+      "page_number": 12,
+      "title": "Structure of Programs",
+      "text": "Structure of Programs \n\n. Use modules to break the whole problem into parts, \n  with each part having a particular function. \n\n. Use the three logic structures to ensure that the \n solution flows smoothly from one instruction to the next, \n  rather jumping from one point in the solution to another."
+    },
+    {
+      "page_number": 13,
+      "title": "Structure of Programs",
+      "text": "Structure of Programs \n\n  Program Structures: \n\n    The sequential Structure. \n\n       Ex: Simple calculation. \n\n   . The Decision Structure. \n\n     . Ex: Decide if student pass or fail. \n\n   . The Loop Structure. \n\n       Ex: Repeat displaying a warning message 10 times."
+    },
+    {
+      "page_number": 14,
+      "title": "Beginning Computer Concepts for Problem Solving",
+      "text": "Beginning Computer Concepts for Problem Solving \n\n. There are 3 types of problem that can be solved in computer: \n\n· Computational problems \n    involving some kind of mathematical processing \n\n. Logical Problems \n   · involving relational or logical processing \n\n. Repetitive Problems \n    involving repeating a set of mathematical and/or logical instructions."
+    },
+    {
+      "page_number": 15,
+      "title": "Basic building blocks for programming and problem solving",
+      "text": "Basic building blocks for programming and problem solving \n\n· Basic building programming blocks: \n\n      Equations \n\n           Consist of constant, variables and operators. It incorporates a left hand side LHS (variable of a \n           specific data type), assignment operator '=' and a right hand side RHS (may be value, variable, \n           constant or expression) \n\n    · Expressions \n\n           Incorporates arithmetic, relational and logical expressions. It can be used as a right hand side \n           in an assignment expression, as a loop controlling condition or a branching condition in a \n           decision structure. \n\n    · Functions \n\n        · Block of code that runs when the function invoked and almost returns a value."
+    },
+    {
+      "page_number": 16,
+      "title": "Beginning Computer Concepts for Problem Solving",
+      "text": "Beginning Computer Concepts for Problem Solving \n\n· Constants: \n\n     Does not change during the processing of all the instructions in a solution \n\n     Can be of any data type: numeric, alphabetical or special symbols \n\n   · Examples \n\n         3, 5, 10, \"Sara\", \"+\", \"-\", \"/\""
+    },
+    {
+      "page_number": 17,
+      "title": "Beginning Computer Concepts for Problem Solving",
+      "text": "Beginning Computer Concepts for Problem Solving \n\n· Variables: \n     May change during processing \n   . In many programming languages, variables are called identifiers. \n     A name is assigned to each variable used in a solution and \n     should be consistent with what the value of the variable \n     represents. \n   . The computer uses the variable name to find the location; it uses \n     the value found at the memory location to do the processing. \n· Ex: \n   · Name=\"Java\" \n     Test Score=95"
+    },
+    {
+      "page_number": 18,
+      "title": "Beginning Computer Concepts for Problem Solving",
+      "text": "Beginning Computer Concepts for Problem Solving \n\n Data Types: \n\n  · Data can come with different type: \n     · Numeric \n     · Character \n      Logical \n\n    Computer should know the data type of each variable or constant ."
+    },
+    {
+      "page_number": 19,
+      "title": "Beginning Computer Concepts for Problem Solving",
+      "text": "Beginning Computer Concepts for Problem Solving \n\n             Data Type             Data Set            Examples \n\n          Numeric :Integer All whole numbers      3456 \n                                                   -43 \n\n          Numeric : Real    All real numbers (whole + 3456.78 \n                            decimal)              0.000123 \n\n          Character (uses   All letters, numbers, and \"A\", \"a\", \"1\", \"5\", \"+\", \n          quotation marks) special symbols        \"%\" \n\n          String (uses quotation Combinations of more than \"Mulder\" \n          marks)            one character          \"Scully\" \n                                                   \"123-45-6789\" \n\n          Logical           True or False          True \n                                                   False"
+    },
+    {
+      "page_number": 20,
+      "title": "Solution Organization Tools",
+      "text": "Solution Organization Tools \n\n  Certain organizational tools will help you learn to how solve problems on the computer. \n\n The tools include the: \n\n    Pseudocode Algorithm \n    Flowchart"
+    },
+    {
+      "page_number": 21,
+      "title": "Algorithm",
+      "text": "Algorithm \n\nThe next step of organizing a solution is to develop \n\nsets of instructions for the computer, called algorithms. \n  Algorithm \n                             Input list\n                  \n            A step-by-step method for solving a problem or doing a task \n\n                            Output list"
+    },
+    {
+      "page_number": 22,
+      "title": "Writing the Algorithm",
+      "text": "Writing the Algorithm \n\n                                                    The Form of an Algorithm \nThe next step of organizing a \n\nsolution is to develop sets of\n\ninstructions for the computer,\n\ncalled algorithms. \n\n                                                 \nThe Form of an Algorithm\nName of Module\n\n1.Instruction\n\n2.Instruction\n\n3…\n\n4…\n…\n-, exit"
+    },
+    {
+      "page_number": 23,
+      "title": "Writing the Algorithm",
+      "text": "Writing the Algorithm \n\n The programmer writes a separate set of instructions \nfor each program or (module). \n\n. The number of instruction is determined by the way \n\n the programmer chooses to solve the problem."
+    },
+    {
+      "page_number": 24,
+      "title": "Drawing the Flowchart",
+      "text": "Drawing the Flowchart \n\n· Flowchart is a graphical representation of the algorithm. \n\n  The algorithms and flowcharts are the final steps in \n\n  organizing a solution. \n\n  Both of algorithm and flowcharts shows the flow of \n\n  processing from the beginning to the end of a solution."
+    },
+    {
+      "page_number": 25,
+      "title": "Drawing the Flowchart",
+      "text": "Drawing the Flowchart \n\n Each block in a flowchart represents one instruction \n\n from an algorithm. \n\n· Flowlines indicate the direction of the data flow. \n\n. Most block have one or more entrances and have only \n\n one exit ."
+    },
+    {
+      "page_number": 26,
+      "title": "Flowchart Symbol",
+      "text": "Flowchart Symbol \n\n    Flowchart                                 \n\n     Symbol Flowline \"----------->\"\n\n    Explanation\n                         Flowlines are indicated by straight lines with arrows to show the \n\n                         direction of data flow. \n\n                         Flowlines are used to connect blocks by exiting from one and \n\n                         entering another."
+    },
+    {
+      "page_number": 27,
+      "title": "Flowchart Symbol",
+      "text": "Flowchart Symbol \n\n    Flowchart                                  \n    \n    \n    Explanation \n\n        Start--> <--End \n\n                          Flattened ellipses indicate the start and the end of a module. An \n\n         \n                          ellipse uses the name of the program (module) at the start. \n\n                       . The end is indicated by the word end or stop. \n\n                       · A start has no flowlines entering it and only one exiting it; an end"
+    },
+    {
+      "page_number": 28,
+      "title": "Flowchart Symbol",
+      "text": "Flowchart Symbol \n\n                    xplanation \n\n                   The rectangle indicates a processing block, for such things as \n\n                       calculations, \n\n                       opening and closing files, and so forth. A processing block has \n\n                       one entrance and one exit."
+    },
+    {
+      "page_number": 29,
+      "title": "Flowchart Symbol",
+      "text": "Flowchart Symbol \n\n   Flowchart                              \n  Input/Output (1/0)  \n  Explanation\n                   The parallelogram indicates input to and output from the \n\n                       computer memory. \n\n                     · An input/output (I/O) block has one entrance and only one exit."
+    },
+    {
+      "page_number": 30,
+      "title": "Flowchart Symbol",
+      "text": "Flowchart Symbol \n\n\n                      . The diamond indicates a decision. It has one entrance and two \n     \n\n                        and only two exits from the block. \n\n                      . One exit is the action when the resultant is True, and the other \n\n                        exit is the action when the resultant is False."
+    },
+    {
+      "page_number": 31,
+      "title": "Example: Payroll System",
+      "text": "Example: Payroll System \n   · Problem: \n\n   Calculate the gross pay of an employee given the worked hours and \n  the rate of pay. The gross pay is calculated by multiplying the worked \n   hours by the rate of pay."
+    },
+    {
+      "page_number": 32,
+      "title": "Example: Payroll System",
+      "text": "Example: Payroll System \n\n· Problem: \n   Attempt to design a flowchart and write an algorithm to     calculate and \n   print the gross pay of an employee given the hours worked and the rate \n   of pay. The gross pay is calculated by multiplying the hours worked by \n   the rate of pay. \n                                                             Flow Chart \nAlgorithm \n                                                 \n  Gross Pay Calculation Algorithm \n  1. Enter worked Hours h.                        \n  2. Enter Pay Rate r.                               \n  3. Calculate Gross Pay: g = h * r. \n                                                       \n  4. Print Gross Pay g.                                   \n  5. End."
+    },
+    {
+      "page_number": 33,
+      "title": "Design a flowchart and an algorithm",
+      "text": "Design a flowchart and an algorithm \n\n     Sarah is traveling from city A to city B. The distance d between the \n     two cities is variable. she uses an equation to calculate the consumed \n     travelling. Assuming that here driving speed is 50k/h (Kilometre per \n     Hour) within the first half of distance and100k/h within the second half \n     of the distance. \n     Attempt to design a flowchart and write an algorithm to get the \n    travelling time from one city to another giving the distance d between \n     them."
+    },
+    {
+      "page_number": 34,
+      "title": "Solution",
+      "text": "Solution"
+    },
+    {
+      "page_number": 35,
+      "title": "Solution",
+      "text": "Solution \n\n                            Step 5 \n\nTravelling Time Calculation \n\n1. Enter travelling distance d \n\n2. Calculate required time for first half distance: Time1=0.5d/50 h \n\n3. Calculate required time for second half distance: Time2=0.5d/50 h \n\n4. Calculate Total time=Time1+Time2 \n\n5. Print Total Time \n\n6. End;"
+    },
+    {
+      "page_number": 36,
+      "title": "Solution",
+      "text": "Solution \n\n                     Step 5 \n\n                   Start \n\n                 Read distance \n\n                  Time 1= \n                 0.5*distance/50 \n\n                  Time 2= \n                0.5*distance/100 \n\n                   Total \n                time=Time1+Time2 \n\n                  Print Total \n                   Time \n\n                   End"
+    },
+    {
+      "page_number": 37,
+      "title": "Design a flowchart & algorithm",
+      "text": "Design a flowchart & algorithm \n\n    Ahmed would like to know the average of his test scores. \n    Design an flowchart and write an algorithm that accepts five \n    grades then calculates and prints their average. \n\n                Give student 5 min to solve"
+    },
+    {
+      "page_number": 38,
+      "title": "Solution",
+      "text": "Solution \n                         Step 5 \n\nGrades Average Algorithm \n\n1. Enter the five test grades g1, g2, g3, g4 and g5. \n\n2. Calculate total grades total = g1+ g2 + g3 + g4 + g5. \n\n3. Calculate average of grades avg= total / 5 \n\n4. Print average avg. \n\n5. End."
+    },
+    {
+      "page_number": 39,
+      "title": "Solution",
+      "text": "Solution \n                      Step 5 \n\n                     Start \n\n                   Read grade 1, \n                   grade2, grade 3, \n                   grade 4, grade 5 \n\n                   Total= grade1 + \n                  grade2+ grade3+ \n                   grade4+ grade5 \n\n                   Average=total/5 \n\n                      Print \n                     Average \n\n                      End"
+    }
+  ]
+}

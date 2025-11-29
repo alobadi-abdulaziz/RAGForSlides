@@ -1,0 +1,299 @@
+
+
+Fundamentals of Java Programs 
+    (Part 2-Reference datatype) 
+<<<
+
+ Reference 
+
+· Readings 
+    Chapter 6: Arrays and ArrayLists 
+    Chapter 19: Searching, Sorting and Big O 
+<<<
+
+Introduction 
+
+ Data structures-collections of related 
+
+ data items. 
+
+ Array objects-data structures consisting 
+ of related data items of the same type. 
+
+ Make it convenient to process related 
+
+ groups of values. 
+
+· Remain the same length once they're 
+<<<
+
+Creating Arrays 
+
+  An array is a sequence of values; the values in the 
+  array are called elements. 
+
+. You can make an array of ints, doubles, or any other 
+  type, but all the values in an array must have the same 
+  type. 
+
+  To create an array, you have to declare a variable with 
+  an array type and then create the array itself. Array 
+  types look like other Java types, except they are 
+  followed by square brackets ([]). 
+<<<
+
+Creating Arrays 
+
+  For example, the following lines declare that 
+  counts is an "integer array" and values is a 
+  "double array"
+     int[] counts; 
+     double [] values; 
+     int size=3; //variable 
+
+· To create the array itself, you have to use the new operator:
+    counts = new int [4] ; 
+    values = new double [size] ; 
+
+Of course, you can also declare the variable and create the array in a single line of code:
+    int [] counts = new int [4]; 
+    double [] values = new double [size] ; 
+<<<
+
+Accessing Elements 
+
+   When you create an array of ints, the elements are initialized to zero. 
+
+ . Also, you can initialize array directly in the declration line with known values 
+   as: 
+
+                       int [] counts = {1, 2, 3, 4}; 
+   The arrow indicates that the value of counts is a reference to the array. You 
+   should think of the array and the variable that refers to it as two different 
+   things. 
+
+   The large numbers inside the boxes are the elements of the array. The small 
+   numbers outside the boxes are the indexes (or indices) used to identify each 
+   location in the array. 
+
+   Notice that the index of the first element is 0, not 1, as you might have 
+   expected. 
+<<<
+
+Accessing Elements 
+
+  The [] operator selects elements from an array and 
+ you can use the [] operator anywhere in an 
+  expression; 
+  counts[1] = counts[0] * 2; counts[2]++; counts[3] -= 60; 
+  System.out.println("The zeroth element is " + counts[0]); 
+
+  You can use any expression as an index, as long as 
+  it has type int. 
+<<<
+
+  Accessing Elements 
+
+     Array names follow the same conventions as other 
+     variable names (c, array2, intArray, etc.). 
+     An index must be a nonnegative integer (c[ -3] not allowed). 
+
+     The highest index in an array is one less than the number 
+     of elements. 
+
+     A program can use an expression as an index (c[i-j+1]). 
+
+     Array-access expressions can be used on the left side of 
+     an assignment to place a new value into an array 
+     element.                                            
+Common Programming Error 6.1                             
+An indexZmust be dh Ont value or a value of a type that 
+ can be promoted to int-namely, byte, short or           
+ char, but not long; otherwise, a compilation error oc-curs 
+
+Error-Prevention Tip 6.1
+When writing code to access an array element, ensure
+that the array index remains greater than or equal to 0 
+and less than the length of the array. This would prevent
+ArrayIndexOutOfBoundsExceptions if your pro-gram is correct. 
+<<<
+
+Common Errors 
+
+ Common Programming Error 6.2 
+  In an array declaration, specifying the number of ele- 
+  ments in the square brackets of the declaration (e.g., 
+  int [12] c;) is a syntax error. 
+
+  Common Programming Error 6.3 
+  Declaring multiple array variables in a single declara- 
+  tion can lead to subtle errors. Consider the declaration 
+  int[] a, b, c ;. Ifa, b and c should be declared as ar- 
+  ray variables, then this declaration is correct-placing 
+  square brackets directly following the type indicates that 
+  all the identifiers in the declaration are array variables. 
+  However, if only a is intended to be an array variable, 
+  and b and c are intended to be individual int vari- 
+  ables, then this declaration is incorrect-the declaration 
+  int a[], b, c; would achieve the desired result. 
+<<<
+
+Multidimensional arrays 
+
+ Multidimensional arrays with two 
+ dimensions are often used to represent 
+ tables of values with data arranged in 
+ rows and columns. 
+    To identify a particular table element we use: 
+    array [i] [j] 
+       i identifies the element's row and j identifies the 
+       element's column 
+ Arrays that require two indices to identify 
+ each element are called two-dimensional 
+ arrays. 
+<<<
+
+Multidimensional arrays 
+
+  Figure 6.11 illustrates a two-dimensional 
+  array named a with three rows and four 
+  columns (i.e., a three-by-four array). 
+
+  In general, an array with m rows and n 
+  columns is called an m-by-n array. 
+
+<<<
+
+Multidimensional arrays 
+
+  Multidimensional arrays can be initialized with array 
+ initializers in declarations. 
+ A two-dimensional array b with two rows and two 
+ columns could be declared and initialized with nested 
+ array initializers as follows: 
+      · int[][] b = { { 1, 2 }, { 3, 4 } }; 
+ The initial values are grouped by row in braces. 
+. The compiler counts the number of nested array 
+ initializers to determine the number of rows in array b. 
+. The compiler counts the initializer values in the nested 
+ array initializer for a row to determine the number of 
+ columns in that row. 
+ Rows can have different lengths. 
+<<<
+
+Multidimensional arrays 
+
+  A multidimensional array with the same number of 
+ columns in every row can be created with an array- 
+  creation expression, as in: 
+        int[][] b = new int[3][4]; 
+  Programs can also use variables to specify array 
+  dimensions, because new creates arrays at execution 
+  time-not at compile time. 
+  The elements of a multidimensional array are initialized 
+ when the array object is created. 
+  A multidimensional array in which each row has a 
+  different number of columns can be created as follows: 
+        int[][] b = new int[2][ ]; // create 2 rows 
+        b[0] = new int[5]; // create 5 columns for row 0 
+        b[1] = new int[3]; // create 3 columns for row 1 
+<<<
+
+Array Class 
+
+   Class Arrays helps you avoid reinventing the wheel by providing methods for 
+
+   common array manipulations. 
+
+   Class Arrays must be imported in the program. 
+
+                      import java. util. Arrays; 
+
+   Class Arrays methods include: 
+
+        sort for sorting an array (i.e., arranging elements into ascending order), 
+
+        binarySearch for searching a sorted array (i.e., determining whether an array 
+        contains a specific value and, if so, where the value is located), 
+
+        equals for comparing arrays 
+
+        fill for placing values into an array. 
+
+        toString for returns a string representation of the contents of this array enclosed by []. 
+<<<
+
+Example 1 
+
+import java. util. Arrays; 
+
+public class example1 { 
+  public static void main (String[ ] args) 
+   { 
+      // Get the Array 
+      int intArr [] = { 10, 20, 15, 22, 35 }; 
+
+      Arrays. sort (intArr ) ; 
+
+      int intKey = 22; 
+
+      / / Print the key and corresponding index 
+      System. out. print ln( 
+         intKey + " found at index = " 
+         + Arrays. binarySearch ( intArr, intKey) ) ; 
+   } 
+} 
+      Output : 
+      22 found at index = 3 
+
+                  What if the intKey=5 ?! 
+<<<
+
+Example 2 
+
+ import java. util. Arrays; 
+
+ public class Main { 
+    public static void main (String[] args) 
+    { 
+
+        / / Get the Arrays 
+        int intArr[] = { 10, 20, 15, 22, 35 } ; 
+
+        / / Get the second Arrays 
+        int intArr1[] = { 10, 15, 22}; 
+
+        / / To compare both arrays 
+        System. out . println( "Integer Arrays on comparison: " 
+                        + Arrays . equals ( intArr, intArr1) ); 
+    } 
+ } 
+
+       Output : 
+       Integer Arrays on comparison:     false 
+<<<
+
+Example 3 
+
+ import java. util. Arrays; 
+
+ public class example3 { 
+    public static void main (String[] args) 
+     { 
+
+        / / Get the Arrays 
+        int intArr [] = { 10, 20, 15, 22, 35 } ; 
+
+        int intKey = 22; 
+
+        Arrays. fill(intArr, intKey) ; 
+
+        / / To fill the arrays 
+        System. out.println( "Integer Array on filling: " 
+                          + Arrays. toString( intArr ) ) ; 
+    } 
+ } 
+
+        Output : 
+        Integer Array on filling:      [22, 22,   22, 22, 22] 
+<<<

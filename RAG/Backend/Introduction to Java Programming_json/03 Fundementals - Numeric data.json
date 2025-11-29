@@ -1,0 +1,237 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "03- Fundementals - Numeric data",
+  "number_of_slides": 46,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Fundamentals of Java Programs",
+      "text": "Fundamentals of Java Programs \n            (Part 1)"
+    },
+    {
+      "page_number": 2,
+      "title": "Reference",
+      "text": "Reference \n\n· Readings \n     Chapter 2: Introduction to Java Applications; Input/Output and Operators \n     Chapter 3: Control Statements: Part I; Assignment, ++ and -- Operators"
+    },
+    {
+      "page_number": 3,
+      "title": "Introduction",
+      "text": "Introduction \n\nJava application programming \n   Java application: a computer program that executes when you use the java \n   command to launch the Java Virtual Machine (JVM)."
+    },
+    {
+      "page_number": 4,
+      "title": "First Program",
+      "text": "First Program \n\n  1 // Fig. 2.1: Welcome1. java       Comments \n  2 // Text-printing program. \n                                      Class Name \n  4 public class Welcome1 \n  5 { \n  6     // main method begins execution of Java application     main Method \n  7     public static void main(String[] args) \n  8     { \n                                                                        Statement \n  9        System.out. println(\"Welcome to Java Programming!\"); \n 10     } // end method main \n 11 } // end class Welcome1 \n\n Welcome to Java Programming! \n                                                   Notice that the output does not \nFig. 2.1 Text-printing program.                     include the quotation marks."
+    },
+    {
+      "page_number": 5,
+      "title": "First Program",
+      "text": "First Program \n\n A statement is a line of code that performs a basic operation. \n In the previous example, the line is a print statement that displays a message on \n the screen. \n           System. out.println(\"Welcome to Java Programming!\"); \n Instructs the computer to perform an action \n     Display the characters contained between the double quotation marks. \n     Together, the quotation marks and the characters between them are a string \n     also known as a character string or a string literal. \n     White-space characters in strings are not ignored by the compiler. \n     Strings cannot span multiple lines of code."
+    },
+    {
+      "page_number": 6,
+      "title": "First Program",
+      "text": "First Program \n\n  A method is a named sequence of statements. This program defines one method \n  named main. \n                 public static void main(String[] args) \n· Starting point of every Java application. \n  Parentheses after the identifier main indicate that it's a program building block \n  called a method. \n  Java class declarations normally contain one or more methods. \n  main must be defined as shown; otherwise, the JVM will not execute the \n  application. \n  Methods perform tasks and can return information when they complete their tasks. \n· Keyword void indicates that this method will not return any information."
+    },
+    {
+      "page_number": 7,
+      "title": "First Program",
+      "text": "First Program \n\n Class declaration \n                                 public class Welcome1 \n  Every Java program consists of at least one class that you define. \n· class keyword introduces a class declaration and is immediately followed by the class name. \n  Keywords (Appendix C) are reserved for use by Java and are always spelled with all lowercase \n  letters. \n. The name of the class must match the name of the file it is in, so this class must be in a file named \n  Welcome1.java \n  By convention, begin with a capital letter and capitalize the first letter of each word they include \n  (e.g., SampleClassName). \n· A class name is an identifier-a series of characters consisting of letters, digits, underscores (_) \n  and dollar signs ($) that does not begin with a digit and does not contain spaces."
+    },
+    {
+      "page_number": 8,
+      "title": "First Program",
+      "text": "First Program \n\n Class Body \n A left brace, {, begins the body of every class declaration. \n A corresponding right brace, }, must end each class declaration."
+    },
+    {
+      "page_number": 9,
+      "title": "First Program",
+      "text": "First Program \n\n Commenting Your Programs \n                            // Fig.    2.1: Welcome1. java \n    .  / / indicates that the line is a comment. \n    .  Used to document programs and improve their readability. \n    · Compiler ignores comments. \n    . A comment that begins with / / is an end-of-line comment-it terminates at the end of the line \n      on which it appears. \n  Traditional comment, can be spread over several lines as in \n                     /* This is a traditional comment.             It \n                        can be split over multiple lines */ \n      This type of comment begins with /* and ends with */. \n      All text between the delimiters is ignored by the compiler. \n  Blank lines, space characters and tabs are known as white space (or whitespace). \n      They are ignored by the compiler. But make programs easier to read.                 9"
+    },
+    {
+      "page_number": 10,
+      "title": "Common Programming Error 2.1",
+      "text": "Common Programming Error 2.1 \nForgetting one of the delimiters of a traditional or Java- \ndoc comment is a syntax error. A syntax error occurs \nwhen the compiler encounters code that violates Java's \nlanguage rules (i.e., its syntax). These rules are similar to \na natural language's grammar rules specifying sentence \nstructure. Syntax errors are also called compiler errors, \ncompile-time errors or compilation errors, because the \ncompiler detects them when compiling the program. \nWhen a syntax error is encountered, the compiler issues \nan error message. You must eliminate all compilation er- \nrors before your program will compile properly."
+    },
+    {
+      "page_number": 11,
+      "title": "Common Programming Error 2.2",
+      "text": "Common Programming Error 2.2                                 \nA compilation error occurs if a public class's filename      \nis not exactly same name as the class (in terms of both      pairs. \nspelling and capitalization) followed by the . java ex- \ntension. \n\n                             Error-Prevention Tip 2.3 \n                             When the compiler reports a syntax error, it may not be \n                             on the line that the error message indicates. First, check \n                             the line for which the error was reported. If you don't \n                             find an error on that line, check several preceding lines.\n\nCommon Programming Error 2.3 \nIt's a syntax error if braces do not occur in matching  pairs."
+    },
+    {
+      "page_number": 12,
+      "title": "First Program",
+      "text": "First Program \n\n· Displaying strings \n  Phrases that appear in quotation marks are called strings, because they contain a \n sequence of \"characters\" strung together. Characters can be letters, numbers, \n punctuation marks, symbols, spaces, tabs, etc. \n\n  System.out.println appends a special character, called a newline, that moves to \n the beginning of the next line. If you don't want a newline at the end, you can \n use print instead of println."
+    },
+    {
+      "page_number": 13,
+      "title": "System Class",
+      "text": "System Class \n\n· System.out object \n    · Standard output object. \n      Allows a Java application to display information in the command window from which it \n      executes. \n  System.out.println method \n      Displays (or prints) a line of text in the command window. \n      The string in the parentheses the argument to the method. \n      Positions the output cursor at the beginning of the next line in the command window. \n  System.out's method print displays a string. \n  Unlike println, print does not position the output cursor at the beginning of the next line in the \n  command window. \n      The next character the program displays will appear immediately after the last character that \n      print displays."
+    },
+    {
+      "page_number": 14,
+      "title": "First Program",
+      "text": "First Program \n\n          1 // Fig. 2.3: Welcome2. java \n          2 // Printing a line of text with multiple statements. \n          4 public class Welcome2 \n          5   { \n          6     // main method begins execution of Java application \n          7     public static void main(String[] args) \n          8     { \n          9        System.out.print(\"Welcome to \"); \n         10        System.out. println(\"Java Programming!\") ; \n         11     } // end method main \n         12 } // end class Welcome2 \n\n         Welcome to Java Programming! \n\n        Fig. 2.3 Printing a line of text with multiple statements."
+    },
+    {
+      "page_number": 15,
+      "title": "First Program",
+      "text": "First Program \n\n· Escape Sequence \n· it is possible to display multiple lines of output in just one line of code. You just \n  must tell Java where to put the line breaks. \n  The backslash (\\) is called an escape character. \n    · Indicates a \"special character\" \n· Backslash is combined with the next character to form an escape sequence-\\n \n  represents the newline character."
+    },
+    {
+      "page_number": 16,
+      "title": "Another Program",
+      "text": "Another Program\n  1 // Fig. 2.4: Welcome3. java \n  2 11 Printing multiple lines of text with a single statement. \n  4 public class Welcome3 \n  5 { \n  6     / / main method begins execution of Java application \n  7     public static void main(String[] args) \n  8     { \n  9                                   [X] [X]   [X] \n 10     } // end method main \n 11 }     end class Welcome3 \n\n Welcome \n  to \n  Java \n  Programming! \n\nFig. 2.4 Printing multiple lines of text with a single statement."
+    },
+    {
+      "page_number": 17,
+      "title": "Escape sequence and Description",
+      "text": "Escape sequence and Description \n  Escape \n  sequence     Description \n\n  \\n           Newline. Position the screen cursor at the beginning of the next line. \n               Horizontal tab. Move the screen cursor to the next tab stop. \n  \\r           Carriage return. Position the screen cursor at the beginning of the current \n               line-do not advance to the next line. Any characters output after the car- \n               riage return overwrite the characters previously output on that line. \n               Backslash. Used to print a backslash character. \n   \"           Double quote. Used to print a double-quote character. For example, \n                  System.out.println(\"\\\"in quotes\\\"\"); \n               displays \"in quotes\". \n\nFig. 2.5    Some common escape sequences."
+    },
+    {
+      "page_number": 18,
+      "title": "Declaring variables",
+      "text": "Declaring variables \n\n Programs remember numbers and other data in the computer's memory and access \n that data through program elements called variables. \n Every variable has a name, a type, a size (in bytes) and a value. \n A variable is a named location that stores a value. Values may be numbers, text, \n images, sounds, and other types of data. To store a value, you first must declare a \n variable. \n             String message; \n This statement is a declaration, because it declares that the variable \n named message has the type String. \n Each variable has a type that determines what kind of values it can store. For \n example, the int type can store integers, and the char type can store characters. \n· To declare an integer variable named x, you simply type: int x;"
+    },
+    {
+      "page_number": 19,
+      "title": "Declaring variables",
+      "text": "Declaring variables \n\n· Variable name is an identifier-a series of characters consisting of letters, digits, underscores \n  (_) and dollar signs ($) that does not begin with a digit and does not contain spaces. \n  Java is case sensitive-uppercase and lowercase letters are distinct-so al and are \n  different (but both valid) identifiers. \n\n  For declaring multiple variables with the same type on one line: hour and minute are both \n integers. Note that each declaration statement ends with a semicolon. \n\n                         int hour, minute; \n\n. You can use any name you want for a variable. But there are about 50 reserved words, \n  called keywords, that you are not allowed to use as variable names. These words \n include public, class, static, void, and int, which are used by the compiler to analyze the \n structure of the program."
+    },
+    {
+      "page_number": 20,
+      "title": "Built-in Data Type",
+      "text": "Built-in Data Type \n\n· int: hold integer values [whole numbers such as 72, -1127 and 0]. \n\n  float and double: hold real number [contain decimal points, such as 3.4, 0.0 and -11.19]. \n\n· char : hold character data between single quotation mark [such as an uppercase letter (e.g., A), a \n\n  digit (e.g., 7), a special character (e.g., *or %) or an escape sequence (e.g., the newline character, \n  n)]. \n\n  string : hold sequence of character between double quotation mark [such as \"Hello World\", \"Hi\", \n  \"3.14\", \"true\", \"2020\"]. \n\n  boolean : hold true or false."
+    },
+    {
+      "page_number": 21,
+      "title": "The eight primitive data types supported by the Java programming language",
+      "text": "The eight primitive data types supported by the Java programming language \n\n       Type    Size (in bits) Range \n\n       byte    8            -128 to 127 \n       short    16          -32,768 to 32,767 \n\n       int     32           -231 to 231-1 \n\n       long     64          -263 to 263-1 \n       float   32           1.4e-045 to 3.4e+038 \n\n       double   64          4.9e-324 to 1.8e+308 \n\n       char     16          0 to 65,535 \n\n       boolean 1            true or false \n\n                                                   Startertutorials.com"
+    },
+    {
+      "page_number": 22,
+      "title": "Assignment operation",
+      "text": "Assignment operation \n\n. Now that we have declared variables, we want to use them to store values. We do \n  that with an assignment statement. \n   message = \"Hello!\"; // put in the message variable the value \"Hello!\" \n   hour = 11;         // assign the value 11 to hour \n   minute = 59;       // set minute to 59 \n\n  When you declare a variable, you create a named storage location. \n\n· When you make an assignment to a variable, you update its value. \n· When a new value is placed into a variable, the new value replaces the previous \n  value (if any)"
+    },
+    {
+      "page_number": 23,
+      "title": "Assignment operation",
+      "text": "Assignment operation \n\n   Generally, a variable must have the same type as the value you assign to it. For \n  example, you cannot store a string in minute or an integer in message. We will see \n  some examples that seem to break this rule, but we'll get to that later. \n\n            message = \"123\"; // legal \n            message = 123;    // not legal \n\n  Variables must be initialized (assigned for the first time) before they can be used. \n  You can declare a variable and then assign a value later, as in the previous \n  example. You can also declare and initialize on the same line: \n\n            String message = \"Hello!\"; \n            int hour = 11; \n            int minute = 59;"
+    },
+    {
+      "page_number": 24,
+      "title": "Assignment operation",
+      "text": "Assignment operation \n\n  Because Java uses the = symbol for assignment, it is tempting to interpret the \n\n  statement a = b as a statement of equality. It is not! \n\n    · In Java a = 7; is a legal assignment statement, but 7 = a; is not. \n\n      The left side of an assignment statement has to be a variable name (storage location). \n\n  In Java, an assignment statement can make two variables equal, but they don't \n\n  have to stay that way. \n                                                                          \n   int a = 5; int b = a;         / / a and b are now equal               a 3 \n   a = 3;                        // a and b are no longer equal          b 5"
+    },
+    {
+      "page_number": 25,
+      "title": "Printing Variables",
+      "text": "Printing Variables \n\n  You can display the value of a variable using print or println. The following statements declare a \n  variable named firstLine, assign it the value \"Hello, again!\", and display that value. \n\n      Example: \n               String firstLine = \"Hello, again!\"; \n               System.out.println(firstLine); \n      Output : Hello, again! \n\n  To display the name of a variable, you have to put it in quotes. \n      Example \n                 System.out.print(\"The value of firstLine is \"); \n                 System.out.println(firstLine); \n\n       Output: The value of firstLine is Hello, again!"
+    },
+    {
+      "page_number": 26,
+      "title": "Printing Variables",
+      "text": "Printing Variables \n\n   System.out.printf method displays formatted data \n\n   Multiple method arguments are placed in a comma-separated list. \n · Method printf's first argument is a format string \n   May consist of fixed text and format specifiers. \n       Fixed text is output as it would be by print or println. \n       Each format specifier is a placeholder for a value and specifies the type of data to output. \n       Format specifiers begin with a percent sign (%) and are followed by a character that represents \n       the data type. Ex: %s is a placeholder for a string. \n\n                   %d     Decimal integer             12345 \n                   %08d   Padded with zeros, at least 8 0001234 \n                          digit wide                  5 \n                   %f     Floating-point              6.78900 \n                   %.2f   Rounded to 2 decimal places 6.79"
+    },
+    {
+      "page_number": 27,
+      "title": "Program",
+      "text": "Program\n  1 // Fig. 2.6: Welcome4. java \n  2   // Displaying multiple lines with method System. out.printf. \n  4 public class Welcome4 \n  5   { \n  6     // main method begins execution of Java application \n  7     public static void main(String[] args) \n  8      { \n  9        System. out. printf (\"%s%n%s%n\", \n 10            \"Welcome to\", \"Java Programming!\") ; \n 11     } // end method main \n 12 } // end class Welcome4 \n\n Welcome to \n  Java Programming! \n\nFig. 2.6 Displaying multiple lines with method System. out. printf."
+    },
+    {
+      "page_number": 28,
+      "title": "Arithmetic Operations",
+      "text": "Arithmetic Operations \n\n · Operators are symbols that represent simple computations. For example, the \n  addition operator is +, subtraction is -, multiplication is *, and division is /. \n· An expression, which represents a single value to be computed. When the \n  program runs, each variable is replaced by its current value, and then the operators \n  are applied. The values operators work with are called operands. \n\n    Example: \n           int hour = 11; \n           int minute = 59; \n           System.out.print(\"Number of minutes since midnight: \"); \n           System.out.println(hour * 60 + minute); \n\n    Output: Number of minutes since midnight: 719"
+    },
+    {
+      "page_number": 29,
+      "title": "Built-in Data Type Operations",
+      "text": "Built-in Data Type Operations \n\n                              Java operation Operator Algebraic expression Java expression \n\n                              Addition      +         f+7               f + 7 \n                              Subtraction   -         p-c               p - c \n                                            *         bm                b * m \n                              Multiplication \n                              Division      /         xly Or   of x+y   x / y \n                              Remainder     %         r mod s           r % s \n\n                             Fig. 2.11 Arithmetic operators. \n\n                      type             set of values       common operators    sample literal values \n                      int                integers            + - * / %        99 12 2147483647 \n\n                     double        floating-point numbers     + - * /         3.14 2.5 6.022e23 \n\n                    boolean           boolean values          && | | !           true false \n\n                      char              characters                            'A' '1' '%' '\\n' \n\n                     String        sequences of characters        +          \"AB\" \"Hello\" \"2.5\""
+    },
+    {
+      "page_number": 30,
+      "title": "Ex: https://trinket.io/java/618528ea37 (omit import statement)",
+      "text": "Ex: https://trinket.io/java/618528ea37 (omit import statement) \n\nThe Scanner Class \n\n  Scanner is a class that provides methods for inputting words, numbers, \n  and other data. Scanner is provided by java.util, which is a package that \n  contains classes so useful they are called \"utility classes\". Before you \n  can use Scanner, you have to import it like this: \n                                                                                     \n        import java.util. Scanner;                                                      \n                                                                                       \n. This import statement tells the compiler that when you say Scanner, you \n                                                                                      \n  mean the one defined in java.util. Import statements can't be inside a \n  class definition. By convention, they are usually at the beginning of the            \n  file.                                                                                \n· Variable declaration from Scanner class:                                             \n\n       Scanner input = new Scanner( System.in ); \n    Scanner methods:\n    int      nextint()\n    short    nextShort()\n    double    nextDouble()\n    float    nextFloat()\n    char    next().chatAt()\n    string    nextLine()"
+    },
+    {
+      "page_number": 31,
+      "title": "Example of Adding Integers",
+      "text": "Example of Adding Integers \n\n       1   // Fig. 2.7: Addition. java \n       2   // Addition program that inputs two numbers then displays their sum. \n       3   import java. util . Scanner; // program uses class Scanner \n       5   public class Addition \n       7      // main method begins execution of Java application \n       8      public static void main(String[] args) \n       9      { \n      10         // create a Scanner to obtain input from the command window \n      11         Scanner input = new Scanner (System. in) ; \n      13         int number1; // first number to add \n      14         int number2; // second number to add \n      15         int sum; // sum of number1 and number2 \n      17         System. out. print(\"Enter first integer: \"); // prompt \n      18         number1 = input. nextInt(); // read first number from user \n      20         System. out. print(\"Enter second integer: \"); // prompt \n      21         number2 = input. nextInt(); // read second number from user \n      23         sum = number1 + number2; // add numbers, then store total in sum \n      25         System.out.printf(\"Sum is %d%n\", sum); // display sum \n      26      } / / end method main \n      27   } // end class Addition \n\n       Enter first integer: 45 \n       Enter second integer: 72 \n       Sum is 117 \n\n     Fig. 2.7   Addition program that inputs two numbers then displays their sum. (Part"
+    },
+    {
+      "page_number": 32,
+      "title": "Error Types",
+      "text": "Error Types \n\n  Compile-time errors occur when you violate the syntax rules of the Java \n language. \n\n Run-time error, so-called because it does not appear until after the program has \n started running. \n   · Ex: divide by zero \n\n logic error. If your program has a logic error, it will compile and run without \n generating error messages, but it will not do the right thing."
+    },
+    {
+      "page_number": 33,
+      "title": "Integer Division",
+      "text": "Integer Division \n\n   The arithmetic operators are binary operators because they each operate on two operands. \n\n· Integer division yields an integer quotient. \n\n       Any fractional part in integer division is simply truncated (i.e., discarded) no rounding \n       occurs. \n\n   The remainder operator, %, yields the remainder after division. \n\n       Examplet: minute = 59; \n             System.out.print(\"Fraction of the hour that has passed: \"); \n             System.out.println(minute / 60); \n\n      Output: Fraction of the hour that has passed: 0"
+    },
+    {
+      "page_number": 34,
+      "title": "Floating-point numbers",
+      "text": "Floating-point numbers \n\n  A more general solution is to use floating-point numbers, \n  which can represent fractions as well as integers. \n  In Java, the default floating-point type is called double, which is \n  short for double-precision. \n. You can create double variables and assign values to them using \n  the same syntax we used for the other types. \n   Example: \n         double minute = 59.0; \n         System.out.print(\"Fraction of the hour that has passed: \"); \n         System.out.println(minute / 60.0); \n\n  Output : Fraction of the hour that has passed: 0.9833333333333333"
+    },
+    {
+      "page_number": 35,
+      "title": "Conversion",
+      "text": "Conversion \n\n The following is illegal because the variable on the left is an int and the value on \n the right is a double: \n                  int x = 1.1; // compiler error \n\n. In many cases Java automatically converts from one type to another if promotion \n is possible: \n                 double y = 1; // legal, but bad style \n\n The expression on the right divides two integers, so Java does integer division, \n which yields the int value 0. Converted to double, the value assigned to y is 0.0. \n                 double y = 1 / 3; // common mistake ( logic error)"
+    },
+    {
+      "page_number": 36,
+      "title": "Conversion",
+      "text": "Conversion \n\n  The simplest way to convert a floating-point value to an integer is to use a type cast, so called \n  because it \"casts\" a value from one type to another. The syntax for type casting is to put the name \n  of the type in parentheses and use it as an operator. \n  The casting used to convert from double to int to avoid compilation error \"incompatible types: \n  possible lossy conversion from double to int\" \n  The value of x and y in the following code did not change they still contain a double value in the \n  memory. \n     Example: \n         public static void main(String[] args) \n         { double x=3.5; \n            double y=2.3; \n            int z=(int)x+(int)y; \n                                                                      Output: \n            System. out.print (\"Sum=\"+z) ; \n         }                                                            Sum = 5"
+    },
+    {
+      "page_number": 37,
+      "title": "Conversion",
+      "text": "Conversion \n\npublic static void main(String [] args) \n{ \n  int total =1000;                                                              Output \n  int counter=15; \n  double average; \n                                                               Average without cast=66.0 \n                                                                       with cast left \n  average=total/counter;                                       Average \n  System. out.println(\"Average without cast=\"+ average) ;      operand=66.66666666666667 \n                                                               Average with cast right \n  average=(double) total/counter;                              operand=66.66666666666667 \n  System. out. println(\"Average with cast left operand=\"+ average) ;Average with cast both \n                                                               operand=66.66666666666667 \n  average=total/ (double) counter; \n  System.out.println(\"Average with cast right operand=\"+ average) ; \n\n  average=(double) total/ (double) counter; \n  System. out. println(\"Average with cast both operand=\"+ average) ; \n}"
+    },
+    {
+      "page_number": 38,
+      "title": "Conversion",
+      "text": "Conversion \n\n   The previous code use casting from int to double to avoid losing data \"when \n  performing arithmetic operation such as division. \n\n. As we can see from the first operation when we did not use casting the result lost \n  its fraction part. \n\n. The value of total and counter in the following code did not change they still \n  contain an integer value in the memory. \n  Type       Valid promotions \n  double     None                                                  \n  float      double                                                \n  long       float or double \n                                                                   \n  int        long, float or double \n  char       int, long, float or double                           \n  short      int, long, float or double (but not char)             \n  byte       short, int, long, float or double (but not char)      \n  boolean    None (boolean values are not considered to be numbers in Java) \n\n Fig. 5.4 Promotions allowed for primitive types.\n Common Programming Error 5.8 \n Casting a primitive-type value to another primitive type\n may change the value if the new type is not a valid pro- \n motion. For example, casting a floating-point value to\n an integer value may introduce truncation errors (loss of \n the fractional part) into the result."
+    },
+    {
+      "page_number": 39,
+      "title": "Rules              of     Operator                     Precedence",
+      "text": "Rules              of     Operator                     Precedence \n\n   Parentheses are used to group terms in expressions in the same manner as in algebraic expressions. \n\n   If an expression contains nested parentheses, the expression in the innermost set of parentheses is \n  evaluated first. \n\n   As in algebra, it's acceptable to place unnecessary parentheses in an expression to make the \n  expression clearer \n\n                   Operators                         Associativity    Type \n\n                   ++    --                          right to left   unary postfix \n                   ++          +     - (type)        right to left    unary prefix \n                   *     /    % \n                                                     left to right   multiplicative \n                   +     -                           left to right   additive \n                        < =    >    > =              left to right    relational \n                   ==    ! =                         left to right    equality \n                   ?:                                right to left    conditional \n                   =     +=    -=   *=    /=    %=   right to left   assignment \n\n                 Fig. 3.14   Precedence and associativity of the operators discussed so far.              39"
+    },
+    {
+      "page_number": 40,
+      "title": "Step 1. y = 2 * 5 * 5 + 3 * 5 + 7;          (Leftmost multiplication)",
+      "text": "Step 1. y = 2 * 5 * 5 + 3 * 5 + 7;          (Leftmost multiplication) \n                           2 * 5 is 10 \n\n             Step 2. y = 10 * 5 + 3 * 5 + 7;             (Leftmost multiplication) \n                            10 * 5 is 50 \n\n             Step 3. y = 50 + 3 * 5 + 7;                 (Multiplication before addition) \n                                  3 * 5 is 15 \n\n             Step 4. y = 50 + 15 + 7;                    (Leftmost addition) \n                           50 + 15 is 65 \n\n             Step 5.   y = 65 + 7;                       (Last addition) \n                           65 + 7 is 72 \n\n             Step 6.   y = 72                            (Last operation-place 72 in y) \n\nFig. 2.13     Order in which a second-degree polynomial is evaluated."
+    },
+    {
+      "page_number": 41,
+      "title": "Increment and Decrement",
+      "text": "Increment and Decrement \n\nOperators \n\n  Unary increment operator, ++, adds one to its operand \n\n  Unary decrement operator, -- , subtracts one from its operand \n\n An increment or decrement operator that's prefixed to (placed before) a \n variable is referred to as the prefix increment or prefix decrement \n operator, respectively. \n\n An increment or decrement operator that's postfixed to (placed after) a \n variable is referred to as the postfix increment or postfix decrement \n operator, respectively."
+    },
+    {
+      "page_number": 42,
+      "title": "Program",
+      "text": "Program \n  1     Fig. 3.13: Increment. java \n  2 // Prefix increment and postfix increment operators. \n  4 public class Increment \n  5 { \n  6     public static void main(String[] args) \n  7     { \n  8        // demonstrate postfix increment operator \n  9        int c = 5; \n 10        System. out. printf(\"c before postincrement: %d%n\", c); // prints 5 \n 11        System. out.printf(\"   postincrementing c: %d%n\", c++); // prints 5 \n 12        System. out. printf(\" c after postincrement: %d%n\", c); // prints 6 \n 14        System.out.println(); // skip a line \n 16        // demonstrate prefix increment operator \n 17        c = 5; \n 18        System. out. printf(\" c before preincrement: %d%n\", c) ; // prints 5 \n 19        System.out.printf(\"     preincrementing c: %d%n\", ++c); // prints 6 \n 20        System. out.printf(\" c after preincrement: %d%n\", c); // prints 6 \n 21     } \n 22 } // end class Increment \n\nFig. 3.13 Prefix increment and postfix increment operators. (Part of 2.) \n\n c before postincrement: 5 \n     postincrementing c: 5 \n  c after postincrement: 6 \n\n  c before preincrement: 5 \n      preincrementing c: 6 \n   c after preincrement: 6 \n\nFig. 3.13 Prefix increment and postfix increment operators. (Part 2 of 2.)"
+    },
+    {
+      "page_number": 43,
+      "title": "Operation on Strings",
+      "text": "Operation on Strings \n\n  The + operator works with strings, but it might not do what you expect. For \n  strings, the + operator performs concatenation, which means joining end-to-end. \n. When more than one operator appears in an expression, they are evaluated \n  according to order of operations. \n\n     System. out.println(1 + 2 + \"Hello\"); // the output is 3Hello \n     System. out.println(\"Hello\" + 1 + 2); // the output is Hello12"
+    },
+    {
+      "page_number": 44,
+      "title": "Compound  Assignment Operators",
+      "text": "Compound  Assignment Operators \n\n         Assignment operator     Sample expression    Explanation      Assigns \n\n         Assume: int c = 3, d = 5, e = 4, f = 6, g = 12; \n         +=                      c += 7               C = C + 7        10 to c \n                                 d -= 4               d = d - 4        1 to d \n         *=                      e *= 5               e = e * 5        20 to e \n\n         /=                      f /= 3               f = f / 3        2 to f \n         %=                      g %= 9               g = g % 9        3 to g \n\n       Fig. 3.11   Arithmetic compound assignment operators."
+    },
+    {
+      "page_number": 45,
+      "title": "Math Methods",
+      "text": "Math Methods \n\n. The Java library includes a Math class that provides common mathematical \n operations. Math is in the java.lang package, so you don't have to import it. \n You can use, or invoke, Math methods like this: \n\n                double root = Math. sqrt(17.0); \n                double angle = 1.5; \n                double height = Math. sin(angle); \n\n      Software Engineering Observation 5.4 \n      Class Math is part of the java. lang package, which is \n      implicitly imported by the compiler, so it's not necessary \n      to import class Math to use its methods."
+    },
+    {
+      "page_number": 46,
+      "title": "Method          Description                            Example",
+      "text": "Method          Description                            Example \n\n  abs (x) [X]      absolute value of x                    abs(23.7) is 23.7 \n                                                          abs(0.0) is 0.0 \n                                                          abs(-23.7) is 23.7 \n   ceil (x) [X]    rounds x to the smallest integer not   ceil(9.2) is 10.0 \n                   less than x                            ceil(-9.8) is -9.0 \n   cos (x) [X]     trigonometric cosine of x (x in radi- cos(0.0) is 1.0 \n                   ans) \n   exp (x) [X]     exponential method                     exp(1.0) is 2.71828 \n                                                          exp(2.0) is 7.38906 \n  floor (x) [X]    rounds x to the largest integer not    floor(9.2) is 9.0 \n                   greater than x                         floor(-9.8) is -10.0 \n  log (x) [X]      natural logarithm of x (base e)        log (Math. E) is 1.0 \n                                                          log (Math . E * Math. E) is 2.0 \n  max (x, y)       larger value of x and y                max(2.3, 12.7) is 12.7 \n                                                          max(-2.3, -12.7) is -2.3 \n  min(x, [X] y)    smaller value of x and y               min(2.3, 12.7) is 2.3 \n                                                          min(-2.3, -12.7) is -12.7 \n  pow(x, y)        x raised to the power y (i.e.,         pow(2.0, 7.0) is 128.0 \n                                                          pow(9.0, 0.5) is 3.0 \n  sin(x) [X]       trigonometric sine of x (x in radians) sin(0.0) is 0.0 \n  sqrt(x) [X]      square root of x                       sqrt(900.0) is 30.0 \n  tan (x) [X]      trigonometric tangent of x (x in radi- tan(0.0) is 0.0 \n                   ans) \n\nFig. 5.2     Math class methods. (Part 2 of 2.)"
+    }
+  ]
+}

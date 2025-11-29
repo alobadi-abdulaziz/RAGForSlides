@@ -1,0 +1,953 @@
+
+
+Control Statementsm Selection 
+
+                      1 
+<<<
+
+Contents 
+
+· Readings 
+     Chapter 2: Introduction to Java Applications; 
+     Input/Output and Operators 
+     Chapter 3: Control Statements: Part I; Assignment, ++ 
+     and - Operators 
+     Chapter 4: Control Statements: Part 2; Logical Operators 
+
+                                                        2 
+<<<
+
+Equality and Relational Operators 
+
+  Java has six relational operators that test the relationship 
+  between two values (e.g., whether they are equal, or whether 
+  one is greater than the other). The following expressions 
+  show how they are used: 
+
+
+
+          Equality operators 
+          =         ==              x == y       x is equal to y 
+          !=        !=              x ! = y      x is not equal to y 
+
+          Relational operators 
+          >         >               x > y        x is greater than y 
+          <         <                x < y        x is less than y 
+          2         >=              x >= y       x is greater than or equal to y 
+          5         <=              x <= y       x is less than or equal to y 
+
+        Fig. 2.14 Equality and relational operators.                           3 
+<<<
+
+Equality and Relational Operators (Cont.) 
+
+  The result of a relational operator is a Boolean 
+  data type, one of two special values: true or 
+  false. 
+
+  We call it Boolean expressions. 
+
+              Operators         Associativity        Type 
+              *   /   %         left to right     multiplicative 
+              +   -             left to right     additive 
+              <   < = >    >=   left to right     relational 
+              == ! =            left to right     equality 
+              =                 right to left     assignment 
+
+             Fig. 2.16 Precedence and associativity of operators discussed. 
+
+                                                                     4 
+<<<
+
+  Equality and Relational Operators (Cont.) 
+
+//Examples on dealing with Boolean variables and Boolean expressions 
+boolean result= 2>3; 
+System.out.println("2>3 is "+ result);     //2>3 is false 
+System.out.println("2<3 is "+ (2<3) );     / / 2<3 is true 
+
+boolean flag;                              / / Declare Boolean variable 
+flag = true;                     // assign a true value to the variable flag 
+boolean testResult = false;      //Declare and initialize Boolean variable 
+int x=5;                         / / Decalre integer variable 
+boolean evenFlag = (x % 2 == 0); //declare & assign true if x is even 
+boolean positiveFlag = (x > 0); //Declare & assign true if x is positive 
+
+                                                                          5 
+<<<
+
+Equality and Relational Operators (Cont.) 
+   Remember that: 
+
+         = is the assignment operator, and == is a relational operator. 
+
+        The operators =< and => do not exist. 
+
+        The two sides of a relational operator have to be compatible. 
+             For example, the expression 5 < "6" is invalid because 5 is an int and "6" is a String. 
+
+        When comparing values of different numeric types, Java applies 
+
+        the same conversion rulesyou saw previously with the 
+        
+        assignment operator. 
+             For example, when evaluating the expression 5 < 6.0, Java automatically converts 
+             the 5 to 5.0. 
+                                                                                        6 
+<<<
+
+Control Structures 
+
+  Sequential execution: Statements in a program execute one after 
+  the other in the order in which they are written. 
+
+  Transfer of control: Various Java statements, enable you to specify 
+  that the next statement to execute is not necessarily the next one in 
+  sequence. 
+
+· Bohm and Jacopini 
+      Demonstrated that programs can be written in terms of only three 
+      control structures-the sequence structure, the selection structure and 
+      the repetition structure. 
+
+. We refer to the control structures in the terminology of Java as 
+  "control statements." 
+
+                                                                     7 
+<<<
+
+ Control Structures (Cont.) 
+
+Three types of selection statements. 
+· if statement: 
+     · Performs an action, if a condition is true; skips it, if false. 
+     · Single-selection statement-selects or ignores a single action (or group 
+       of actions). 
+· if ... else statement: 
+       Performs an action if a condition is true and performs a different action 
+       if the condition is false. 
+     · Double-selection statement-selects between two different actions (or 
+       groups of actions). 
+· switch statement 
+       Performs one of several actions, based on the value of an expression. 
+       Multiple-selection statement-selects among many different actions (or 
+       groups of actions). 
+
+                                                                          8 
+<<<
+
+  Control Structures (Cont.) 
+   
+                                                                 9 
+ 
+<<<
+
+The Single if Statement 
+
+                                                                     
+  To write useful programs, we almost always need to           
+  check conditions and react accordingly. Conditional 
+  statements give us this ability.                               
+  The simplest conditional statement in Java is the if                                                            
+  statement:                                                   
+      if (x > 0) { 
+          System. out.println("x is positive");              
+       }                                                        
+
+  The expression in parentheses is called the condition. 
+    · If it is true, the statements in braces get executed. 
+    · If the condition is false, execution skips over that block of 
+      code. 
+      The condition in parentheses can be any boolean expression. 
+
+                                                                  10 
+<<<
+
+The Single if Statement (Cont.) 
+
+· if selection statement 
+    · Allows a program to make a decision based on a condition's value. 
+      An if statement always begins with keyword if, followed by a 
+      condition in parentheses. 
+· Condition 
+      An expression that can be true or false. 
+· Pseudocode 
+       If student's grade is ≥ 60 then 
+             Print "Passed" 
+  The preceding pseudocode If in Java: 
+          if ( studentGrade >= 60 ) 
+                   System. out. println ( "Passed" ) ; 
+  Indentation is optional, but recommended 
+      Emphasizes the inherent structure of structured programs 
+
+                                                                 11 
+<<<
+
+The Single if Statement (Cont.) 
+
+  An if statement expects one statement in its body, 
+     if ( studentGrade >= 60 ) 
+         System. out. println( "Passed" ) ; 
+  but may contain multiple statements if they are enclosed in a 
+  set of braces ( { }). 
+        if ( studentGrade >= 60 ) 
+        { 
+             System. out.println( "Passed" ) ; 
+
+          System. out.println( "Congratulations" ) ; 
+        } 
+  Note that there is no semicolon (;) at the end of the first line 
+  of each if statement. 
+
+<<<
+
+The Single if Statement (Cont.) 
+
+  This code is misleading because it's not indented correctly: 
+
+ if (x > 0) 
+   System. out.println("x is positive"); 
+   System. out.println("x is not zero"); 
+
+                         if (x > 0) { 
+                          System. out.println("x is positive"); 
+How compiler sees: 
+                         System.out.println("x is not zero"); 
+
+                                                              13 
+<<<
+
+Example 
+
+  Design an algorithm to read two integers. 
+ Then apply all relational and equality 
+ operator showing the result on the output 
+ screen. 
+
+    Writ Pseudocode Algorithm? 
+
+   . Draw the Flow Chart ? 
+
+                                       14 
+<<<
+
+  1 // Fig. 2.15: Comparison. java 
+  2 / / Compare integers using if statements, relational operators 
+  3 // and equality operators. 
+  4 import java. util . Scanner; // program uses class Scanner 
+  5 
+  6 public class Comparison                                                       
+  7 { 
+  8     // main method begins execution of Java application 
+  9     public static void main(String[] args)                                   
+10      { 
+11         // create Scanner to obtain input from command line                 
+  12       Scanner input = new Scanner(System. in); 
+  13 
+  14       int number1; // first number to compare                            
+  15       int number2; // second number to compare 
+  16                                                                          
+  17       System. out. print("Enter first integer: "); // prompt 
+  18       number1 = input. nextInt(); // read first number from user 
+  19 
+                                                                                 
+20         System. out. print("Enter second integer: "); // prompt 
+21         number2 = input. nextInt(); // read second number from user       
+22 
+23         if (number1 == number2) 
+24           System.out.printf("%d == %d%n", number1, number2); 
+25 
+26         if (number1 != number2) 
+27           System.out.printf("%d != %d%n", number1, number2); 
+28 
+29         if (number1 < number2) 
+30           System.out.printf("%d < %d%n", number1, number2); 
+31 
+32         if (number1 > number2) 
+33           System.out.printf("%d >%d%n", number1, number2); 
+34 
+35         if (number1 <= number2) 
+36           System.out.printf("%d <= %d%n", number1, number2); 
+37 
+38         if (number1 >= number2) 
+39           System.out.printf("%d >= %d%n", number1, number2); 
+40      } // end method main 
+41   } // end class Comparison 
+
+Example: First Run: 777 and 777, Second Run: 1000 and 2000 Third Run: 2000 and 1000
+<<<
+
+ Enter first integer: 777 
+ Enter second integer: 777 
+ 777 == 777 
+ 777 <= 777 
+ 777 >= 777 
+
+ Enter first integer: 1000 
+ Enter second integer: 2000 
+ 1000 != 2000 
+ 1000 < 2000 
+ 1000 <= 2000 
+
+ Enter first integer: 2000 
+ Enter second integer: 1000 
+ 2000 != 1000 
+ 2000 > 1000 
+ 2000 >= 1000 
+
+Fig. 2.15 | Compare integers using if statements, relational operators and equality 
+operators. (Part 3 of 3.) 
+<<<
+
+The Single if Statement (Cont.) 
+
+       Error-Prevention Tip 4.10 
+       Assignment (=) expressions generally should not be used 
+       in conditions. Every condition must result in a boo1- 
+       ean value; otherwise, a compilation error occurs. In a 
+       condition, an assignment will compile only if a bool- 
+       ean expression is assigned to a boolean variable. 
+
+                                                                 17 
+<<<
+
+The Single if Statement (Cont.) 
+·In all previous examples, notice that there is no semicolon at the end of the if 
+   or else lines. Instead, a new block should be defined using braces. Another 
+   common mistake is to put a semicolon after the condition, like this: 
+
+         int x = 1; 
+         if (x % 2 == 0); { // incorrect semicolon 
+         System.out.println("x is even"); } 
+   Here is the same incorrect code with better formatting: 
+
+          int x = 1; 
+          if (x % 2 == 0) 
+           ; // empty statement 
+          { 
+          System.out.println("x is even"); 
+          } 
+
+. Because of the semicolon, the if statement compiles as if there are no braces, 
+   and the subsequent block runs independently. (Logical error!) 
+
+                                                                          18 
+<<<
+
+The if-else Statement 
+
+  A second form of conditional statement has two possibilities, 
+  indicated by if and else. The possibilities are called branches, 
+  and the condition determines which branch gets executed. 
+
+
+                                                           19 
+<<<
+
+   The if-else Statement (Cont.) 
+   . The braces are optional for branches that have only one 
+     statement. 
+
+if (x % 2 == 0) {                         if (x % 2 == 0) 
+ System. out.println("x is even");         System.out.println("x is even"); 
+} else {                                   else 
+ System.out.println("x is odd"); }         System. out.println("x is odd"); 
+
+   . If the remainder when x is divided by 2 is 0, we know that x is 
+     even, and the program displays a message to that effect. If the 
+     condition is false, the second print statement is executed 
+     instead. 
+   . Since the condition must be true or false, exactly one of the 
+     branches will run. 
+
+                                                                    20 
+<<<
+
+  The if-else Statement (Cont.) 
+
+    The if statement normally expects only one statement in its body. 
+
+    To include several statements in the body of an if (or the body of an 
+    else for an if ... else statement), enclose the statements in braces.
+
+    Statements contained in a pair of braces form a block. 
+
+    A block can be placed anywhere that a single statement can be 
+   placed.
+
+    Example: A block in the else part of an if ... else statement: 
+
+           if ( grade >= 60 ) 
+              System. out. println( "Passed") ; 
+           else 
+           { 
+              System. out. println("Failed"); 
+block         System.out.println("You must take this course 
+           again. ") ; 
+           } 
+
+                                                                  21 
+<<<
+
+The if-else Statement (Cont.) 
+
+  The empty statement is represented by placing a 
+  semicolon (; ) where a statement would normally 
+  be. 
+
+      Common Programming Error 3.1 
+      Placing a semicolon after the condition in an if or 
+      if ... else statement leads to a logic error in single-selec- 
+      tion if statements and a syntax error in double-selection 
+      if ... else statements (when the if-part contains an ac- 
+      tual body statement). 
+
+                                                             22 
+<<<
+
+ Chaining and Nesting 
+
+Sometimes you want to check related conditions and choose one of several 
+actions. 
+
+One way to do this is by chaining a series of if and else blocks by placing if ... 
+else statements inside other if ... else statements to create nested if ... 
+else statements. 
+
+
+                            23 
+<<<
+
+    Chaining and Nesting 
+
+    · Pseudocode 
+
+            If number > 0 then 
+                 Print "positive" 
+            else If number <0 then 
+
+                 Print "Negative" 
+                 else Print "Zero" 
+
+
+                                                                           24 
+<<<
+
+Example 
+
+  Write a program that read a student grade and print the associated grade 
+  letter as following: 
+       90 and above ="A" 
+      Less than 90 and great than or equal 80 = "B" and so on ... 
+
+    Writ Pseudocode Algorithm? 
+
+    Draw the Flow Chart ? 
+
+                                                                   25 
+<<<
+
+ Example 
+
+· Pseudocode: 
+If student's grade is greater than or equal to 90 
+           Print "A" 
+else 
+           If student's grade is greater than or equal to 80 
+                     Print "B" 
+           else 
+                     If student's grade is greater than or equal to 70 
+                          Print "C" 
+                     else 
+                          If student's grade is greater than or equal to 60 
+                                Print "D" 
+                           else 
+                                Print "F" 
+                                                    Try by your self to write the code 
+
+                                                                       26 
+<<<
+
+Solution 
+
+if (studentGrade >= 90) 
+   System. out . println( "A"); 
+else if (studentGrade >= 80) 
+   System. out.println ( "B"); 
+else if (studentGrade >= 70) 
+   System. out. println( "C"); 
+else if (studentGrade >= 60) 
+   System. out. println ( "D"); 
+else 
+   System. out.println("F"); 
+
+                                         27 
+<<<
+
+Chaining and Nesting (Cont.) 
+
+  The Java compiler always associates an else with the immediately preceding if 
+  unless told to do otherwise by the placement of braces ( { and } ). 
+
+  Referred to as the dangling-else problem. 
+
+  The following code is not what it appears: 
+               if (x > 5) 
+              if (y > 5) 
+                  System. out.println("x and y are > 5" ) ; 
+           else 
+              System.out.println("x is <= 5"); 
+
+  The compiler actually interprets the statement as 
+             if (x > 5) 
+               if (y > 5) 
+                  System. out.println("x and y are > 5") ; 
+               else 
+                  System.out.println("x is <= 5"); 
+
+                                                                           28 
+<<<
+
+Chaining and Nesting (Cont.) 
+
+. To force the nested if ... else statement to execute as it 
+ was originally intended, we must write it as follows: 
+        if (x > 5) 
+        { 
+            if (y > 5) 
+               System. out. println("x and y are > 5") ; 
+        } 
+        else 
+            System.out.println("x is <= 5"); 
+. The braces indicate that the second if is in the body of 
+ the first and that the else is associated with the first if. 
+
+                                                        29 
+<<<
+
+Logical Operators 
+
+  Java's logical operators enable you to form more 
+  complex conditions by combining simple 
+  conditions. 
+  The logical operators are we are interesting in are: 
+   · && (conditional AND) 
+   · | (conditional OR) 
+   · ! (logical NOT) 
+
+                                                 30 
+<<<
+
+Logical Operators (Cont.) 
+
+  In addition to the relational operators, Java also has three logical 
+  operators: &&, ||, and !, which respectively stand for and, or, and 
+  not. 
+
+  The results of these operators are similar to their meanings in 
+  English. For example: 
+       x > 0 && x < 10 is true when x is greater than 0 and less than 10. 
+       x < 0 | |   x > 10 is true if either condition is true; that is, if x is less 
+       than 0 or greater than 10. 
+       ! (x > 0) is true if x is not greater than 0. The parentheses are necessary 
+       in this example because, in the order of operations, ! comes before >. 
+  In order for an expression with && to be true, both sides of the 
+  && operator must be true. And in order for an expression with || to 
+  be false, both sides of the || operator must be false. 
+
+                                                                            31 
+<<<
+
+Logical Operators (Cont.) 
+
+. The && (conditional AND) operator ensures that two conditions are both 
+  true before choosing a certain path of execution. 
+
+  Java evaluates to false or true all expressions that include relational 
+  operators, equality operators or logical operators. 
+
+               expression        expression2        expression1 && expression2 
+
+               false                false                     false 
+               false                true                      false 
+               true                 false                     false 
+               true                 true                      true 
+
+              Fig. 4.13 && (conditional AND) operator truth table. 
+
+                                                                       32 
+<<<
+
+Logical Operators (Cont.) 
+
+. The | | (conditional OR) operator ensures that either or both of two 
+  conditions are true before choosing a certain path of execution. 
+
+  Operator && has a higher precedence than operator | | . 
+
+  Both operators associate from left to right. 
+
+               expression          expression2          expression1 | | expression2 
+
+               false                 false                         false 
+               false                 true                          true 
+               true                  false                         true 
+               true                  true                          true 
+
+             Fig. 4.14  || (conditional OR) operator truth table. 
+
+                                                                         33 
+<<<
+
+ Logical Operators (Cont.) 
+
+ · The && operator can be used to simplify nested if 
+   statements. For example, the following code can be rewritten 
+   with a single condition: 
+
+if (x == 0) { 
+ if (y == 0) { 
+     System. out.println("Both x and y are zero"); 
+ } 
+} 
+
+            // combined 
+            if (x == 0 && y == 0) { 
+                System.out.println("Both x and y are zero"); 
+            } 
+
+                                                             34 
+<<<
+
+Logical Operators (Cont.) 
+
+  The || operator can simplify chained if statements. Since the 
+  branches are the same, there is no need to duplicate that 
+  code: 
+
+if (x == 0) { 
+ System.out.println("Either x or y is zero"); 
+} else if (y == 0) { 
+   System.out.println("Either x or y is zero"); 
+  } 
+
+                // combined 
+               if (x == 0 | | y == 0) { 
+                System. out.println("Either x or y is zero"); 
+                } 
+
+                                                             35 
+<<<
+
+Logical Operators (Cont.) 
+
+· Logical operators evaluate the second expression only 
+  when necessary. 
+      For example, true | | anything is always true, so Java does not 
+      need to evaluate the expression anything. 
+      Likewise, false && anything is always false. 
+
+  Ignoring the second operand, when possible, is called 
+  short-circuit evaluation. 
+
+  Short-circuit evaluation can save time, especially if 
+  anything takes a long time to evaluate. It can also avoid 
+  unnecessary 
+  
+                Common errors, Programming if anything Error-4.8 might fail 
+                In expressions using operator &&, a condition-we'll call 
+                this the dependent condition-may require another 
+                condition to be true for the evaluation of the dependent 
+                condition to be meaningful. In this case, the dependent 
+                condition should be placed after the && operator to pre- 
+                vent errors. Consider the expression (i != 0) && (10 / 
+                 i == 2). The dependent condition (10 / i == 2) 
+                must appear after the && operator to prevent the possi- 
+                bility of division by zero.                             
+                
+                 36 
+<<<
+
+Logical Operators (Cont.) 
+
+The ! (logical NOT, also called logical negation or logical complement) 
+operator "reverses" the meaning of a condition. 
+The logical negation operator is a unary operator that has only one condition 
+as an operand. 
+The logical negation operator is placed before a condition to choose a path 
+of execution if the original condition (without the logical negation operator) 
+is false. 
+In most cases, you can avoid using logical negation by expressing the 
+condition differently with an appropriate relational or equality operator. 
+
+                     expression       ! expression 
+                     false            true 
+                     true             false 
+
+                    Fig. 4.16 ! (logical NOT) operator truth table. 
+                                                                       37 
+<<<
+
+4.8 Logical Operators (Cont.) 
+
+ The %b format specifier displays the word "true" or the 
+ word "false" based on a boolean expression's value. 
+
+ I // Fig. 4.17: LogicalOperators. java 
+ 2 // Logical operators. 
+ 3 
+ 4 public class LogicalOperators 
+ 5 { 
+ 6     public static void main(String[] args) 
+ 7     { 
+ 8        // create truth table for && (conditional AND) operator 
+ 9        System.out. printf("%s%n%s : %b%n%s : %b%n%s : %b%n%s : %b%n%n", 
+10           "Conditional AND (&)", "false     false", (false    false) 
+11           "false && true", (false && true)   , 
+12           "true && false", (true && false) 
+13           "true && true", (true && true) ); 
+14 
+15        // create truth table for | | (conditional OR) operator 
+16        System. out.printf ("%s%n%s : %b%n%s : %b%n%s : %b%n%s : %b%n%n", 
+17           "Conditional OR (||)", "false | | false", (false | | false) 
+18           "false || true", (false | | true) , 
+19           "true | | false", (true | | false) , 
+20           "true || true", (true | | true) ); 
+22        // create truth table for ! (logical negation) operator 
+23        System. out. printf ("%s%n%s : %b%n%s : %b%n", "Logical NOT (!)", 
+24            "! false", (! false) , "!true", (!true) ); 
+25     } 
+26 } // end class LogicalOperators 
+27 
+
+                                                                                               38 
+   4.17   Logical operators. (Part 3 of 5.) 
+<<<
+
+  Conditional AND (&&) 
+  false && false: false 
+  false && true: false 
+  true && false: false 
+  true && true: true 
+
+  Conditional OR (II) 
+  false    false: false 
+  false    true: true 
+  true    false: true 
+  true    true: true 
+
+  Logical NOT (!) 
+  ! false: true 
+  ! true: false 
+
+Fig. 4.17   Logical operators. (Part 5 of 5.) 
+
+                                                                                         39 
+<<<
+
+  Operators                            Associativity       Type 
+
+  ++   --                              right to left    unary postfix 
+  ++   -- +     -    !   (type)        right to left    unary prefix 
+  *   /    %                           left to right    multiplicative 
+  +    -                               left to right    additive 
+  ‹   ‹=   >                           left to right    relational 
+  ==   ! =                             left to right    equality 
+  &&                                   left to right    conditional AND 
+                                       left to right    conditional OR 
+  ? :                                  right to left    conditional 
+  =   +=   -=   *= /=    %=            right to left    assignment 
+
+Fig. 4.18    Precedence/associativity of the operators discussed so far. 
+
+                                                                                                     40 
+<<<
+
+Conditional Operator 
+
+  Conditional operator (? : )-can be used in place of an if ... else 
+  statement. 
+  Ternary operator (takes three operands) 
+  Operand to the left of the ? is a boolean expression-evaluates to a 
+  boolean value (true or false) 
+  Second operand (between the ? and : ) is the value if the boolean 
+  expression is true 
+  Third operand (to the right of the : ) is the value if the boolean 
+  expression evaluates to false. 
+· Example: 
+        System. out. println(studentGrade >= 60 ? "Passed" : "Failed") ; 
+  Evaluates to the string "Passed" if the boolean expression 
+  studentGrade >= 60 is true and to the string "Failed" if it is 
+  false. 
+                  Error-Prevention Tip 3.2 
+                  Use expressions of the same type for the second and third 
+                  operands of the ?: operator to avoid subtle errors. 
+                                                                     41 
+<<<
+
+Switch Multiple-Selection Statement 
+
+. If you need to make a series of decisions, 
+  chaining else if blocks can get long and 
+  redundant. For example, consider a 
+  program that converts integers like 1, 2, 
+  and 3 into words like "one", "two", and 
+  "three" if (number == 1) {        This chain could go on and on ! 
+           word = "one"; 
+           } else if (number == 2) { 
+                   word = "two"; 
+             } else if (number == 3) { 
+                    word = "three"; 
+               } else { word = "unknown"; } 
+
+                                                         42 
+<<<
+
+Switch Multiple-Selection Statement (Cont.) 
+
+  An alternative way to evaluate many possible values of an 
+  expression is to use a switch statement. 
+
+  switch multiple-selection statement performs different 
+  actions based on the possible values of a constant integral 
+  expression of type byte, short, int or char. 
+
+        switch (number) { 
+         case 1: word = "one"; 
+                 break; 
+         case 2: word = "two"; 
+                 break; 
+         case 3: word = "three"; 
+                 break; 
+         default : word = "unknown"; 
+                  break; 
+        }                                              43 
+<<<
+
+Switch Multiple-Selection Statement (Cont.) 
+. The switch statement consists of a block that 
+  contains a sequence of case labels and an optional 
+  default case. 
+  The program evaluates the controlling expression 
+  in the parentheses following keyword switch. 
+  The program compares this expression's value 
+  (which must evaluate to an integral value of type 
+  byte, char, short or int, or to a 
+  String) with each case label. 
+
+                                               44 
+<<<
+
+Switch Multiple-Selection Statement (Cont.) 
+
+  The body of a switch statement is organized into 
+  one or more case blocks. 
+. If a match occurs, the program executes that 
+  case ' S statements. 
+
+. The break statement causes program control to 
+  proceed with the first statement after the switch. 
+. The default block is optional and executed only 
+  if none of the cases apply. 
+
+          Common Programming Error 4.7 
+          Forgetting a break statement when one is needed in a 
+          switch is a logic error. 
+                                                       45 
+<<<
+
+Switch Multiple-Selection Statement (Cont.) 
+
+  switch does not provide a mechanism for testing 
+  ranges of values- every value must be listed in a 
+  separate case label. 
+  switch differs from other control statements in that it 
+  does not require braces around multiple statements in 
+  a case. 
+  Without break, the statements for a matching case 
+  and subsequent cases execute until a break or the end 
+  of the switch is encountered. This is called "falling 
+  through." 
+. If no match occurs between the controlling 
+  expression's value and a case label, the default case 
+  executes. 
+. If no match occurs and there is no default case, 
+  program control simply continues with the first 
+  statement after the switch. 
+
+                                                    46 
+<<<
+
+Switch Multiple-Selection Statement (Cont.) 
+
+. Although switch statements appear 
+ longer than chained else if blocks, they 
+ are particularly useful when multiple 
+ cases can be grouped. 
+   switch (food) 
+   case "apple": 
+   case "banana" : 
+   case "cherry": 
+      System. out.println("Fruit!"); 
+       break; 
+   case "asparagus" : 
+   case "broccoli" : 
+   case "carrot" : 
+       System. out.println("Vegetable!"); 
+   } 
+                                            47 
+<<<
+
+Example 
+
+  Write a program that read a student grade and print the associated grade 
+  letter as following: 
+       90 and above ="A" 
+       Less than 90 and great than or equal 80 = "B" and so on ... 
+
+    Use Switch statement! 
+
+                                                                    48 
+<<<
+
+ 1 // Fig. 4.9: LetterGrades. java 
+ 2 // LetterGrades class uses the switch statement to count letter grades. 
+ 3 import java. util. Scanner; 
+ 4 
+ 5 public class LetterGrades 
+ 6 { 
+ 7     public static void main(String[] args) 
+ 8     { 
+ 9       Scanner input = new Scanner(System. in); 
+10       System.out.print("Enter a grade in the range 0-100:"); 
+11       int grade = input. nextInt(); // read grade 
+12       // increment appropriate letter-grade counter 
+13       switch (grade / 10) 
+14       { 
+15          case 9: // grade was between 90 
+16          case 10: // and 100, inclusive 
+17             System.out.println("Your grade is: A"); 
+18             break; // exits switch 
+19 
+20          case 8: // grade was between 80 and 89 
+21             System.out.println("Your grade is: B"); 
+22             break; // exits switch 
+23 
+24          case 7: // grade was between 70 and 79 
+25 
+               System.out.println("Your grade is: C"); 
+26             break; // exits switch 
+27 
+28          case 6: // grade was between 60 and 69 
+29             System.out.println("Your grade is: D"); 
+30             break; // exits switch 
+31 
+32          default: // grade was less than 60 
+33             System.out.println("Your grade is: F"); 
+34             break; // optional; exits switch anyway 
+35       } // end switch 
+36      }    end main 
+37    }// end class Lettengrades 
+
+                                                                                                 49 
+<<<

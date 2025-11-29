@@ -1,0 +1,252 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "06 Selection",
+  "number_of_slides": 49,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Control Statementsm Selection",
+      "text": "Control Statementsm Selection"
+    },
+    {
+      "page_number": 2,
+      "title": "Contents",
+      "text": "Contents \n\n· Readings \n     Chapter 2: Introduction to Java Applications; \n     Input/Output and Operators \n     Chapter 3: Control Statements: Part I; Assignment, ++ \n     and - Operators \n     Chapter 4: Control Statements: Part 2; Logical Operators"
+    },
+    {
+      "page_number": 3,
+      "title": "Equality and Relational Operators",
+      "text": "Equality and Relational Operators \n\n  Java has six relational operators that test the relationship \n  between two values (e.g., whether they are equal, or whether \n  one is greater than the other). The following expressions \n  show how they are used: \n\n\n\n          Equality operators \n          =         ==              x == y       x is equal to y \n          !=        !=              x ! = y      x is not equal to y \n\n          Relational operators \n          >         >               x > y        x is greater than y \n          <         <                x < y        x is less than y \n          2         >=              x >= y       x is greater than or equal to y \n          5         <=              x <= y       x is less than or equal to y \n\n        Fig. 2.14 Equality and relational operators.                           3"
+    },
+    {
+      "page_number": 4,
+      "title": "Equality and Relational Operators (Cont.)",
+      "text": "Equality and Relational Operators (Cont.) \n\n  The result of a relational operator is a Boolean \n  data type, one of two special values: true or \n  false. \n\n  We call it Boolean expressions. \n\n              Operators         Associativity        Type \n              *   /   %         left to right     multiplicative \n              +   -             left to right     additive \n              <   < = >    >=   left to right     relational \n              == ! =            left to right     equality \n              =                 right to left     assignment \n\n             Fig. 2.16 Precedence and associativity of operators discussed."
+    },
+    {
+      "page_number": 5,
+      "title": "Equality and Relational Operators (Cont.)",
+      "text": "Equality and Relational Operators (Cont.) \n\n//Examples on dealing with Boolean variables and Boolean expressions \nboolean result= 2>3; \nSystem.out.println(\"2>3 is \"+ result);     //2>3 is false \nSystem.out.println(\"2<3 is \"+ (2<3) );     / / 2<3 is true \n\nboolean flag;                              / / Declare Boolean variable \nflag = true;                     // assign a true value to the variable flag \nboolean testResult = false;      //Declare and initialize Boolean variable \nint x=5;                         / / Decalre integer variable \nboolean evenFlag = (x % 2 == 0); //declare & assign true if x is even \nboolean positiveFlag = (x > 0); //Declare & assign true if x is positive"
+    },
+    {
+      "page_number": 6,
+      "title": "Equality and Relational Operators (Cont.)",
+      "text": "Equality and Relational Operators (Cont.) \n   Remember that: \n\n         = is the assignment operator, and == is a relational operator. \n\n        The operators =< and => do not exist. \n\n        The two sides of a relational operator have to be compatible. \n             For example, the expression 5 < \"6\" is invalid because 5 is an int and \"6\" is a String. \n\n        When comparing values of different numeric types, Java applies \n\n        the same conversion rulesyou saw previously with the \n        \n        assignment operator. \n             For example, when evaluating the expression 5 < 6.0, Java automatically converts \n             the 5 to 5.0."
+    },
+    {
+      "page_number": 7,
+      "title": "Control Structures",
+      "text": "Control Structures \n\n  Sequential execution: Statements in a program execute one after \n  the other in the order in which they are written. \n\n  Transfer of control: Various Java statements, enable you to specify \n  that the next statement to execute is not necessarily the next one in \n  sequence. \n\n· Bohm and Jacopini \n      Demonstrated that programs can be written in terms of only three \n      control structures-the sequence structure, the selection structure and \n      the repetition structure. \n\n. We refer to the control structures in the terminology of Java as \n  \"control statements.\""
+    },
+    {
+      "page_number": 8,
+      "title": "Control Structures (Cont.)",
+      "text": "Control Structures (Cont.) \n\nThree types of selection statements. \n· if statement: \n     · Performs an action, if a condition is true; skips it, if false. \n     · Single-selection statement-selects or ignores a single action (or group \n       of actions). \n· if ... else statement: \n       Performs an action if a condition is true and performs a different action \n       if the condition is false. \n     · Double-selection statement-selects between two different actions (or \n       groups of actions). \n· switch statement \n       Performs one of several actions, based on the value of an expression. \n       Multiple-selection statement-selects among many different actions (or \n       groups of actions)."
+    },
+    {
+      "page_number": 9,
+      "title": "Control Structures (Cont.)",
+      "text": "Control Structures (Cont.)"
+    },
+    {
+      "page_number": 10,
+      "title": "The Single if Statement",
+      "text": "The Single if Statement \n\n                                                                     \n  To write useful programs, we almost always need to           \n  check conditions and react accordingly. Conditional \n  statements give us this ability.                               \n  The simplest conditional statement in Java is the if                                                            \n  statement:                                                   \n      if (x > 0) { \n          System. out.println(\"x is positive\");              \n       }                                                        \n\n  The expression in parentheses is called the condition. \n    · If it is true, the statements in braces get executed. \n    · If the condition is false, execution skips over that block of \n      code. \n      The condition in parentheses can be any boolean expression."
+    },
+    {
+      "page_number": 11,
+      "title": "The Single if Statement (Cont.)",
+      "text": "The Single if Statement (Cont.) \n\n· if selection statement \n    · Allows a program to make a decision based on a condition's value. \n      An if statement always begins with keyword if, followed by a \n      condition in parentheses. \n· Condition \n      An expression that can be true or false. \n· Pseudocode \n       If student's grade is ≥ 60 then \n             Print \"Passed\" \n  The preceding pseudocode If in Java: \n          if ( studentGrade >= 60 ) \n                   System. out. println ( \"Passed\" ) ; \n  Indentation is optional, but recommended \n      Emphasizes the inherent structure of structured programs"
+    },
+    {
+      "page_number": 12,
+      "title": "The Single if Statement (Cont.)",
+      "text": "The Single if Statement (Cont.) \n\n  An if statement expects one statement in its body, \n     if ( studentGrade >= 60 ) \n         System. out. println( \"Passed\" ) ; \n  but may contain multiple statements if they are enclosed in a \n  set of braces ( { }). \n        if ( studentGrade >= 60 ) \n        { \n             System. out.println( \"Passed\" ) ; \n\n          System. out.println( \"Congratulations\" ) ; \n        } \n  Note that there is no semicolon (;) at the end of the first line \n  of each if statement."
+    },
+    {
+      "page_number": 13,
+      "title": "The Single if Statement (Cont.)",
+      "text": "The Single if Statement (Cont.) \n\n  This code is misleading because it's not indented correctly: \n\n if (x > 0) \n   System. out.println(\"x is positive\"); \n   System. out.println(\"x is not zero\"); \n\n                         if (x > 0) { \n                          System. out.println(\"x is positive\"); \nHow compiler sees: \n                         System.out.println(\"x is not zero\");"
+    },
+    {
+      "page_number": 14,
+      "title": "Example",
+      "text": "Example \n\n  Design an algorithm to read two integers. \n Then apply all relational and equality \n operator showing the result on the output \n screen. \n\n    Writ Pseudocode Algorithm? \n\n   . Draw the Flow Chart ?"
+    },
+    {
+      "page_number": 15,
+      "title": "1 // Fig. 2.15: Comparison. java",
+      "text": "1 // Fig. 2.15: Comparison. java \n  2 / / Compare integers using if statements, relational operators \n  3 // and equality operators. \n  4 import java. util . Scanner; // program uses class Scanner \n  6 public class Comparison                                                       \n  7 { \n  8     // main method begins execution of Java application \n  9     public static void main(String[] args)                                   \n10      { \n11         // create Scanner to obtain input from command line                 \n  12       Scanner input = new Scanner(System. in); \n  14       int number1; // first number to compare                            \n  15       int number2; // second number to compare \n  17       System. out. print(\"Enter first integer: \"); // prompt \n  18       number1 = input. nextInt(); // read first number from user \n                                                                                 \n20         System. out. print(\"Enter second integer: \"); // prompt \n21         number2 = input. nextInt(); // read second number from user       \n23         if (number1 == number2) \n24           System.out.printf(\"%d == %d%n\", number1, number2); \n26         if (number1 != number2) \n27           System.out.printf(\"%d != %d%n\", number1, number2); \n29         if (number1 < number2) \n30           System.out.printf(\"%d < %d%n\", number1, number2); \n32         if (number1 > number2) \n33           System.out.printf(\"%d >%d%n\", number1, number2); \n35         if (number1 <= number2) \n36           System.out.printf(\"%d <= %d%n\", number1, number2); \n38         if (number1 >= number2) \n39           System.out.printf(\"%d >= %d%n\", number1, number2); \n40      } // end method main \n41   } // end class Comparison \n\nExample: First Run: 777 and 777, Second Run: 1000 and 2000 Third Run: 2000 and 1000"
+    },
+    {
+      "page_number": 16,
+      "title": "Enter first integer: 777",
+      "text": "Enter first integer: 777 \n Enter second integer: 777 \n 777 == 777 \n 777 <= 777 \n 777 >= 777 \n\n Enter first integer: 1000 \n Enter second integer: 2000 \n 1000 != 2000 \n 1000 < 2000 \n 1000 <= 2000 \n\n Enter first integer: 2000 \n Enter second integer: 1000 \n 2000 != 1000 \n 2000 > 1000 \n 2000 >= 1000 \n\nFig. 2.15 | Compare integers using if statements, relational operators and equality \noperators. (Part 3 of 3.)"
+    },
+    {
+      "page_number": 17,
+      "title": "The Single if Statement (Cont.)",
+      "text": "The Single if Statement (Cont.) \n\n       Error-Prevention Tip 4.10 \n       Assignment (=) expressions generally should not be used \n       in conditions. Every condition must result in a boo1- \n       ean value; otherwise, a compilation error occurs. In a \n       condition, an assignment will compile only if a bool- \n       ean expression is assigned to a boolean variable."
+    },
+    {
+      "page_number": 18,
+      "title": "The Single if Statement (Cont.)",
+      "text": "The Single if Statement (Cont.) \n·In all previous examples, notice that there is no semicolon at the end of the if \n   or else lines. Instead, a new block should be defined using braces. Another \n   common mistake is to put a semicolon after the condition, like this: \n\n         int x = 1; \n         if (x % 2 == 0); { // incorrect semicolon \n         System.out.println(\"x is even\"); } \n   Here is the same incorrect code with better formatting: \n\n          int x = 1; \n          if (x % 2 == 0) \n           ; // empty statement \n          { \n          System.out.println(\"x is even\"); \n          } \n\n. Because of the semicolon, the if statement compiles as if there are no braces, \n   and the subsequent block runs independently. (Logical error!)"
+    },
+    {
+      "page_number": 19,
+      "title": "The if-else Statement",
+      "text": "The if-else Statement \n\n  A second form of conditional statement has two possibilities, \n  indicated by if and else. The possibilities are called branches, \n  and the condition determines which branch gets executed."
+    },
+    {
+      "page_number": 20,
+      "title": "The if-else Statement (Cont.)",
+      "text": "The if-else Statement (Cont.) \n   . The braces are optional for branches that have only one \n     statement. \n\nif (x % 2 == 0) {                         if (x % 2 == 0) \n System. out.println(\"x is even\");         System.out.println(\"x is even\"); \n} else {                                   else \n System.out.println(\"x is odd\"); }         System. out.println(\"x is odd\"); \n\n   . If the remainder when x is divided by 2 is 0, we know that x is \n     even, and the program displays a message to that effect. If the \n     condition is false, the second print statement is executed \n     instead. \n   . Since the condition must be true or false, exactly one of the \n     branches will run."
+    },
+    {
+      "page_number": 21,
+      "title": "The if-else Statement (Cont.)",
+      "text": "The if-else Statement (Cont.) \n\n    The if statement normally expects only one statement in its body. \n\n    To include several statements in the body of an if (or the body of an \n    else for an if ... else statement), enclose the statements in braces.\n\n    Statements contained in a pair of braces form a block. \n\n    A block can be placed anywhere that a single statement can be \n   placed.\n\n    Example: A block in the else part of an if ... else statement: \n\n           if ( grade >= 60 ) \n              System. out. println( \"Passed\") ; \n           else \n           { \n              System. out. println(\"Failed\"); \nblock         System.out.println(\"You must take this course \n           again. \") ; \n           }"
+    },
+    {
+      "page_number": 22,
+      "title": "The if-else Statement (Cont.)",
+      "text": "The if-else Statement (Cont.) \n\n  The empty statement is represented by placing a \n  semicolon (; ) where a statement would normally \n  be. \n\n      Common Programming Error 3.1 \n      Placing a semicolon after the condition in an if or \n      if ... else statement leads to a logic error in single-selec- \n      tion if statements and a syntax error in double-selection \n      if ... else statements (when the if-part contains an ac- \n      tual body statement)."
+    },
+    {
+      "page_number": 23,
+      "title": "Chaining and Nesting",
+      "text": "Chaining and Nesting \n\nSometimes you want to check related conditions and choose one of several \nactions. \n\nOne way to do this is by chaining a series of if and else blocks by placing if ... \nelse statements inside other if ... else statements to create nested if ... \nelse statements."
+    },
+    {
+      "page_number": 24,
+      "title": "Chaining and Nesting",
+      "text": "Chaining and Nesting \n\n    · Pseudocode \n\n            If number > 0 then \n                 Print \"positive\" \n            else If number <0 then \n\n                 Print \"Negative\" \n                 else Print \"Zero\""
+    },
+    {
+      "page_number": 25,
+      "title": "Example",
+      "text": "Example \n\n  Write a program that read a student grade and print the associated grade \n  letter as following: \n       90 and above =\"A\" \n      Less than 90 and great than or equal 80 = \"B\" and so on ... \n\n    Writ Pseudocode Algorithm? \n\n    Draw the Flow Chart ?"
+    },
+    {
+      "page_number": 26,
+      "title": "Example",
+      "text": "Example \n\n· Pseudocode: \nIf student's grade is greater than or equal to 90 \n           Print \"A\" \nelse \n           If student's grade is greater than or equal to 80 \n                     Print \"B\" \n           else \n                     If student's grade is greater than or equal to 70 \n                          Print \"C\" \n                     else \n                          If student's grade is greater than or equal to 60 \n                                Print \"D\" \n                           else \n                                Print \"F\" \n                                                    Try by your self to write the code"
+    },
+    {
+      "page_number": 27,
+      "title": "Solution",
+      "text": "Solution \n\nif (studentGrade >= 90) \n   System. out . println( \"A\"); \nelse if (studentGrade >= 80) \n   System. out.println ( \"B\"); \nelse if (studentGrade >= 70) \n   System. out. println( \"C\"); \nelse if (studentGrade >= 60) \n   System. out. println ( \"D\"); \nelse \n   System. out.println(\"F\");"
+    },
+    {
+      "page_number": 28,
+      "title": "Chaining and Nesting (Cont.)",
+      "text": "Chaining and Nesting (Cont.) \n\n  The Java compiler always associates an else with the immediately preceding if \n  unless told to do otherwise by the placement of braces ( { and } ). \n\n  Referred to as the dangling-else problem. \n\n  The following code is not what it appears: \n               if (x > 5) \n              if (y > 5) \n                  System. out.println(\"x and y are > 5\" ) ; \n           else \n              System.out.println(\"x is <= 5\"); \n\n  The compiler actually interprets the statement as \n             if (x > 5) \n               if (y > 5) \n                  System. out.println(\"x and y are > 5\") ; \n               else \n                  System.out.println(\"x is <= 5\");"
+    },
+    {
+      "page_number": 29,
+      "title": "Chaining and Nesting (Cont.)",
+      "text": "Chaining and Nesting (Cont.) \n\n. To force the nested if ... else statement to execute as it \n was originally intended, we must write it as follows: \n        if (x > 5) \n        { \n            if (y > 5) \n               System. out. println(\"x and y are > 5\") ; \n        } \n        else \n            System.out.println(\"x is <= 5\"); \n. The braces indicate that the second if is in the body of \n the first and that the else is associated with the first if."
+    },
+    {
+      "page_number": 30,
+      "title": "Logical Operators",
+      "text": "Logical Operators \n\n  Java's logical operators enable you to form more \n  complex conditions by combining simple \n  conditions. \n  The logical operators are we are interesting in are: \n   · && (conditional AND) \n   · | (conditional OR) \n   · ! (logical NOT)"
+    },
+    {
+      "page_number": 31,
+      "title": "Logical Operators (Cont.)",
+      "text": "Logical Operators (Cont.) \n\n  In addition to the relational operators, Java also has three logical \n  operators: &&, ||, and !, which respectively stand for and, or, and \n  not. \n\n  The results of these operators are similar to their meanings in \n  English. For example: \n       x > 0 && x < 10 is true when x is greater than 0 and less than 10. \n       x < 0 | |   x > 10 is true if either condition is true; that is, if x is less \n       than 0 or greater than 10. \n       ! (x > 0) is true if x is not greater than 0. The parentheses are necessary \n       in this example because, in the order of operations, ! comes before >. \n  In order for an expression with && to be true, both sides of the \n  && operator must be true. And in order for an expression with || to \n  be false, both sides of the || operator must be false."
+    },
+    {
+      "page_number": 32,
+      "title": "Logical Operators (Cont.)",
+      "text": "Logical Operators (Cont.) \n\n. The && (conditional AND) operator ensures that two conditions are both \n  true before choosing a certain path of execution. \n\n  Java evaluates to false or true all expressions that include relational \n  operators, equality operators or logical operators. \n\n               expression        expression2        expression1 && expression2 \n\n               false                false                     false \n               false                true                      false \n               true                 false                     false \n               true                 true                      true \n\n              Fig. 4.13 && (conditional AND) operator truth table."
+    },
+    {
+      "page_number": 33,
+      "title": "Logical Operators (Cont.)",
+      "text": "Logical Operators (Cont.) \n\n. The | | (conditional OR) operator ensures that either or both of two \n  conditions are true before choosing a certain path of execution. \n\n  Operator && has a higher precedence than operator | | . \n\n  Both operators associate from left to right. \n\n               expression          expression2          expression1 | | expression2 \n\n               false                 false                         false \n               false                 true                          true \n               true                  false                         true \n               true                  true                          true \n\n             Fig. 4.14  || (conditional OR) operator truth table."
+    },
+    {
+      "page_number": 34,
+      "title": "Logical Operators (Cont.)",
+      "text": "Logical Operators (Cont.) \n\n · The && operator can be used to simplify nested if \n   statements. For example, the following code can be rewritten \n   with a single condition: \n\nif (x == 0) { \n if (y == 0) { \n     System. out.println(\"Both x and y are zero\"); \n } \n} \n\n            // combined \n            if (x == 0 && y == 0) { \n                System.out.println(\"Both x and y are zero\"); \n            }"
+    },
+    {
+      "page_number": 35,
+      "title": "Logical Operators (Cont.)",
+      "text": "Logical Operators (Cont.) \n\n  The || operator can simplify chained if statements. Since the \n  branches are the same, there is no need to duplicate that \n  code: \n\nif (x == 0) { \n System.out.println(\"Either x or y is zero\"); \n} else if (y == 0) { \n   System.out.println(\"Either x or y is zero\"); \n  } \n\n                // combined \n               if (x == 0 | | y == 0) { \n                System. out.println(\"Either x or y is zero\"); \n                }"
+    },
+    {
+      "page_number": 36,
+      "title": "Logical Operators (Cont.)",
+      "text": "Logical Operators (Cont.) \n\n· Logical operators evaluate the second expression only \n  when necessary. \n      For example, true | | anything is always true, so Java does not \n      need to evaluate the expression anything. \n      Likewise, false && anything is always false. \n\n  Ignoring the second operand, when possible, is called \n  short-circuit evaluation. \n\n  Short-circuit evaluation can save time, especially if \n  anything takes a long time to evaluate. It can also avoid \n  unnecessary \n  \n                Common errors, Programming if anything Error-4.8 might fail \n                In expressions using operator &&, a condition-we'll call \n                this the dependent condition-may require another \n                condition to be true for the evaluation of the dependent \n                condition to be meaningful. In this case, the dependent \n                condition should be placed after the && operator to pre- \n                vent errors. Consider the expression (i != 0) && (10 / \n                 i == 2). The dependent condition (10 / i == 2) \n                must appear after the && operator to prevent the possi- \n                bility of division by zero."
+    },
+    {
+      "page_number": 37,
+      "title": "Logical Operators (Cont.)",
+      "text": "Logical Operators (Cont.) \n\nThe ! (logical NOT, also called logical negation or logical complement) \noperator \"reverses\" the meaning of a condition. \nThe logical negation operator is a unary operator that has only one condition \nas an operand. \nThe logical negation operator is placed before a condition to choose a path \nof execution if the original condition (without the logical negation operator) \nis false. \nIn most cases, you can avoid using logical negation by expressing the \ncondition differently with an appropriate relational or equality operator. \n\n                     expression       ! expression \n                     false            true \n                     true             false \n\n                    Fig. 4.16 ! (logical NOT) operator truth table."
+    },
+    {
+      "page_number": 38,
+      "title": "4.8 Logical Operators (Cont.)",
+      "text": "4.8 Logical Operators (Cont.) \n\n The %b format specifier displays the word \"true\" or the \n word \"false\" based on a boolean expression's value. \n\n I // Fig. 4.17: LogicalOperators. java \n 2 // Logical operators. \n 4 public class LogicalOperators \n 5 { \n 6     public static void main(String[] args) \n 7     { \n 8        // create truth table for && (conditional AND) operator \n 9        System.out. printf(\"%s%n%s : %b%n%s : %b%n%s : %b%n%s : %b%n%n\", \n10           \"Conditional AND (&)\", \"false     false\", (false    false) \n11           \"false && true\", (false && true)   , \n12           \"true && false\", (true && false) \n13           \"true && true\", (true && true) ); \n15        // create truth table for | | (conditional OR) operator \n16        System. out.printf (\"%s%n%s : %b%n%s : %b%n%s : %b%n%s : %b%n%n\", \n17           \"Conditional OR (||)\", \"false | | false\", (false | | false) \n18           \"false || true\", (false | | true) , \n19           \"true | | false\", (true | | false) , \n20           \"true || true\", (true | | true) ); \n22        // create truth table for ! (logical negation) operator \n23        System. out. printf (\"%s%n%s : %b%n%s : %b%n\", \"Logical NOT (!)\", \n24            \"! false\", (! false) , \"!true\", (!true) ); \n25     } \n26 } // end class LogicalOperators \n\n   4.17   Logical operators. (Part 3 of 5.)"
+    },
+    {
+      "page_number": 39,
+      "title": "Conditional AND (&&)",
+      "text": "Conditional AND (&&) \n  false && false: false \n  false && true: false \n  true && false: false \n  true && true: true \n\n  Conditional OR (II) \n  false    false: false \n  false    true: true \n  true    false: true \n  true    true: true \n\n  Logical NOT (!) \n  ! false: true \n  ! true: false \n\nFig. 4.17   Logical operators. (Part 5 of 5.)"
+    },
+    {
+      "page_number": 40,
+      "title": "Operators                            Associativity       Type",
+      "text": "Operators                            Associativity       Type \n\n  ++   --                              right to left    unary postfix \n  ++   -- +     -    !   (type)        right to left    unary prefix \n  *   /    %                           left to right    multiplicative \n  +    -                               left to right    additive \n  ‹   ‹=   >                           left to right    relational \n  ==   ! =                             left to right    equality \n  &&                                   left to right    conditional AND \n                                       left to right    conditional OR \n  ? :                                  right to left    conditional \n  =   +=   -=   *= /=    %=            right to left    assignment \n\nFig. 4.18    Precedence/associativity of the operators discussed so far."
+    },
+    {
+      "page_number": 41,
+      "title": "Conditional Operator",
+      "text": "Conditional Operator \n\n  Conditional operator (? : )-can be used in place of an if ... else \n  statement. \n  Ternary operator (takes three operands) \n  Operand to the left of the ? is a boolean expression-evaluates to a \n  boolean value (true or false) \n  Second operand (between the ? and : ) is the value if the boolean \n  expression is true \n  Third operand (to the right of the : ) is the value if the boolean \n  expression evaluates to false. \n· Example: \n        System. out. println(studentGrade >= 60 ? \"Passed\" : \"Failed\") ; \n  Evaluates to the string \"Passed\" if the boolean expression \n  studentGrade >= 60 is true and to the string \"Failed\" if it is \n  false. \n                  Error-Prevention Tip 3.2 \n                  Use expressions of the same type for the second and third \n                  operands of the ?: operator to avoid subtle errors."
+    },
+    {
+      "page_number": 42,
+      "title": "Switch Multiple-Selection Statement",
+      "text": "Switch Multiple-Selection Statement \n\n. If you need to make a series of decisions, \n  chaining else if blocks can get long and \n  redundant. For example, consider a \n  program that converts integers like 1, 2, \n  and 3 into words like \"one\", \"two\", and \n  \"three\" if (number == 1) {        This chain could go on and on ! \n           word = \"one\"; \n           } else if (number == 2) { \n                   word = \"two\"; \n             } else if (number == 3) { \n                    word = \"three\"; \n               } else { word = \"unknown\"; }"
+    },
+    {
+      "page_number": 43,
+      "title": "Switch Multiple-Selection Statement (Cont.)",
+      "text": "Switch Multiple-Selection Statement (Cont.) \n\n  An alternative way to evaluate many possible values of an \n  expression is to use a switch statement. \n\n  switch multiple-selection statement performs different \n  actions based on the possible values of a constant integral \n  expression of type byte, short, int or char. \n\n        switch (number) { \n         case 1: word = \"one\"; \n                 break; \n         case 2: word = \"two\"; \n                 break; \n         case 3: word = \"three\"; \n                 break; \n         default : word = \"unknown\"; \n                  break; \n        }                                              43"
+    },
+    {
+      "page_number": 44,
+      "title": "Switch Multiple-Selection Statement (Cont.)",
+      "text": "Switch Multiple-Selection Statement (Cont.) \n. The switch statement consists of a block that \n  contains a sequence of case labels and an optional \n  default case. \n  The program evaluates the controlling expression \n  in the parentheses following keyword switch. \n  The program compares this expression's value \n  (which must evaluate to an integral value of type \n  byte, char, short or int, or to a \n  String) with each case label."
+    },
+    {
+      "page_number": 45,
+      "title": "Switch Multiple-Selection Statement (Cont.)",
+      "text": "Switch Multiple-Selection Statement (Cont.) \n\n  The body of a switch statement is organized into \n  one or more case blocks. \n. If a match occurs, the program executes that \n  case ' S statements. \n\n. The break statement causes program control to \n  proceed with the first statement after the switch. \n. The default block is optional and executed only \n  if none of the cases apply. \n\n          Common Programming Error 4.7 \n          Forgetting a break statement when one is needed in a \n          switch is a logic error."
+    },
+    {
+      "page_number": 46,
+      "title": "Switch Multiple-Selection Statement (Cont.)",
+      "text": "Switch Multiple-Selection Statement (Cont.) \n\n  switch does not provide a mechanism for testing \n  ranges of values- every value must be listed in a \n  separate case label. \n  switch differs from other control statements in that it \n  does not require braces around multiple statements in \n  a case. \n  Without break, the statements for a matching case \n  and subsequent cases execute until a break or the end \n  of the switch is encountered. This is called \"falling \n  through.\" \n. If no match occurs between the controlling \n  expression's value and a case label, the default case \n  executes. \n. If no match occurs and there is no default case, \n  program control simply continues with the first \n  statement after the switch."
+    },
+    {
+      "page_number": 47,
+      "title": "Switch Multiple-Selection Statement (Cont.)",
+      "text": "Switch Multiple-Selection Statement (Cont.) \n\n. Although switch statements appear \n longer than chained else if blocks, they \n are particularly useful when multiple \n cases can be grouped. \n   switch (food) \n   case \"apple\": \n   case \"banana\" : \n   case \"cherry\": \n      System. out.println(\"Fruit!\"); \n       break; \n   case \"asparagus\" : \n   case \"broccoli\" : \n   case \"carrot\" : \n       System. out.println(\"Vegetable!\"); \n   }"
+    },
+    {
+      "page_number": 48,
+      "title": "Example",
+      "text": "Example \n\n  Write a program that read a student grade and print the associated grade \n  letter as following: \n       90 and above =\"A\" \n       Less than 90 and great than or equal 80 = \"B\" and so on ... \n\n    Use Switch statement!"
+    },
+    {
+      "page_number": 49,
+      "title": "1 // Fig. 4.9: LetterGrades. java",
+      "text": "1 // Fig. 4.9: LetterGrades. java \n 2 // LetterGrades class uses the switch statement to count letter grades. \n 3 import java. util. Scanner; \n 5 public class LetterGrades \n 6 { \n 7     public static void main(String[] args) \n 8     { \n 9       Scanner input = new Scanner(System. in); \n10       System.out.print(\"Enter a grade in the range 0-100:\"); \n11       int grade = input. nextInt(); // read grade \n12       // increment appropriate letter-grade counter \n13       switch (grade / 10) \n14       { \n15          case 9: // grade was between 90 \n16          case 10: // and 100, inclusive \n17             System.out.println(\"Your grade is: A\"); \n18             break; // exits switch \n20          case 8: // grade was between 80 and 89 \n21             System.out.println(\"Your grade is: B\"); \n22             break; // exits switch \n24          case 7: // grade was between 70 and 79 \n               System.out.println(\"Your grade is: C\"); \n26             break; // exits switch \n28          case 6: // grade was between 60 and 69 \n29             System.out.println(\"Your grade is: D\"); \n30             break; // exits switch \n32          default: // grade was less than 60 \n33             System.out.println(\"Your grade is: F\"); \n34             break; // optional; exits switch anyway \n35       } // end switch \n36      }    end main \n37    }// end class Lettengrades"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15 # Use a modern version of PostgreSQL
+    container_name: rag_postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: raguser         # The username for the database
+      POSTGRES_PASSWORD: ragpassword # The password for the database
+      POSTGRES_DB: ragapp_db         # The name of the database
+    ports:
+      - "5432:5432" # Map the port from your local machine to the container
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+

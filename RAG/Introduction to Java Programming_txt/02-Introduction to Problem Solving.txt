@@ -1,0 +1,547 @@
+
+
+       Introduction to Problem Solving 
+
+                          Reference: 
+      Problem Solving and Programming Concepts 9th Edition 
+             by Maureen Sprankle and Jim Hubbard 
+
+August 24, 2025      IMAMU, Computer Science dept, CS140/150 1 
+<<<
+
+Outlines 
+
+ General Problem Solving 
+
+ Six Steps of Problem Solving 
+
+ Structure of Programs 
+
+ Beginning Computer Concepts for Problem Solving 
+
+ Problem Solving Organization Tools 
+<<<
+
+General Problem Solving 
+
+. People make decisions every day to solve problems that affect their lives 
+
+    Important problems 
+    Unimportant problem 
+
+· Bad/Good decision 
+<<<
+
+Six Steps of Problem Solving 
+
+. There are six steps to follow to ensure the best decision. 
+  Most people use them without even knowing it: 
+   1. Identify the problem. 
+   2. Understand the problem. 
+   3. Identify alternative ways to solve the problem. 
+   4. Select the best way to solve the problem from the list of 
+      alternative solutions. 
+   5. List instructions that enable you to solve the problem using 
+      the selected solution. 
+   6. Evaluate the solution. 
+<<<
+
+Six Steps of Problem Solving 
+
+1. Identify the problem 
+
+     The first step toward solving a problem is to identify the problem 
+
+     What is the specific problem?                              
+      . This means you should determine what is that you want to change. 
+
+     Clearly define the goal that you want to achieve. 
+        What are you trying to achieve? 
+
+     Determine what are the inputs and outputs 
+
+     If you don't know what the problem is, you cannot solve it. 
+<<<
+
+ Six Steps of Problem Solving 
+
+2.   Understand the problem 
+    . You must understand what is involved in the problem before you can continue 
+      toward the solution (you should issue a clear (unambiguous) problem 
+      statement). 
+    . This includes understanding the rules or the logic for the business 
+      (business rules or logic) you are attempt to solve a problem concerned with 
+      it. 
+    . Also, you must know the suitable set of steps to solve a given problem. You 
+      cannot solve a problem if you miss the exact processing steps (arithmetic, 
+      relational and logical) to handle it . For example, to solve a problem involving 
+      accounting, you must study the accounting life cycle. 
+<<<
+
+Six Steps of Problem Solving 
+
+3. Identify alternative ways to solve the problem 
+   Generate as many potential solutions as possible. 
+   List the features for each possible solution 
+<<<
+
+Six Steps of Problem Solving 
+
+4. Select the best way to solve the problem from 
+   the list of alternative solutions 
+
+   . In this step, you need to identify and evaluate the pros and 
+    cons of each possible solution before selecting the best one 
+
+   . In order to do this, you need to select criteria for the evaluation 
+<<<
+
+Six Steps of Problem Solving 
+
+5. List instructions that enable you to solve the 
+   problem using the selected solution 
+        Create a numbered, step-by-step instructions that must fall within the 
+       knowledge base set up in step 2 
+<<<
+
+Six Steps of Problem Solving 
+
+6. Evaluate the solution 
+
+     To evaluate or test a solution means to check its result to see if it is 
+
+     correct, and to see if it satisfies the needs of the person(s) with the 
+
+     problem. 
+
+     Test the solution 
+
+         Are the results accurate? 
+
+         Does the solution solve the original problem? 
+
+         Does it satisfy the needs of the user? 
+
+         Is it acceptable to the user? 
+<<<
+
+     Problem Solving Example 
+
+
+<<<
+
+Structure of Programs 
+
+. Use modules to break the whole problem into parts, 
+  with each part having a particular function. 
+
+. Use the three logic structures to ensure that the 
+ solution flows smoothly from one instruction to the next, 
+  rather jumping from one point in the solution to another. 
+<<<
+
+Structure of Programs 
+
+  Program Structures: 
+
+    The sequential Structure. 
+
+       Ex: Simple calculation. 
+
+   . The Decision Structure. 
+
+     . Ex: Decide if student pass or fail. 
+
+   . The Loop Structure. 
+
+       Ex: Repeat displaying a warning message 10 times. 
+<<<
+
+Beginning Computer Concepts for Problem Solving 
+
+. There are 3 types of problem that can be solved in computer: 
+
+· Computational problems 
+    involving some kind of mathematical processing 
+
+. Logical Problems 
+   · involving relational or logical processing 
+
+. Repetitive Problems 
+    involving repeating a set of mathematical and/or logical instructions. 
+<<<
+
+Basic building blocks for programming and problem solving 
+
+· Basic building programming blocks: 
+
+      Equations 
+
+           Consist of constant, variables and operators. It incorporates a left hand side LHS (variable of a 
+           specific data type), assignment operator '=' and a right hand side RHS (may be value, variable, 
+           constant or expression) 
+
+    · Expressions 
+
+           Incorporates arithmetic, relational and logical expressions. It can be used as a right hand side 
+           in an assignment expression, as a loop controlling condition or a branching condition in a 
+           decision structure. 
+
+    · Functions 
+
+        · Block of code that runs when the function invoked and almost returns a value. 
+<<<
+
+Beginning Computer Concepts for Problem Solving 
+
+· Constants: 
+
+     Does not change during the processing of all the instructions in a solution 
+
+     Can be of any data type: numeric, alphabetical or special symbols 
+
+   · Examples 
+
+         3, 5, 10, "Sara", "+", "-", "/" 
+<<<
+
+Beginning Computer Concepts for Problem Solving 
+
+· Variables: 
+     May change during processing 
+   . In many programming languages, variables are called identifiers. 
+     A name is assigned to each variable used in a solution and 
+     should be consistent with what the value of the variable 
+     represents. 
+   . The computer uses the variable name to find the location; it uses 
+     the value found at the memory location to do the processing. 
+· Ex: 
+   · Name="Java" 
+     Test Score=95 
+<<<
+
+Beginning Computer Concepts for Problem Solving 
+
+ Data Types: 
+
+  · Data can come with different type: 
+     · Numeric 
+     · Character 
+      Logical 
+
+    Computer should know the data type of each variable or constant . 
+<<<
+
+Beginning Computer Concepts for Problem Solving 
+
+             Data Type             Data Set            Examples 
+
+          Numeric :Integer All whole numbers      3456 
+                                                   -43 
+
+          Numeric : Real    All real numbers (whole + 3456.78 
+                            decimal)              0.000123 
+
+          Character (uses   All letters, numbers, and "A", "a", "1", "5", "+", 
+          quotation marks) special symbols        "%" 
+
+          String (uses quotation Combinations of more than "Mulder" 
+          marks)            one character          "Scully" 
+                                                   "123-45-6789" 
+
+          Logical           True or False          True 
+                                                   False 
+<<<
+
+Solution Organization Tools 
+
+  Certain organizational tools will help you learn to how solve problems on the computer. 
+
+ The tools include the: 
+
+    Pseudocode Algorithm 
+    Flowchart 
+<<<
+
+  Algorithm 
+
+The next step of organizing a solution is to develop 
+
+sets of instructions for the computer, called algorithms. 
+  Algorithm 
+                             Input list
+                  
+            A step-by-step method for solving a problem or doing a task 
+
+                            Output list
+                              
+<<<
+
+  Writing the Algorithm 
+
+                                                    The Form of an Algorithm 
+The next step of organizing a 
+
+solution is to develop sets of
+
+instructions for the computer,
+
+called algorithms. 
+
+                                                 
+The Form of an Algorithm
+Name of Module
+
+1.Instruction
+
+2.Instruction
+
+3…
+
+4…
+…
+-, exit
+<<<
+
+  Writing the Algorithm 
+
+ The programmer writes a separate set of instructions 
+for each program or (module). 
+
+. The number of instruction is determined by the way 
+
+ the programmer chooses to solve the problem. 
+<<<
+
+ Drawing the Flowchart 
+
+· Flowchart is a graphical representation of the algorithm. 
+
+  The algorithms and flowcharts are the final steps in 
+
+  organizing a solution. 
+
+  Both of algorithm and flowcharts shows the flow of 
+
+  processing from the beginning to the end of a solution. 
+<<<
+
+Drawing the Flowchart 
+
+ Each block in a flowchart represents one instruction 
+
+ from an algorithm. 
+
+· Flowlines indicate the direction of the data flow. 
+
+. Most block have one or more entrances and have only 
+
+ one exit . 
+<<<
+
+Flowchart Symbol 
+
+    Flowchart                                 
+
+     Symbol Flowline "----------->"
+
+    Explanation
+                         Flowlines are indicated by straight lines with arrows to show the 
+
+                         direction of data flow. 
+
+                         Flowlines are used to connect blocks by exiting from one and 
+
+                         entering another. 
+<<<
+
+Flowchart Symbol 
+
+    Flowchart                                  
+    
+    
+    Explanation 
+
+        Start--> <--End 
+
+                          Flattened ellipses indicate the start and the end of a module. An 
+
+         
+                          ellipse uses the name of the program (module) at the start. 
+
+                       . The end is indicated by the word end or stop. 
+
+                       · A start has no flowlines entering it and only one exiting it; an end 
+<<<
+
+Flowchart Symbol 
+
+                    xplanation 
+
+                   The rectangle indicates a processing block, for such things as 
+
+                       calculations, 
+
+                       opening and closing files, and so forth. A processing block has 
+
+                       one entrance and one exit. 
+<<<
+
+Flowchart Symbol 
+
+   Flowchart                              
+  Input/Output (1/0)  
+  Explanation
+                   The parallelogram indicates input to and output from the 
+
+                       computer memory. 
+
+                     · An input/output (I/O) block has one entrance and only one exit. 
+<<<
+
+Flowchart Symbol 
+
+
+                      . The diamond indicates a decision. It has one entrance and two 
+     
+
+                        and only two exits from the block. 
+
+                      . One exit is the action when the resultant is True, and the other 
+
+                        exit is the action when the resultant is False. 
+<<<
+
+Example: Payroll System 
+   · Problem: 
+
+   Calculate the gross pay of an employee given the worked hours and 
+  the rate of pay. The gross pay is calculated by multiplying the worked 
+   hours by the rate of pay. 
+
+<<<
+
+Example: Payroll System 
+
+· Problem: 
+   Attempt to design a flowchart and write an algorithm to     calculate and 
+   print the gross pay of an employee given the hours worked and the rate 
+   of pay. The gross pay is calculated by multiplying the hours worked by 
+   the rate of pay. 
+                                                             Flow Chart 
+Algorithm 
+                                                 
+  Gross Pay Calculation Algorithm 
+  1. Enter worked Hours h.                        
+  2. Enter Pay Rate r.                               
+  3. Calculate Gross Pay: g = h * r. 
+                                                       
+  4. Print Gross Pay g.                                   
+  5. End. 
+
+<<<
+
+Design a flowchart and an algorithm 
+
+     Sarah is traveling from city A to city B. The distance d between the 
+     two cities is variable. she uses an equation to calculate the consumed 
+     travelling. Assuming that here driving speed is 50k/h (Kilometre per 
+     Hour) within the first half of distance and100k/h within the second half 
+     of the distance. 
+     Attempt to design a flowchart and write an algorithm to get the 
+    travelling time from one city to another giving the distance d between 
+     them. 
+<<<
+
+Solution 
+
+
+<<<
+
+ Solution 
+
+                            Step 5 
+
+Travelling Time Calculation 
+
+1. Enter travelling distance d 
+
+2. Calculate required time for first half distance: Time1=0.5d/50 h 
+
+3. Calculate required time for second half distance: Time2=0.5d/50 h 
+
+4. Calculate Total time=Time1+Time2 
+
+5. Print Total Time 
+
+6. End; 
+<<<
+
+Solution 
+
+                     Step 5 
+
+                   Start 
+
+                 Read distance 
+
+                  Time 1= 
+                 0.5*distance/50 
+
+                  Time 2= 
+                0.5*distance/100 
+
+                   Total 
+                time=Time1+Time2 
+
+                  Print Total 
+                   Time 
+
+                   End 
+<<<
+
+Design a flowchart & algorithm 
+
+    Ahmed would like to know the average of his test scores. 
+    Design an flowchart and write an algorithm that accepts five 
+    grades then calculates and prints their average. 
+
+                Give student 5 min to solve 
+<<<
+
+ Solution 
+                         Step 5 
+
+Grades Average Algorithm 
+
+1. Enter the five test grades g1, g2, g3, g4 and g5. 
+
+2. Calculate total grades total = g1+ g2 + g3 + g4 + g5. 
+
+3. Calculate average of grades avg= total / 5 
+
+4. Print average avg. 
+
+5. End. 
+<<<
+
+Solution 
+                      Step 5 
+
+                     Start 
+
+                   Read grade 1, 
+                   grade2, grade 3, 
+                   grade 4, grade 5 
+
+                   Total= grade1 + 
+                  grade2+ grade3+ 
+                   grade4+ grade5 
+
+                   Average=total/5 
+
+                      Print 
+                     Average 
+
+                      End 
+<<<

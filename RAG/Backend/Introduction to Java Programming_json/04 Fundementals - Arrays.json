@@ -1,0 +1,92 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "04- Fundementals - Arrays",
+  "number_of_slides": 17,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Fundamentals of Java Programs",
+      "text": "Fundamentals of Java Programs \n    (Part 2-Reference datatype)"
+    },
+    {
+      "page_number": 2,
+      "title": "Reference",
+      "text": "Reference \n\n· Readings \n    Chapter 6: Arrays and ArrayLists \n    Chapter 19: Searching, Sorting and Big O"
+    },
+    {
+      "page_number": 3,
+      "title": "Introduction",
+      "text": "Introduction \n\n Data structures-collections of related \n\n data items. \n\n Array objects-data structures consisting \n of related data items of the same type. \n\n Make it convenient to process related \n\n groups of values. \n\n· Remain the same length once they're"
+    },
+    {
+      "page_number": 4,
+      "title": "Creating Arrays",
+      "text": "Creating Arrays \n\n  An array is a sequence of values; the values in the \n  array are called elements. \n\n. You can make an array of ints, doubles, or any other \n  type, but all the values in an array must have the same \n  type. \n\n  To create an array, you have to declare a variable with \n  an array type and then create the array itself. Array \n  types look like other Java types, except they are \n  followed by square brackets ([])."
+    },
+    {
+      "page_number": 5,
+      "title": "Creating Arrays",
+      "text": "Creating Arrays \n\n  For example, the following lines declare that \n  counts is an \"integer array\" and values is a \n  \"double array\"\n     int[] counts; \n     double [] values; \n     int size=3; //variable \n\n· To create the array itself, you have to use the new operator:\n    counts = new int [4] ; \n    values = new double [size] ; \n\nOf course, you can also declare the variable and create the array in a single line of code:\n    int [] counts = new int [4]; \n    double [] values = new double [size] ;"
+    },
+    {
+      "page_number": 6,
+      "title": "Accessing Elements",
+      "text": "Accessing Elements \n\n   When you create an array of ints, the elements are initialized to zero. \n\n . Also, you can initialize array directly in the declration line with known values \n   as: \n\n                       int [] counts = {1, 2, 3, 4}; \n   The arrow indicates that the value of counts is a reference to the array. You \n   should think of the array and the variable that refers to it as two different \n   things. \n\n   The large numbers inside the boxes are the elements of the array. The small \n   numbers outside the boxes are the indexes (or indices) used to identify each \n   location in the array. \n\n   Notice that the index of the first element is 0, not 1, as you might have \n   expected."
+    },
+    {
+      "page_number": 7,
+      "title": "Accessing Elements",
+      "text": "Accessing Elements \n\n  The [] operator selects elements from an array and \n you can use the [] operator anywhere in an \n  expression; \n  counts[1] = counts[0] * 2; counts[2]++; counts[3] -= 60; \n  System.out.println(\"The zeroth element is \" + counts[0]); \n\n  You can use any expression as an index, as long as \n  it has type int."
+    },
+    {
+      "page_number": 8,
+      "title": "Accessing Elements",
+      "text": "Accessing Elements \n\n     Array names follow the same conventions as other \n     variable names (c, array2, intArray, etc.). \n     An index must be a nonnegative integer (c[ -3] not allowed). \n\n     The highest index in an array is one less than the number \n     of elements. \n\n     A program can use an expression as an index (c[i-j+1]). \n\n     Array-access expressions can be used on the left side of \n     an assignment to place a new value into an array \n     element.                                            \nCommon Programming Error 6.1                             \nAn indexZmust be dh Ont value or a value of a type that \n can be promoted to int-namely, byte, short or           \n char, but not long; otherwise, a compilation error oc-curs \n\nError-Prevention Tip 6.1\nWhen writing code to access an array element, ensure\nthat the array index remains greater than or equal to 0 \nand less than the length of the array. This would prevent\nArrayIndexOutOfBoundsExceptions if your pro-gram is correct."
+    },
+    {
+      "page_number": 9,
+      "title": "Common Errors",
+      "text": "Common Errors \n\n Common Programming Error 6.2 \n  In an array declaration, specifying the number of ele- \n  ments in the square brackets of the declaration (e.g., \n  int [12] c;) is a syntax error. \n\n  Common Programming Error 6.3 \n  Declaring multiple array variables in a single declara- \n  tion can lead to subtle errors. Consider the declaration \n  int[] a, b, c ;. Ifa, b and c should be declared as ar- \n  ray variables, then this declaration is correct-placing \n  square brackets directly following the type indicates that \n  all the identifiers in the declaration are array variables. \n  However, if only a is intended to be an array variable, \n  and b and c are intended to be individual int vari- \n  ables, then this declaration is incorrect-the declaration \n  int a[], b, c; would achieve the desired result."
+    },
+    {
+      "page_number": 10,
+      "title": "Multidimensional arrays",
+      "text": "Multidimensional arrays \n\n Multidimensional arrays with two \n dimensions are often used to represent \n tables of values with data arranged in \n rows and columns. \n    To identify a particular table element we use: \n    array [i] [j] \n       i identifies the element's row and j identifies the \n       element's column \n Arrays that require two indices to identify \n each element are called two-dimensional \n arrays."
+    },
+    {
+      "page_number": 11,
+      "title": "Multidimensional arrays",
+      "text": "Multidimensional arrays \n\n  Figure 6.11 illustrates a two-dimensional \n  array named a with three rows and four \n  columns (i.e., a three-by-four array). \n\n  In general, an array with m rows and n \n  columns is called an m-by-n array."
+    },
+    {
+      "page_number": 12,
+      "title": "Multidimensional arrays",
+      "text": "Multidimensional arrays \n\n  Multidimensional arrays can be initialized with array \n initializers in declarations. \n A two-dimensional array b with two rows and two \n columns could be declared and initialized with nested \n array initializers as follows: \n      · int[][] b = { { 1, 2 }, { 3, 4 } }; \n The initial values are grouped by row in braces. \n. The compiler counts the number of nested array \n initializers to determine the number of rows in array b. \n. The compiler counts the initializer values in the nested \n array initializer for a row to determine the number of \n columns in that row. \n Rows can have different lengths."
+    },
+    {
+      "page_number": 13,
+      "title": "Multidimensional arrays",
+      "text": "Multidimensional arrays \n\n  A multidimensional array with the same number of \n columns in every row can be created with an array- \n  creation expression, as in: \n        int[][] b = new int[3][4]; \n  Programs can also use variables to specify array \n  dimensions, because new creates arrays at execution \n  time-not at compile time. \n  The elements of a multidimensional array are initialized \n when the array object is created. \n  A multidimensional array in which each row has a \n  different number of columns can be created as follows: \n        int[][] b = new int[2][ ]; // create 2 rows \n        b[0] = new int[5]; // create 5 columns for row 0 \n        b[1] = new int[3]; // create 3 columns for row 1"
+    },
+    {
+      "page_number": 14,
+      "title": "Array Class",
+      "text": "Array Class \n\n   Class Arrays helps you avoid reinventing the wheel by providing methods for \n\n   common array manipulations. \n\n   Class Arrays must be imported in the program. \n\n                      import java. util. Arrays; \n\n   Class Arrays methods include: \n\n        sort for sorting an array (i.e., arranging elements into ascending order), \n\n        binarySearch for searching a sorted array (i.e., determining whether an array \n        contains a specific value and, if so, where the value is located), \n\n        equals for comparing arrays \n\n        fill for placing values into an array. \n\n        toString for returns a string representation of the contents of this array enclosed by []."
+    },
+    {
+      "page_number": 15,
+      "title": "Example 1",
+      "text": "Example 1 \n\nimport java. util. Arrays; \n\npublic class example1 { \n  public static void main (String[ ] args) \n   { \n      // Get the Array \n      int intArr [] = { 10, 20, 15, 22, 35 }; \n\n      Arrays. sort (intArr ) ; \n\n      int intKey = 22; \n\n      / / Print the key and corresponding index \n      System. out. print ln( \n         intKey + \" found at index = \" \n         + Arrays. binarySearch ( intArr, intKey) ) ; \n   } \n} \n      Output : \n      22 found at index = 3 \n\n                  What if the intKey=5 ?!"
+    },
+    {
+      "page_number": 16,
+      "title": "Example 2",
+      "text": "Example 2 \n\n import java. util. Arrays; \n\n public class Main { \n    public static void main (String[] args) \n    { \n\n        / / Get the Arrays \n        int intArr[] = { 10, 20, 15, 22, 35 } ; \n\n        / / Get the second Arrays \n        int intArr1[] = { 10, 15, 22}; \n\n        / / To compare both arrays \n        System. out . println( \"Integer Arrays on comparison: \" \n                        + Arrays . equals ( intArr, intArr1) ); \n    } \n } \n\n       Output : \n       Integer Arrays on comparison:     false"
+    },
+    {
+      "page_number": 17,
+      "title": "Example 3",
+      "text": "Example 3 \n\n import java. util. Arrays; \n\n public class example3 { \n    public static void main (String[] args) \n     { \n\n        / / Get the Arrays \n        int intArr [] = { 10, 20, 15, 22, 35 } ; \n\n        int intKey = 22; \n\n        Arrays. fill(intArr, intKey) ; \n\n        / / To fill the arrays \n        System. out.println( \"Integer Array on filling: \" \n                          + Arrays. toString( intArr ) ) ; \n    } \n } \n\n        Output : \n        Integer Array on filling:      [22, 22,   22, 22, 22]"
+    }
+  ]
+}

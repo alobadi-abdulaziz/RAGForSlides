@@ -1,0 +1,77 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "05 Fundementals - String",
+  "number_of_slides": 14,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Fundamentals of Java Programs",
+      "text": "Fundamentals of Java Programs \n\n  (Part 3-Reference datatype -Strings)"
+    },
+    {
+      "page_number": 2,
+      "title": "Reference",
+      "text": "Reference \n\n· Readings \n     Chapter 14: Strings, Characters and Regular Expressions"
+    },
+    {
+      "page_number": 3,
+      "title": "Introduction to Object",
+      "text": "Introduction to Object \n\n. In Java and other object-oriented languages, an \n  object is a collection of data that provides a set of \n  methods. For example, Scanner, is an object that \n  provides methods for parsing input. System.out and \n  System.in are also objects. \n\n  Strings are objects, too. They contain characters and \n  provide methods for manipulating character data."
+    },
+    {
+      "page_number": 4,
+      "title": "Primitive vs Reference Data Type",
+      "text": "Primitive vs Reference Data Type \n\n Java's types are divided into primitive types and reference \n types. \n     Primitive types: boolean, byte, char, short, int, long, \n     float and double. \n All nonprimitive types are reference types. \n A primitive-type variable can hold exactly one value of its \n declared type at a time. \n  Programs use variables of reference types (normally called \n references) to store the addresses of objects in the \n computer's memory. \n     Such a variable is said to refer to an object in the \n     program."
+    },
+    {
+      "page_number": 5,
+      "title": "Class String",
+      "text": "Class String \n\n· Class String is used to represent strings in Java. \nCreate an empty string represented as \"\" and has a \n length of 0. \n    String s1 = new String() ; \nConstructor that takes a String object copies the \n argument into the new String. \n    String str = \"Hello\"; \n    String s = new String ( \"Hello\") ; \n    String s2 = new String(s2) ;"
+    },
+    {
+      "page_number": 6,
+      "title": "1    Fig. 14.1: StringConstructors. java",
+      "text": "1    Fig. 14.1: StringConstructors. java \n  2    String class constructors. \n  4 public class StringConstructors \n  5 { \n  6    public static void main(String[] args) \n  7    { \n  8       char [] charArray = {'b', 'i', 'r', 't', 'h', ' ', 'd', 'a', 'y'}; \n  9       String s = new String(\"hello\"); \n 11       // use String constructors \n 12       String s1 = new String(); \n 13       String s2 = new String(s); \n 14       String s3 = new String(charArray) ; \n 15       String s4 = new String(charArray, 6, 3); \n 17       System. out. printf( \n 18         \"s1 = %5%ns2 = %5%ns3 = %5%ns4 = %5%n\", s1, s2, s4) ; \n 19    } \n 20 } // end class StringConstructors \n\nFig. 14.1 String class constructors. (Part of 2.) \n\n s1 = \n s2 = hello \n s3 = birth day \n s4 = day \n\nFig. 14.1 String class constructors. (Part 2 of 2.)"
+    },
+    {
+      "page_number": 7,
+      "title": "Characters",
+      "text": "Characters \n\n   Strings provide a method named charAt, which extracts a character. It \n   returns a char, a primitive type that stores an individual character. \n\n                String fruit = \"banana\"; \n                char letter = fruit.charAt(0); \n\n   The argument 0 means that we want the letter at position 0. Like array \n   indexes, string indexes start at 0, so the character assigned to letter is b. \n · String method length determines the number of characters in a string. \n\nString fruit = \"banana\"; \nSystem.out.print(fruit. length()); //output 6 \nSystem.out.print( fruit.charAt(fruit. length())); //Error! \nSystem.out.print( fruit.charAt(fruit. length()-1)); //Correct!"
+    },
+    {
+      "page_number": 8,
+      "title": "Strings are Immutable",
+      "text": "Strings are Immutable \n\n Strings provide methods, toUpperCase and to LowerCase, \n that convert from uppercase to lowercase and back. \n\n These methods are often a source of confusion, because it \n sounds like they modify strings. But neither these methods \n nor any others can change a string, because strings are \n immutable. \n\n          String name = \"Hello Java\"; \n          String upperName = name. toUpperCase( ); \n          System. out.print (name +\"\\n\"+ upperName) ; \n\n          Output : \n          Hello Java \n          HELLO JAVA"
+    },
+    {
+      "page_number": 9,
+      "title": "Substrings Method",
+      "text": "Substrings Method \n\n  The substring method returns a new string that copies letters from an existing \n\n  string, starting at the given index. \n\n     · fruit.substring(0) returns \"banana\" \n\n     · fruit.substring(2) returns \"nana\" \n\n     · fruit.substring(6) returns \"\"\n\n  There are other versions of substring that have different parameters. If it's \n\n  invoked with two arguments, they are treated as a start and end index: \n\n     · fruit.substring(0, 3) returns \"ban\" \n\n     · fruit.substring(2, 5) returns \"nan\" \n\n     · fruit.substring(6, 6) returns \"\""
+    },
+    {
+      "page_number": 10,
+      "title": "The indexOf Method",
+      "text": "The indexOf Method \n\n  The indexOf method searches for a character in a string and it returns \n  the index of the first appearance. \n         String fruit = \"banana\"; \n         int index = fruit . indexOf ( 'a' ) ; //index=1 \n\n  To find subsequent appearances, you can use another version of \n  indexOf, which takes a second argument that indicates where in the \n  string to start looking.\n\n    int index= fruit fruit.indexOf('a', 2) ; //index=3\n                                        \n\n. If the character does not appear in the string, indexOf returns -1. Since \n  indexes cannot be negative, this value indicates the character was not \n  found."
+    },
+    {
+      "page_number": 11,
+      "title": "The indexOf Method",
+      "text": "The indexOf Method \n\n· You can also use indexOf to search for a substring, not just a single \n  character. \n         int index = fruit.indexOf ( \"nan\") ; //index=2 \n\n· Method lastIndexOf locates the last occurrence of a character in a \n  String. The method searches from the end of the String toward the \n  beginning. If it finds the character, it returns the character's index in the \n  String-otherwise, it returns -1. \n· A second version of lastIndexOf takes two integer arguments-the \n  integer representation of the character and the index from which to begin \n  searching backward. \n\n        String fruit = \"banana\"; \n        int index = fruit.lastIndexOf ( 'a' ) ; //index=5 \n        int index = fruit.lastIndexOf ( 'a', 4) ; //index=3"
+    },
+    {
+      "page_number": 12,
+      "title": "String Comparison",
+      "text": "String Comparison \n\n  equals method used to compare strings. \n\n  The equals method returns true if the strings contain the \n  same characters; otherwise it returns false. \n\n  String method equalsIgnoreCase ignores whether the letters \n  in each String are uppercase or lowercase when performing \n  the comparison. \n\n String name1 = \"Java\"; \n String name2 = \"JAVA\"; \n\n boolean answer= name1. equals(name2) ; \n System. out.print ln(\"Answer=\"+answer); //output false \n\n answer= name1. equalsIgnoreCase(name2) ; \n System. out.println(\"Answer=\"+answer); //output true"
+    },
+    {
+      "page_number": 13,
+      "title": "String Comparison",
+      "text": "String Comparison \n\n  We can use compareTo to see which comes first in alphabetical \n  order. The return value from compareTo is the difference between \n  the first characters in the strings that differ. \n      If the strings are equal, their difference is zero. \n      If the first string (the one on which the method is invoked) comes first in \n      the alphabet, the difference is negative. Otherwise, the difference is \n      positive. \n\n       String name1 = \"Alan Turing\"; \n       String name2 = \"Ada Lovelace\"; \n       int answer= name1. compareTo(name2) ; \n       System. out.print ln(\"Answer=\"+answer); //output positive 8 \n\n      In the preceding code, compareTo returns positive 8, because the second \n      letter of \"Ada\" comes before the second letter of \"Alan\" by 8 letters. \n\n      Both equals and compareTo are case-sensitive. The uppercase letters \n      come before the lowercase letters, so \"Ada\" comes before \"ada\"."
+    },
+    {
+      "page_number": 14,
+      "title": "String Checking",
+      "text": "String Checking \n\n String methods startsWith and endsWith \n determine whether strings start with or end with a \n particular set of characters. \n String name1 = \"started\"; \n String name2 = \"start\"; \n String name4 = \"end\"; \n\n System.out.println(name1.startsWith('s' )); //output true \n System.out.println(name1.startsWith(\"st\")); //output true \n\n System. out.println(name2.startsWith('s') ); //output true \n System.out.println(name2.startsWith(\"st\")); //output true \n\n System. out.println(name1.endsWith('d' )); //output true \n System.out.println(name1. endsWith(\"ed\")); //output true \n\n System.out.println(name2.endsWith('d')); //output false \n System.out.println(name3.endsWith('d')); //output true"
+    }
+  ]
+}

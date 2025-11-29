@@ -1,0 +1,162 @@
+{
+  "course_name": "Introduction to Java Programming",
+  "chapter_name": "07 Loop",
+  "number_of_slides": 31,
+  "slides": [
+    {
+      "page_number": 1,
+      "title": "Control Statements Repetition",
+      "text": "Control Statements Repetition \n           Loops - Part1 -"
+    },
+    {
+      "page_number": 2,
+      "title": "Contents",
+      "text": "Contents \n\n· Readings \n3.7 while Repetition Statement \n3.8 Formulating Algorithms: Counter-Controlled Repetition \n3.9 Formulating Algorithms: Sentinel-Controlled Repetition \n3.10 Formulating Algorithms: Nested Control Statements \n4.2 Essentials of Counter-Controlled Repetition \n4.3 for Repetition Statement \n4.4 Examples Using the for Statement \n4.5 do ... while Repetition Statement \n4.7 break and continue Statements"
+    },
+    {
+      "page_number": 3,
+      "title": "Repetition in Real Life",
+      "text": "Repetition in Real Life"
+    },
+    {
+      "page_number": 4,
+      "title": "Common Mathematic Problems Solved Using Repetition",
+      "text": "Common Mathematic Problems Solved Using Repetition \n\n· Print natural number set: \n\n   1,2,3,4, ..... \n\n· Compute Factorial of a number n: \n\n   n! = n × (n - 1) x (n - 2) x ... 1 \n\n  Compute sequence (n+1)! - 1 : \n\n   1 . 1! + 2 . 2! + ... + n n! = (n+1)! - 1, Vn ≥ 1"
+    },
+    {
+      "page_number": 5,
+      "title": "How code would be look without a loop?",
+      "text": "How code would be look without a loop?"
+    },
+    {
+      "page_number": 6,
+      "title": "Repetition Control Statements in High-Level Language",
+      "text": "Repetition Control Statements in High-Level Language \n\n. There are mainly two types of loops: \n     Entry Controlled loops: \n         In this type of loop, the test condition is tested \n        before entering the loop body. \n       Ex: For loop and While loop. \n     Exit Controlled Loops: \n         In this type of loop the test condition is tested or \n        evaluated at the end of the loop body. Therefore, \n        the loop body will execute at least once, irrespective \n        of whether the test condition is true or false. \n       Ex: do-while loop."
+    },
+    {
+      "page_number": 7,
+      "title": "Loops",
+      "text": "Loops"
+    },
+    {
+      "page_number": 8,
+      "title": "While Loop",
+      "text": "While Loop \n\n                                                            \n Repetition statement-repeats an action while a \ncondition remains true. \n\n The repetition statement's body may be a single           \nstatement or a block. \n                                                                   \n Eventually, the condition will become false. At \nthis point, the repetition terminates, and the first \n                                                           \nstatement after the repetition statement executes."
+    },
+    {
+      "page_number": 9,
+      "title": "While Loop",
+      "text": "While Loop \n\n\n\n  The expression in parentheses is called the continuation condition. The \n\n  statements in braces are called the body. \n  The flow of execution for a while statement is: \n       Evaluate the condition, yielding true or false. \n       If the condition is false, skip the body and go to the next statement. \n       If the condition is true, execute the body and go back to step 1. \n. This type of flow is called a loop, because the last step loops back \n  around to the first.                                                 9"
+    },
+    {
+      "page_number": 10,
+      "title": "Counter-Controlled While Loop",
+      "text": "Counter-Controlled While Loop \n\n  Counter-controlled repetition requires \n     a control variable (or loop counter) \n     the initial value of the control variable \n     the increment by which the control variable is modified \n     each time through the loop (also known as each \n     iteration of the loop) \n     the loop-continuation condition that determines if \n     looping should continue."
+    },
+    {
+      "page_number": 11,
+      "title": "Fig. 4.1: WhileCounter . java",
+      "text": "Fig. 4.1: WhileCounter . java \n 2   / Counter-controlled repetition with the while repetition statement. \n  4 public class WhileCounter \n  5 { \n  6    public static void main(String[] args) \n  7    { \n  8      int counter = 1; // declare and initialize control variable \n 10      while (counter <= 10) // loop-continuation condition \n 11      { \n 12        System.out.printf(\"%d \", counter); \n 13        ++counter; // increment control variable \n 14      } \n 16      System.out.println(); \n 17    } \n 18 } // end class WhileCounter \n\n 1 2 3 4 5 6 7 8 9 10 \n\nFig. 4.1 Counter-controlled repetition with the while repetition statement."
+    },
+    {
+      "page_number": 12,
+      "title": "Counter-Controlled While Loop",
+      "text": "Counter-Controlled While Loop\n\n   Common Programming Error 4. \n   Because floating-point values may be approximate, con- \n   trolling loops with floating-point variables may result in \n   imprecise counter values and inaccurate termination \n   tests. \n\n     Error-Prevention Tip 4.1 \n     Use integers to control counting loops."
+    },
+    {
+      "page_number": 13,
+      "title": "Infinite While Loop",
+      "text": "Infinite While Loop \n\n  int n=1;                               int n=1; \n  while (n > 0) {                        while (true) { \n  System.out.println(n);                 System.out.println(n); \n      n++; }                                 n++; } \n\n               Common Programming Error 3.2 \n               Not providing in the body of a while statement an ac- \n               tion that eventually causes the condition in the while to \n               become false normally results in a logic error called an \n               infinite loop (the loop never terminates)."
+    },
+    {
+      "page_number": 14,
+      "title": "10 times",
+      "text": "10 times\nint n=1;                     int n=0; \nwhile (n <= 10) {                    while (n < 10) { \nSystem.out.println(n);               System.out.println(n); \n    n++; }                               n++; } \n\n                   9 times                                   11 times \nint n=1;                             int n=0; \nwhile (n < 10) {                     while (n <= 10) { \nSystem.out.println(n);               System.out.println(n); \n    n++; }                               n++; } \n\n         Common Programming Error 4.2 \n         Using an incorrect relational operator or an incorrect fi- \n         nal value of a loop counter in the loop-continuation con- \n         dition of a repetition statement can cause an off-by-one \n         error."
+    },
+    {
+      "page_number": 15,
+      "title": "Counter-Controlled While Loop",
+      "text": "Counter-Controlled While Loop \n\n  Example: find the first power of 3 larger than 100. \n           int product = 3; \n           while     (product <= 100) \n               product = 3 * product ; \n\n    Statement                     Performed Action \n    int product = 3;              product declared and initialized to 3 \n    while (product <= 100)        while condition evaluated to true (3 <= 100) \n         product = 3 * product;   product value changed to 9 \n    while (product <= 100)        condition evaluated to true (9 <= 100) \n         product = 3 * product;   product value changed to 27 \n    while (product <= 100)        condition evaluated to true (27 <= 100) \n         product = 3 * product;   product value changed to 81 \n    while (product <= 100)        condition evaluated to true (81 <= 100) \n         product = 3 * product ; product value changed to 243 \n    while (product <= 100)        condition evaluated to false (243>100) 15"
+    },
+    {
+      "page_number": 16,
+      "title": "Formulating Algorithms: Counter-Controlled Repetition",
+      "text": "Formulating Algorithms: Counter-Controlled Repetition \n\n A class of ten students took a quiz. The grades \n  (integers in the range 0 to 100) for this quiz are \n  available to you. Determine the class average on the \n  quiz. \n  The class average is equal to the sum of the grades divided by the \n number of students. \n  The algorithm for solving this problem on a computer must input \n each grade, keep track of the total of all grades input, perform the \n averaging calculation and print the result. \n  Use counter-controlled repetition to input the grades one at a time. \n  A variable called a counter (or control variable) controls the number \n  of times a set of statements will execute. \n  Counter-controlled repetition is often called definite repetition, \n because the number of repetitions is known before the loop begins \n  executing."
+    },
+    {
+      "page_number": 17,
+      "title": "Formulating Algorithms: Counter-Controlled Repetition (Cont.)",
+      "text": "Formulating Algorithms: Counter-Controlled Repetition (Cont.) \n\n   1   Set total to zero \n   2   Set grade counter to one \n   4   While grade counter is less than or equal to ten \n   5      Prompt the user to enter the next grade \n   6      Input the next grade \n   7      Add the grade into the total \n   8      Add one to the grade counter \n   10 Set the class average to the total divided by ten \n   11 Print the class average \n\n Fig. 3.5   Pseudocode algorithm that uses counter-controlled repetition to solve the \n class-average problem. \n\n  A total is a variable used to accumulate the sum of several values. \n\n· A counter is a variable used to count. \n\n  Variables used to store totals are normally initialized to zero before \n  being used in a program."
+    },
+    {
+      "page_number": 18,
+      "title": "/ Fig. 3.6: ClassAverage. java",
+      "text": "/ Fig. 3.6: ClassAverage. java \n  2 // Solving the class-average problem using counter-controlled repetition. \n  3 import java. util. Scanner; // program uses class Scanner \n  5 public class ClassAverage \n  6 { \n  7    public static void main(String[] args) \n  8     { \n  9       // create Scanner to obtain input from command window \n  10      Scanner input = new Scanner(System. in); \n  12      // initialization phase \n  13      int total = 0; // initialize sum of grades entered by the user \n  14      int gradeCounter = 1; // initialize # of grade to be entered next \n  16      // processing phase uses counter-controlled repetition \n  17      while (gradeCounter <= 10) // loop 10 times \n  18      { \n  19        System.out.print(\"Enter grade: \"); // prompt \n  20          int grade = input. nextInt(); // input next grade \n  21          total = total + grade; // add grade to total \n  22          gradeCounter = gradeCounter + 1; // increment counter by 1 \n  23        } \n  25        // termination phase \n  26        int average = total / 10; // integer division yields integer result \n  28        // display total and average of grades \n  29        System.out.printf(\"%nTotal of all 10 grades is %d%n\", total); \n  30        System. out. printf(\"Class average is %d%n\", average) ; \n  31      } \n  32   } // end class ClassAverage"
+    },
+    {
+      "page_number": 19,
+      "title": "Enter grade: 67",
+      "text": "Enter grade: 67 \n  Enter grade: 78 \n  Enter grade: 89 \n  Enter grade: 67 \n  Enter grade: 87 \n  Enter grade: 98 \n  Enter grade: 93 \n  Enter grade: 85 \n  Enter grade: 82 \n  Enter grade: 100 \n\n  Total of all 10 grades is 846 \n  Class average is 84 \n\nFig. 3.6   Solving the class-average problem using counter-controlled repetition."
+    },
+    {
+      "page_number": 20,
+      "title": "Formulating Algorithms: Counter-Controlled Repetition (Cont.)",
+      "text": "Formulating Algorithms: Counter-Controlled Repetition (Cont.) \n\n  A local variable's declaration must appear before the \n  variable is used in the program. \n      Common Programming Error 3.3 \n      Using the value of a local variable before it's initialized \n      results in a compilation error. All local variables must be \n      initialized before their values are used in expressions. \n\n      Error-Prevention Tip 3.3 \n      Initialize each total and counter, either in its declara- \n      tion or in an assignment statement. Totals are normally \n      initialized to 0. Counters are normally initialized to 0 \n      or 1, depending on how they're used (we'll show exam- \n      ples of when to use O and when to use 1)."
+    },
+    {
+      "page_number": 21,
+      "title": "Formulating Algorithms: Sentinel-Controlled Repetition",
+      "text": "Formulating Algorithms: Sentinel-Controlled Repetition \n\n  Develop a class-averaging program that \n  processes grades for an arbitrary number of \n  students each time it's run. \n· Sentinel-controlled repetition is often called indefinite \n  repetition because the number of repetitions is not known \n  before the loop begins executing. \n· A special value called a sentinel value (also called a signal \n  value, a dummy value or a flag value) can be used to \n  indicate \"end of data entry.\" \n  A sentinel value must be chosen that cannot be confused \n  with an acceptable input value."
+    },
+    {
+      "page_number": 22,
+      "title": "1 Initialize total to zero",
+      "text": "1 Initialize total to zero \n  2 Initialize counter to zero \n  4 Prompt the user to enter the first grade \n  5 Input the first grade (possibly the sentinel) \n  7 While the user has not yet entered the sentinel \n  8     Add this grade into the running total \n  9     Add one to the grade counter \n 10     Prompt the user to enter the next grade \n 11     Input the next grade (possibly the sentinel) \n 13 If the counter is not equal to zero \n 14     Set the average to the total divided by the counter \n 15     Print the average \n 16 else \n 17     Print \"No grades were entered\" \n\nFig. 3.7 Class-average pseudocode algorithm with sentinel-controlled repetition."
+    },
+    {
+      "page_number": 23,
+      "title": "1 11 Fig. 3.8: ClassAverage. java",
+      "text": "1 11 Fig. 3.8: ClassAverage. java \n2 // Solving the class-average problem using sentinel-controlled repetition. \n3 import java. util . Scanner; // program uses class Scanner \n5 public class ClassAverage \n6 { \n7   public static void main(String[] args) \n8    { \n9     // create Scanner to obtain input from command window \n10    Scanner input = new Scanner(System. in); \n12    // initialization phase \n13    int total = 0; // initialize sum of grades \n14    int gradeCounter = 0; // initialize # of grades entered so far \n16    // processing phase \n17    // prompt for input and read grade from user \n18    System.out.print(\"Enter grade or -1 to quit: \"); \n19    int grade = input.nextInt(); \n21     // loop until sentinel value read from user \n22     while (grade != - 1) \n23     { \n24       total = total + grade; // add grade to total \n25       gradeCounter = gradeCounter + 1; // increment counter \n27       // prompt for input and read next grade from user \n28       System. out. print(\"Enter grade or -1 to quit: \"); \n29       grade = input. nextInt(); \n30     } \n32       termination phase \n33       if user entered at least one grade ... \n34     if (gradeCounter != 0) \n35     { \n36       // use number with decimal point to calculate average of grades \n37       double average = (double) total / gradeCounter; \n39       // display total and average (with two digits of precision) \n40       System. out.printf(\"%nTotal of the %d grades entered is %d%n\", \n41         gradeCounter, total) ; \n42       System. out.printf(\"Class average is %.2f%n\", average) ; \n43     } \n44    else // no grades were entered, so output appropriate message \n45      System.out. println(\"No grades were entered\"); \n46 } \n47 } // end class ClassAverage"
+    },
+    {
+      "page_number": 24,
+      "title": "Enter grade or -1 to quit: 97",
+      "text": "Enter grade or -1 to quit: 97 \n   Enter grade or -1 to quit: 88 \n   Enter grade or -1 to quit: 72 \n   Enter grade or -1 to quit: - 1 \n\n   Total of the 3 grades entered is 257 \n   Class average is 85.67 \n\nFig. 3.8    Solving the class-average problem using sentinel-controlled repetition."
+    },
+    {
+      "page_number": 25,
+      "title": "Good Programming Practice 3.3",
+      "text": "Good Programming Practice 3.3 \nIn a sentinel-controlled loop, prompts should remind the \nuser of the sentinel. \n\nCommon Programming Error 3.5 \nOmitting the braces that delimit a block can lead to logic \nerrors, such as infinite loops. To prevent this problem, \nsome programmers enclose the body of every control state- \nment in braces, even if the body contains only a single \nstatement."
+    },
+    {
+      "page_number": 26,
+      "title": "Formulating Algorithms: Nested Control Statements",
+      "text": "Formulating Algorithms: Nested Control Statements \n\n. This case study examines nesting one control \n  statement within another. \n  A college offers a course that prepares students for \n  exam for real-estate brokers. \n. Ten of the students who completed this course took \n  the exam. The college wants to know how well its \n  students did on the exam. You've been asked to write \n  a program to summarize the results. You've been \n  given a list of these 10 students. Next to each name is \n  written a 1 if the student passed the exam or a 2 if the \n  student failed."
+    },
+    {
+      "page_number": 27,
+      "title": "3.10 Formulating Algorithms: Nested Control Statements (Cont.)",
+      "text": "3.10 Formulating Algorithms: Nested Control Statements (Cont.) \n\n. This case study examines nesting one control statement \n  within another. \n\n  Your program should analyze the results of the exam as \n  follows: \n      Input each test result (i.e., a 1 or a 2). Display the message \n      \"Enter result\" on the screen each time the program requests \n      another test result. \n      Count the number of test results of each type. \n      Display a summary of the test results, indicating the number \n      of students who passed and the number who failed. \n    · If more than eight students passed the exam, print \"Bonus to \n      instructor!\""
+    },
+    {
+      "page_number": 28,
+      "title": "1 // Fig. 3.10: Analysis. java",
+      "text": "1 // Fig. 3.10: Analysis. java \n  2 // Analysis of examination results using nested control statements. \n  3 import java. util . Scanner; // class uses class Scanner \n  5 public class Analysis \n  6 { \n  7   public static void main(String[] args) \n  8   { \n  9     // create Scanner to obtain input from command window \n10      Scanner input = new Scanner(System. in); \n12      // initializing variables in declarations \n13      int passes = 0; \n14      int failures = 0; \n15      int studentCounter = 1; \n17      // process 10 students using counter-controlled loop \n18      while (studentCounter <= 10) \n19      { \n20        // prompt user for input and obtain value from user \n21        System. out. print(\"Enter result (1 = pass, 2 = fail): \"); \n22        int result = input.nextInt(); \n24         // if ... else is nested in the while statement \n25         if (result == 1) \n26           passes = passes + 1; \n27         else \n28           failures = failures + 1; \n30         // increment studentCounter so loop eventually terminates \n31         studentCounter = studentCounter + 1; \n32       } \n34       // termination phase; prepare and display results \n35       System. out. printf(\"Passed : %d%nFailed : %d%n\", passes, failures) ; \n37       // determine whether more than 8 students passed \n38       if (passes > 8) \n39         System.out.println(\"Bonus to instructor!\"); \n40    } \n41 } // end class Analysis \n\nFig. 3.10 Analysis of examination results using nested control statements. (Part 2"
+    },
+    {
+      "page_number": 29,
+      "title": "Enter result (1 = pass, 2 = fail): 1",
+      "text": "Enter result (1 = pass, 2 = fail): 1 \n Enter result (1 = pass, 2 = fail): 2 \n Enter result (1 = pass, 2 = fail): 1 \n Enter result (1 = pass, 2 = fail): 1 \n Enter result (1 = pass, 2 = fail): 1 \n Enter result (1 = pass, 2 = fail): 1 \n Enter result (1 = pass, 2 = fail) : 1 \n Enter result (1 = pass, 2 = fail): 1 \n Enter result (1 = pass, 2 = fail): 1 \n Enter result (1 = pass, 2 = fail): 1 \n Passed: 9 \n Failed: 1 \n Bonus to instructor! \n\nFig. 3.10   Analysis of examination results using nested control statements. (Part 3 \nof 4.) \n                    Enter result (1 = pass, 2 = fail): 1 \n                    Enter result (1 = pass, 2 = fail): 2 \n                    Enter result (1 = pass, 2 = fail): 1 \n                    Enter result (1 = pass, 2 = fail) : 2 \n                    Enter result (1 = pass, 2 = fail): 1 \n                    Enter result (1 = pass, 2 = fail): 2 \n                    Enter result (1 = pass, 2 = fail) : 2 \n                    Enter result (1 = pass, 2 = fail): 1 \n                    Enter result (1 = pass, 2 = fail): 1 \n                    Enter result (1 = pass, 2 = fail): 1 \n                    Passed: 6 \n                    Failed: 4 \n\n                  Fig. 3.10   Analysis of examination results using nested control statements. (Part 4 \n                  of 4.)"
+    },
+    {
+      "page_number": 30,
+      "title": "Loop with Array",
+      "text": "Loop with Array \n\n\n 1   public class ex1{ \n     Run | Debug \n 2   public static void main(String [ ] args) \n 3   { \n 4   int [] arr=new int [10]; \n 5   arr[0]=0; \n 6   arr[1]=1;                              \n 7   arr[2]=2; \n 8   arr[3]=3;                              \n 9   arr [4]=4; \n10   arr[5]=5;                              \n11   arr[6]=6; \n12   arr[7]=7;                                    \n13   arr[8]=8; \n14   arr [9]=9;                                  \n16   }"
+    },
+    {
+      "page_number": 31,
+      "title": "Loop with String",
+      "text": "Loop with String \n\n                                      \nString name=\"JAVA\"; \n                                           \nint n=0; \n\nwhile (n < 4) { \n\n    System.out.println(name.charAt(n)); \n                                              \n   n++; \n                                       \n }"
+    }
+  ]
+}
